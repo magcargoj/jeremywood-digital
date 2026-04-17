@@ -21,16 +21,16 @@
     
     <style>
         :root {
-            --bg: #fdfdfd; 
+            --bg: #f9fbff; 
             --surface: #ffffff;
             --primary: #FF6347; /* Tomato */
-            --primary-glow: rgba(255, 99, 71, 0.1);
+            --primary-glow: rgba(255, 99, 71, 0.2);
             --text-dark: #0f172a;
             --text-muted: #64748b;
             --border: #f1f5f9;
-            --shadow-premium: 0 20px 50px rgba(15, 23, 42, 0.05);
+            --shadow-premium: 0 30px 60px rgba(15, 23, 42, 0.08);
             --radius-lg: 32px;
-            --radius-md: 20px;
+            --radius-md: 24px;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -44,70 +44,68 @@
             scroll-behavior: smooth;
         }
 
-        h1, h2, h3 { font-family: 'Outfit', sans-serif; letter-spacing: -0.03em; }
+        h1, h2, h3 { font-family: 'Outfit', sans-serif; letter-spacing: -0.04em; }
 
         .container {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 2rem;
         }
 
-        /* Hero / Header Overhaul */
+        /* Hero Section */
         .hero {
             padding: 10rem 0 6rem;
             display: flex;
             align-items: center;
-            gap: 5rem;
+            gap: 6rem;
         }
 
         .hero-content { flex: 1.5; }
-        .hero-profile { 
-            flex: 0.8; 
-            position: relative;
-        }
+        .hero-profile { flex: 0.8; position: relative; }
 
         .profile-img {
             width: 100%;
             border-radius: var(--radius-lg);
             box-shadow: var(--shadow-premium);
-            border: 8px solid white;
-            transition: transform 0.3s;
+            border: 10px solid white;
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
         }
 
-        .profile-img:hover { transform: scale(1.02) rotate(1deg); }
+        .profile-img:hover { transform: scale(1.03) rotate(1.5deg); }
 
         .label {
-            font-size: 0.8rem;
+            font-size: 0.85rem;
             text-transform: uppercase;
-            letter-spacing: 0.25em;
+            letter-spacing: 0.3em;
             color: var(--primary);
             font-weight: 800;
-            margin-bottom: 1.25rem;
+            margin-bottom: 1.5rem;
             display: flex;
             align-items: center;
-            gap: 0.75rem;
+            gap: 1rem;
         }
 
         .label::before {
             content: "";
-            width: 10px;
-            height: 10px;
+            width: 12px;
+            height: 12px;
             background-color: var(--primary);
             border-radius: 50%;
-            box-shadow: 0 0 15px var(--primary);
+            box-shadow: 0 0 20px var(--primary);
             animation: pulse 2s infinite;
         }
 
         @keyframes pulse {
             0% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.4; transform: scale(1.3); }
+            50% { opacity: 0.4; transform: scale(1.4); }
             100% { opacity: 1; transform: scale(1); }
         }
 
         h1 {
-            font-size: clamp(3.5rem, 8vw, 5rem);
+            font-size: clamp(3.5rem, 8vw, 5.5rem);
             font-weight: 800;
-            line-height: 1;
+            line-height: 0.95;
             margin-bottom: 2rem;
             color: var(--text-dark);
         }
@@ -115,20 +113,37 @@
         h1 span { color: var(--primary); }
 
         .tagline {
-            font-size: 1.35rem;
+            font-size: 1.4rem;
             color: var(--text-muted);
-            max-width: 600px;
-            margin-bottom: 3.5rem;
+            max-width: 650px;
+            margin-bottom: 4rem;
             font-weight: 400;
         }
 
-        /* Bento Grid 3.0 */
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            padding: 1.5rem 3.5rem;
+            border-radius: 24px;
+            text-decoration: none;
+            font-weight: 800;
+            display: inline-block;
+            box-shadow: 0 20px 40px var(--primary-glow);
+            transition: all 0.3s;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 50px var(--primary-glow);
+        }
+
+        /* Bento Grid: Cinematic Overhaul */
         .bento-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            grid-auto-rows: minmax(220px, auto);
+            grid-auto-rows: minmax(250px, auto);
             gap: 2rem;
-            margin-bottom: 8rem;
+            margin-bottom: 10rem;
         }
 
         .bento-card {
@@ -136,17 +151,17 @@
             border: 1px solid var(--border);
             border-radius: var(--radius-md);
             padding: 3rem;
-            transition: all 0.4s cubic-bezier(0.15, 0, 0, 1);
+            transition: all 0.5s cubic-bezier(0.15, 0, 0, 1);
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: flex-end; /* Text at bottom */
             position: relative;
             overflow: hidden;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
         }
 
         .bento-card:hover {
-            transform: translateY(-12px);
+            transform: translateY(-15px);
             box-shadow: var(--shadow-premium);
             border-color: var(--primary);
         }
@@ -155,50 +170,75 @@
         .bento-card.wide { grid-column: span 2; }
         .bento-card.tall { grid-row: span 2; }
 
-        /* Themed Hero Card */
-        .image-card {
-            background-image: linear-gradient(to bottom, rgba(255,255,255,0.2) 0%, var(--text-dark) 100%), 
-                              url('https://upload.wikimedia.org/wikipedia/commons/4/4b/Datacenter_informatique_de_l%27Ecole_Polytechnique_%2832544959853%29.jpg');
+        /* Background Image Utility */
+        .image-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             background-size: cover;
             background-position: center;
+            z-index: 1;
+            transition: transform 0.6s cubic-bezier(0.15, 0, 0, 1);
+        }
+
+        .bento-card:hover .image-bg { transform: scale(1.08); }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(15, 23, 42, 0.95) 10%, rgba(15, 23, 42, 0.4) 60%, transparent 100%);
+            z-index: 2;
+        }
+
+        /* Text Styles for Image Cards */
+        .card-content {
+            position: relative;
+            z-index: 3;
             color: white;
         }
 
-        .image-card h3 { color: white; margin-top: auto; }
-        .image-card .label { color: var(--primary); border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 0.5rem; width: fit-content; }
+        .card-content h3 { color: white; font-size: 2rem; margin-bottom: 1rem; }
+        .card-content p { color: rgba(255, 255, 255, 0.8); font-size: 1.1rem; }
 
-        .icon-box {
-            width: 64px;
-            height: 64px;
-            border-radius: 20px;
-            background: #f8fafc;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 2.5rem;
+        .card-label {
+            position: relative;
+            z-index: 3;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
             color: var(--primary);
-            font-size: 1.75rem;
-            border: 1px solid #f1f5f9;
+            font-weight: 800;
+            margin-bottom: 1rem;
         }
 
-        h3 { font-size: 1.75rem; margin-bottom: 1.25rem; font-weight: 700; color: var(--text-dark); }
-        .content { font-size: 1.1rem; color: var(--text-muted); line-height: 1.7; }
-
-        /* Technical List */
+        /* Technical List (Light Mode Cards) */
         .tech-list { list-style: none; margin-top: 1.5rem; }
         .tech-item {
             display: flex;
             align-items: center;
             gap: 1rem;
             margin-bottom: 0.75rem;
-            font-size: 1rem;
+            font-size: 1.05rem;
             color: var(--text-muted);
         }
-        .tech-item::before { content: "→"; color: var(--primary); font-weight: 800; }
+        .tech-item::before { content: "→"; color: var(--primary); font-weight: 900; }
 
         /* Stats Component */
-        .stat-value { font-size: 4rem; font-weight: 800; color: var(--primary); line-height: 1; margin-bottom: 0.5rem; }
-        .stat-label { font-size: 0.9rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.15em; font-weight: 700; }
+        .stat-value { font-size: 5rem; font-weight: 800; color: var(--primary); line-height: 1; margin-bottom: 0.5rem; }
+        .stat-label { font-size: 1rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.2em; font-weight: 800; }
+
+        /* Global Status Dot (White Theme) */
+        .status-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
 
         /* Floating Nav */
         nav {
@@ -207,46 +247,47 @@
             left: 50%;
             transform: translateX(-50%);
             background: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
             border: 1px solid var(--border);
-            padding: 1rem 3rem;
+            padding: 1.25rem 3.5rem;
             border-radius: 100px;
             display: flex;
-            gap: 3rem;
+            gap: 3.5rem;
             z-index: 1000;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
         }
 
         nav a {
             text-decoration: none;
-            color: var(--text-muted);
-            font-weight: 700;
-            font-size: 0.95rem;
-            transition: color 0.2s;
+            color: var(--text-dark);
+            font-weight: 800;
+            font-size: 1rem;
+            transition: color 0.3s;
         }
         nav a:hover { color: var(--primary); }
 
+        /* Animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 1s cubic-bezier(0.15, 0, 0, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
         @media (max-width: 992px) {
-            .hero { flex-direction: column; text-align: center; padding: 8rem 0 4rem; gap: 3rem; }
+            .hero { flex-direction: column; text-align: center; padding: 8rem 0 4rem; gap: 4rem; }
             .hero-content { order: 2; }
-            .hero-profile { order: 1; width: 100%; max-width: 400px; }
+            .hero-profile { order: 1; width: 100%; max-width: 450px; }
             .bento-grid { grid-template-columns: repeat(2, 1fr); }
         }
 
         @media (max-width: 576px) {
             .bento-grid { grid-template-columns: 1fr; }
             .bento-card.large, .bento-card.wide, .bento-card.tall { grid-column: span 1; grid-row: span 1; }
-        }
-
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s cubic-bezier(0.15, 0, 0, 1);
-        }
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
         }
     </style>
 </head>
@@ -260,10 +301,10 @@
         <!-- Hero Section -->
         <section class="hero">
             <div class="hero-content reveal">
-                <span class="label">Infrastructure Status: Active</span>
+                <span class="label">Operational Integrity: Verified</span>
                 <h1>AdOps Forensic Specialist & Technical <span>Anchor.</span></h1>
-                <p class="tagline">Providing high-fidelity revenue protection and attribution forensics for enterprise SaaS and Ad-Tech environments.</p>
-                <a href="mailto:jeremy@jeremywood.digital" id="cta-email" style="background: var(--primary); color: white; padding: 1.5rem 3rem; border-radius: 20px; text-decoration: none; font-weight: 800; display: inline-block; box-shadow: 0 20px 40px var(--primary-glow);">Audit My Tracking</a>
+                <p class="tagline">Engineering high-fidelity attribution systems and revenue security for enterprise SaaS environments.</p>
+                <a href="mailto:jeremy@jeremywood.digital" id="cta-email" class="btn-primary">Connect for High-Signal Support</a>
             </div>
             <div class="hero-profile reveal">
                 <img src="jeremy-stylish.jpg" alt="Jeremy Wood" class="profile-img">
@@ -273,63 +314,65 @@
         <!-- Bento Grid -->
         <main class="bento-grid">
             
-            <!-- Tracking Card -->
+            <!-- Large Image Card: Infrastructure (Option A) -->
             <div class="bento-card large reveal">
-                <div class="icon-box">🛡️</div>
-                <div>
-                    <span class="label">Live Audit</span>
-                    <h3>High-Signal Tracking Infrastructure</h3>
-                    <p class="content">This site serves as a live technical demo of my implementation standards. I have deployed a professional GTM container (GTM-WHQFSJKB), a robust Data Layer, and GA4 event tracking to prove operational transparency.</p>
-                    <ul class="tech-list">
-                        <li class="tech-item">Server-Side Tracking Configuration</li>
-                        <li class="tech-item">Meta Pixel Deduplication (CAPI)</li>
-                        <li class="tech-item">Cross-Domain Attribution Bridge</li>
-                        <li class="tech-item">Standardized DataLayer Schema</li>
-                    </ul>
+                <div class="image-bg" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/4b/Datacenter_informatique_de_l%27Ecole_Polytechnique_%2832544959853%29.jpg');"></div>
+                <div class="overlay"></div>
+                <div class="card-label">The Digital Anchor</div>
+                <div class="card-content">
+                    <h3>Technical Reliability at Scale</h3>
+                    <p>4 years of mission-critical, autonomous overnight operations. I provide the persistent technical stability required for global, 24/7 SaaS ecosystems.</p>
                 </div>
             </div>
 
-            <!-- Reliability Card -->
+            <!-- Reliability Card (Light Mode) -->
             <div class="bento-card reveal">
-                <span class="label">Reliability</span>
+                <div class="card-label" style="color: var(--primary);">System Status</div>
                 <div class="stat-value">100%</div>
-                <div class="stat-label">System Uptime</div>
-                <p class="content" style="margin-top: 1.5rem; font-size: 1rem;">4 consecutive years of autonomous, mission-critical solo overnight operations.</p>
+                <div class="stat-label">Verified Uptime</div>
+                <p style="color: var(--text-muted); margin-top: 1.5rem; font-size: 1rem;">Solo oversight for high-stakes enterprise assets.</p>
             </div>
 
-            <!-- Forensic Card -->
-            <div class="bento-card tall image-card reveal">
-                <span class="label">Forensics</span>
-                <h3>Attribution Integrity</h3>
-                <p style="font-size: 1rem; color: rgba(255,255,255,0.7); margin-top: 1rem;">I identify root causes where code and revenue collide, treating every ticket like a forensic investigation.</p>
-            </div>
-
-            <!-- WP Card -->
-            <div class="bento-card reveal">
-                <div class="icon-box">WP</div>
-                <div>
-                    <h3>WordPress VIP</h3>
-                    <p class="content">Expert in enterprise WordPress environments, from DNS mapping to plugin conflict resolution.</p>
+            <!-- Tall Image Card: Forensics (Option A) -->
+            <div class="bento-card tall reveal">
+                <div class="image-bg" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/d/df/Magnifying_glass_01.jpg');"></div>
+                <div class="overlay"></div>
+                <div class="card-label">The Lens</div>
+                <div class="card-content">
+                    <h3>Attribution Forensics</h3>
+                    <p>Identifying the precise architectural root causes where code and revenue collide.</p>
                 </div>
             </div>
 
-            <!-- Global Availability -->
+            <!-- Tracking Card (Light Mode) -->
+            <div class="bento-card reveal">
+                <div class="card-label" style="color: var(--primary);">Live Audit</div>
+                <h3>The Tracking Stack</h3>
+                <ul class="tech-list">
+                    <li class="tech-item">DataLayer Schema</li>
+                    <li class="tech-item">GTM Configuration</li>
+                    <li class="tech-item">GA4 Event Logic</li>
+                    <li class="tech-item">Meta CAPI Bridge</li>
+                </ul>
+            </div>
+
+            <!-- Wide Image Card: Tracking (Option A) -->
             <div class="bento-card wide reveal">
-                <div style="display: flex; justify-content: space-between; align-items: center;">
-                    <div>
-                        <span class="label">Status</span>
-                        <h3>Global Remote Availability</h3>
-                    </div>
-                    <div style="font-size: 2.5rem;">🌎</div>
+                <div class="image-bg" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/2/23/Fiber_optic_illuminated.jpg');"></div>
+                <div class="overlay"></div>
+                <div class="card-label">High-Signal Strategy</div>
+                <div class="card-content">
+                    <h3>High-Fidelity Tracking Infrastructure</h3>
+                    <p>Turning complex technical noise into clean, actionable revenue signals through precision GTM and API architectures.</p>
                 </div>
-                <p class="content">Natively comfortable in distributed-first environments. I maintain the infrastructure (US Tax Base, NC) to support global teams at scale.</p>
             </div>
 
-            <!-- Performance Card -->
+            <!-- Availability Card (Light Mode) -->
             <div class="bento-card reveal">
-                <div class="icon-box">📈</div>
-                <h3>ROI Optimization</h3>
-                <p class="content" style="font-size: 1rem;">Translating complex operational data into actionable revenue signals.</p>
+                <div class="card-label" style="color: var(--primary);">Global Reach</div>
+                <div style="font-size: 3rem; margin-bottom: 1rem;">🌎</div>
+                <h3>Autonomous Forward Deployment</h3>
+                <p style="color: var(--text-muted); font-size: 1rem;">Natively comfortable in distributed-first environments with a North Carolina US tax base.</p>
             </div>
 
         </main>
@@ -356,7 +399,7 @@
             });
         });
 
-        // Intersection Observer for Animations
+        // Intersection Observer for Reveal Animations
         const observerOptions = { threshold: 0.1 };
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
