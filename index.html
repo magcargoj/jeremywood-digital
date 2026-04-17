@@ -4,7 +4,7 @@
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&ldataLayer'?'&l='+l:'';j.async=true;j.src=
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-WHQFSJKB');</script>
     <!-- End Google Tag Manager -->
@@ -211,7 +211,7 @@
         .nav-item.active { color: var(--primary); }
 
         .reveal { opacity: 0; transform: translateY(40px); transition: all 1s ease-out; }
-        .reveal.active { opacity: 1; transform: translateY(0); }
+        .reveal.active { opacity: 1 !important; transform: translateY(0) !important; }
 
         /* Profile Img Mobile Fix */
         .hero-portrait {
@@ -259,14 +259,14 @@
 
     <!-- Cinematic Hero -->
     <section class="hero">
-        <div class="container">
-            <div class="hero-content reveal">
+        <div class="container" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;">
+            <div class="hero-content" style="opacity: 1;"> <!-- Removed reveal to ensure instant visibility -->
                 <div class="card-id" style="font-size: 0.9rem; margin-bottom: 2rem;">DOSSIER_ID: SENTINEL_001</div>
                 <h1>Jeremy Wood. <br>Technical <span>Sentinel.</span></h1>
                 <p class="tagline">Providing high-fidelity revenue forensics and operational integrity for the world's best remote teams.</p>
                 <a href="mailto:jeremy@jeremywood.digital" id="cta-email" style="color: white; font-size: 1.2rem; border-bottom: 2px solid var(--primary); padding-bottom: 8px; text-decoration: none; font-weight: 900;">Establish Connection →</a>
             </div>
-            <div class="hero-portrait reveal">
+            <div class="hero-portrait" style="opacity: 0.8;"> <!-- Removed reveal to ensure instant visibility -->
                 <img src="jeremy-stylish.jpg" alt="Jeremy Wood" style="width: 100%; border-radius: var(--radius-lg);">
             </div>
         </div>
@@ -385,7 +385,7 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting) entry.target.classList.add('active');
             });
-        }, { threshold: 0.1 });
+        }, { threshold: 0.05 });
 
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
     </script>
