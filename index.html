@@ -3,19 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jeremy Wood | Technical Support Specialist</title>
+    <title>Jeremy Wood | Technical Anchor</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg: #0a0a0c;
-            --surface: #121216;
-            --primary: #4f46e5;
-            --accent: #818cf8;
-            --text: #f4f4f5;
-            --text-muted: #a1a1aa;
-            --border: #27272a;
+            --bg: #0a0e14;
+            --surface: #161d29;
+            --surface-glass: rgba(22, 29, 41, 0.7);
+            --primary: #FF6347; /* Tomato */
+            --primary-glow: rgba(255, 99, 71, 0.3);
+            --text: #f8f9fa;
+            --text-muted: #94a3b8;
+            --border: rgba(255, 255, 255, 0.08);
+            --glass-blur: 12px;
         }
 
         * {
@@ -30,267 +32,277 @@
             font-family: 'Inter', sans-serif;
             line-height: 1.6;
             overflow-x: hidden;
+            scroll-behavior: smooth;
         }
+
+        h1, h2, h3 { font-family: 'Outfit', sans-serif; }
 
         .container {
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 0 2rem;
+            padding: 2rem;
         }
 
-        /* Hero Section */
-        header {
-            padding: 8rem 0 4rem;
-            text-align: center;
+        /* Background Hero Asset */
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(to bottom, rgba(10, 14, 20, 0) 60%, var(--bg) 100%), 
+                        url('technical_anchor_hero_1776452196811.png');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.4;
+            z-index: -1;
+            filter: grayscale(20%) contrast(110%);
         }
 
-        h1 {
-            font-size: 3.5rem;
+        /* Hero Content */
+        .hero {
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding-top: 4rem;
+        }
+
+        .hero h1 {
+            font-size: clamp(3rem, 8vw, 5rem);
             font-weight: 800;
-            letter-spacing: -0.05em;
-            margin-bottom: 1rem;
-            background: linear-gradient(to right, #ffffff, var(--accent));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.03em;
         }
 
-        .tagline {
+        .hero h1 span {
+            color: var(--primary);
+            text-shadow: 0 0 30px var(--primary-glow);
+        }
+
+        .hero p {
             font-size: 1.25rem;
             color: var(--text-muted);
             max-width: 600px;
-            margin: 0 auto 2rem;
+            margin-bottom: 2.5rem;
         }
 
-        .cta-group {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-        }
-
-        .btn {
-            padding: 0.75rem 1.5rem;
-            border-radius: 8px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.2s;
-        }
-
-        .btn-primary {
-            background-color: var(--primary);
-            color: white;
-        }
-
-        .btn-primary:hover {
-            background-color: var(--accent);
-            transform: translateY(-2px);
-        }
-
-        .btn-secondary {
-            border: 1px solid var(--border);
-            color: var(--text);
-        }
-
-        .btn-secondary:hover {
-            background-color: var(--surface);
-        }
-
-        /* Stats/Chips */
-        .stats-grid {
+        /* Bento Grid */
+        .bento-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: minmax(180px, auto);
             gap: 1.5rem;
-            margin: 4rem 0;
+            margin-bottom: 8rem;
         }
 
-        .stat-card {
-            background-color: var(--surface);
+        .bento-item {
+            background: var(--surface-glass);
+            backdrop-filter: blur(var(--glass-blur));
+            -webkit-backdrop-filter: blur(var(--glass-blur));
             border: 1px solid var(--border);
-            padding: 1.5rem;
-            border-radius: 12px;
-            text-align: center;
-        }
-
-        .stat-value {
-            font-size: 1.5rem;
-            font-weight: 800;
-            color: var(--accent);
-            display: block;
-        }
-
-        .stat-label {
-            font-size: 0.875rem;
-            color: var(--text-muted);
-        }
-
-        /* Section Styling */
-        section {
-            padding: 4rem 0;
-        }
-
-        h2 {
-            font-size: 1.125rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--accent);
-            margin-bottom: 2rem;
+            border-radius: 24px;
+            padding: 2rem;
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s;
             display: flex;
-            align-items: center;
-            gap: 1rem;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
-        h2::after {
-            content: "";
-            flex: 1;
-            height: 1px;
-            background-color: var(--border);
+        .bento-item:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
         }
 
-        .grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+        /* Layout Combinations */
+        .large { grid-column: span 2; grid-row: span 2; }
+        .wide { grid-column: span 2; }
+        .tall { grid-row: span 2; }
+
+        @media (max-width: 992px) {
+            .bento-grid { grid-template-columns: repeat(2, 1fr); }
+            .hero { height: auto; padding: 10rem 0 4rem; }
         }
 
-        @media (max-width: 768px) {
-            .grid { grid-template-columns: 1fr; gap: 2rem; }
-            h1 { font-size: 2.5rem; }
+        @media (max-width: 576px) {
+            .bento-grid { grid-template-columns: 1fr; }
+            .large, .wide, .tall { grid-column: span 1; grid-row: span 1; }
         }
 
-        .skill-list {
-            list-style: none;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 0.75rem;
+        /* Floating Nav */
+        .floating-nav {
+            position: fixed;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 0.75rem 1.5rem;
+            border-radius: 100px;
+            display: flex;
+            gap: 2rem;
+            z-index: 1000;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
         }
 
-        .skill-item {
+        .nav-item {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 600;
+            transition: color 0.2s;
             display: flex;
             align-items: center;
             gap: 0.5rem;
-            color: var(--text-muted);
-            font-size: 0.9375rem;
         }
 
-        .skill-item::before {
-            content: "→";
-            color: var(--accent);
+        .nav-item:hover, .nav-item.active {
+            color: var(--primary);
         }
 
-        /* Case Study / Story */
-        .story-card {
-            background: linear-gradient(145deg, #121216 0%, #0a0a0c 100%);
-            border: 1px solid var(--border);
-            padding: 2.5rem;
-            border-radius: 20px;
-        }
-
-        .story-card p {
-            font-size: 1.125rem;
-            color: var(--text-muted);
-            margin-bottom: 1.5rem;
-        }
-
-        footer {
-            padding: 4rem 0;
-            border-top: 1px solid var(--border);
-            text-align: center;
-            color: var(--text-muted);
-            font-size: 0.875rem;
-        }
-
-        .social-links {
-            margin-top: 1rem;
+        /* 3D Vibrant Icons (CSS based) */
+        .icon-box {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, var(--primary), #ff8a65);
             display: flex;
+            align-items: center;
             justify-content: center;
-            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 8px 16px rgba(255, 99, 71, 0.2), 
+                        inset 0 -4px 6px rgba(0, 0, 0, 0.1);
+            color: white;
+            font-size: 1.5rem;
         }
 
-        .social-links a {
-            color: var(--text-muted);
-            text-decoration: none;
-            transition: color 0.2s;
+        /* Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        .social-links a:hover {
-            color: var(--text);
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
+
+        /* Typography Utilities */
+        .label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--primary);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        h3 { font-size: 1.5rem; margin-bottom: 1rem; }
+        p.small { font-size: 0.9375rem; color: var(--text-muted); }
+
     </style>
 </head>
 <body>
 
+    <div class="hero-bg"></div>
+
     <div class="container">
-        <header>
-            <h1>Jeremy Wood</h1>
-            <p class="tagline">Technical Support Specialist & AdOps Sniper. Expert in identifying root causes where code, content, and revenue collide.</p>
-            <div class="cta-group">
-                <a href="mailto:jeremy@jeremywood.digital" class="btn btn-primary">Hire the Anchor</a>
-                <a href="https://linkedin.com" class="btn btn-secondary">LinkedIn Profile</a>
+        <!-- Hero Section -->
+        <header class="hero">
+            <span class="label reveal">The Digital Anchor</span>
+            <h1 class="reveal">Technical Support <span>Sniper.</span></h1>
+            <p class="reveal">Identifing root causes where code, content, and revenue collide. 4 years of mission-critical overnight operations.</p>
+            <div class="reveal">
+                <a href="#contact" style="background: var(--primary); padding: 1rem 2rem; border-radius: 12px; color: white; text-decoration: none; font-weight: 700; display: inline-block;">Deploy Site</a>
             </div>
         </header>
 
-        <div class="stats-grid">
-            <div class="stat-card">
-                <span class="stat-value">4+ Years</span>
-                <span class="stat-label">Solo Remote Experience</span>
-            </div>
-            <div class="stat-card">
-                <span class="stat-value">100%</span>
-                <span class="stat-label">Overnight Reliability</span>
-            </div>
-            <div class="stat-card">
-                <span class="stat-value">0s</span>
-                <span class="stat-label">Mean Time to Action</span>
-            </div>
-        </div>
-
-        <section id="about">
-            <h2>The "Global Anchor" Persona</h2>
-            <div class="grid">
+        <!-- Bento Grid Section -->
+        <main class="bento-grid">
+            
+            <!-- Large Focus: The Anchor -->
+            <div class="bento-item large reveal">
+                <div class="icon-box">⚓</div>
                 <div>
-                    <p style="color: var(--text-muted); font-size: 1.125rem; margin-bottom: 1.5rem;">
-                        I specialty in high-stakes, autonomous support. After four years of managing mission-critical Ad-Tech operations in isolation, I’ve mastered the art of asynchronous communication and technical detective work.
-                    </p>
-                    <p style="color: var(--text-muted);">
-                        I don't just solve tickets; I bridge the gap between complex engineering stacks and the user experience. I am natively comfortable in non-standard schedules and geographically agnostic by design.
-                    </p>
-                </div>
-                <div>
-                    <h3 style="margin-bottom: 1rem; font-size: 1rem; color: var(--text);">Technical Arsenal</h3>
-                    <ul class="skill-list">
-                        <li class="skill-item">JS Troubleshooting</li>
-                        <li class="skill-item">HTML/CSS DOM Audits</li>
-                        <li class="skill-item">REST API & JSON</li>
-                        <li class="skill-item">DNS & Domain Ops</li>
-                        <li class="skill-item">GTM Tagging</li>
-                        <li class="skill-item">WP-CLI & WordPress</li>
-                        <li class="skill-item">Network Diagnostics</li>
-                        <li class="skill-item">Async Documentation</li>
-                    </ul>
+                    <span class="label">The Persona</span>
+                    <h3>The Global Anchor</h3>
+                    <p class="small">Master of asynchronous communication. After managing overnights solo for 4 years, I thrive in the technical trenches where autonomy is the only option.</p>
                 </div>
             </div>
-        </section>
 
-        <section id="story">
-            <h2>The Ad-Tech Sniper</h2>
-            <div class="story-card">
-                <p>
-                    "I am the person you call when a low-context technical error is costing you thousands of dollars in lost attribution. I treat every ticket like a forensic investigation—diving into DevTools, analyzing network payloads, and fixing the underlying architectural weakness so the problem doesn't happen twice."
-                </p>
-                <p style="margin-bottom: 0;">
-                    <em>Specializing in WordPress VIP, Enterprise SaaS, and Ad-Tech Revenue Protection.</em>
-                </p>
+            <!-- Tall Focus: Technical Arsenal -->
+            <div class="bento-item tall reveal">
+                <span class="label">Skills</span>
+                <h3>The Arsenal</h3>
+                <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.75rem; color: var(--text-muted); font-size: 0.9375rem;">
+                    <li>→ JS Troubleshooting</li>
+                    <li>→ DOM & CSS Audits</li>
+                    <li>→ REST API & JSON</li>
+                    <li>→ WordPress VIP Ops</li>
+                    <li>→ DNS & Domain Mgmt</li>
+                    <li>→ GTM Tag Integration</li>
+                </ul>
             </div>
-        </section>
 
-        <footer>
-            <p>&copy; 2026 Jeremy Wood. Built with Performance in Mind.</p>
-            <div class="social-links">
-                <a href="#">GitHub</a>
-                <a href="#">LinkedIn</a>
-                <a href="mailto:jeremy@jeremywood.digital">Email</a>
+            <!-- Wide Focus: Ad-Tech Specialist -->
+            <div class="bento-item wide reveal">
+                <div>
+                    <span class="label">Expertise</span>
+                    <h3>Ad-Tech Revenue Protection</h3>
+                </div>
+                <p class="small">Treating every ticket like a forensic investigation. I fix the underlying architectural weakness, not just the symptom.</p>
             </div>
-        </footer>
+
+            <!-- Small: Reliability -->
+            <div class="bento-item reveal">
+                <span class="label">Reliability</span>
+                <h3 style="color: var(--primary);">100%</h3>
+                <p class="small">Overnight Uptime Record</p>
+            </div>
+
+            <!-- Wide Focus: Human Angle -->
+            <div class="bento-item wide reveal">
+                <div>
+                    <span class="label">Values</span>
+                    <h3>Intentional Nomadism</h3>
+                </div>
+                <p class="small">Providing a "roadschooling" education for my family of six while providing 24/7 technical stability for global partners.</p>
+            </div>
+
+            <!-- Small: GBA Project -->
+            <div class="bento-item reveal">
+                <div style="font-size: 2rem;">🎮</div>
+                <h3 style="font-size: 1rem;">GBA Platformer</h3>
+                <p class="small" style="font-size: 0.75rem;">C / Hardware Coding</p>
+            </div>
+
+        </main>
     </div>
 
+    <!-- Floating Nav -->
+    <nav class="floating-nav">
+        <a href="#" class="nav-item active">Home</a>
+        <a href="#about" class="nav-item">About</a>
+        <a href="#contact" class="nav-item">Connect</a>
+    </nav>
+
+    <script>
+        // Simple Intersection Observer for Reveal animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
 </body>
 </html>
