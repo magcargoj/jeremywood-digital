@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeremy Wood | Technical Vault</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Inter:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0a0c10;
+            --surface: #12151c;
+            --primary: #ff5233;
+            --text: #ffffff;
+            --text-muted: #94a3b8;
+            --border: rgba(255, 255, 255, 0.1);
+            --mono: 'IBM Plex Mono', monospace;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+            padding: 4rem 2rem;
+        }
+
+        .container { max-width: 1200px; margin: 0 auto; }
+
+        header {
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 4rem;
+            margin-bottom: 6rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            font-weight: 900;
+            line-height: 1;
+        }
+
+        .header-meta {
+            text-align: right;
+            font-family: var(--mono);
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.2rem;
+        }
+
+        /* Skill Matrix */
+        .skills-matrix {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 8rem;
+        }
+
+        .skill-group {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            padding: 2.5rem;
+            border-radius: 4px;
+        }
+
+        .skill-group h3 {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15rem;
+        }
+
+        .skill-list { list-style: none; display: flex; flex-wrap: wrap; gap: 0.75rem; }
+        .skill-tag { 
+            background: rgba(255, 255, 255, 0.05); 
+            border: 1px solid var(--border); 
+            padding: 0.4rem 0.8rem; 
+            border-radius: 2px; 
+            font-size: 0.75rem; 
+            font-family: var(--mono);
+        }
+
+        /* Project Grid */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 4rem;
+        }
+
+        .category-header {
+            grid-column: 1 / -1;
+            margin-top: 4rem;
+            margin-bottom: 2rem;
+            border-left: 3px solid var(--primary);
+            padding-left: 1.5rem;
+        }
+
+        .category-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        .project-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            padding: 3rem;
+            border-radius: 4px;
+            transition: all 0.4s;
+            position: relative;
+        }
+
+        .project-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-5px);
+        }
+
+        .card-ref {
+            font-family: var(--mono);
+            font-size: 0.7rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            display: block;
+            text-transform: uppercase;
+        }
+
+        .project-card h4 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .project-card p {
+            font-size: 1rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+
+        .tech-badges { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .badge { font-size: 0.65rem; font-family: var(--mono); color: var(--text-muted); text-transform: uppercase; border: 1px solid var(--border); padding: 0.2rem 0.5rem; }
+
+        .btn-back {
+            position: fixed;
+            top: 2rem;
+            left: 2rem;
+            font-family: var(--mono);
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 4px;
+        }
+
+        .btn-back:hover { color: var(--primary); border-color: var(--primary); }
+
+        @media (max-width: 768px) {
+            .project-grid { grid-template-columns: 1fr; }
+            h1 { font-size: 2.5rem; }
+            header { flex-direction: column; align-items: flex-start; gap: 2rem; }
+            .header-meta { text-align: left; }
+        }
+    </style>
+</head>
+<body>
+
+    <a href="index.html" class="btn-back">← Return to Dossier</a>
+
+    <div class="container">
+        <header>
+            <div class="header-left">
+                <h1>Technical <br>Vault.</h1>
+                <p style="font-family: var(--mono); color: var(--primary); margin-top: 1rem; font-size: 0.9rem;">ENCRYPTED ARCHIVE: 2021—2026</p>
+            </div>
+            <div class="header-meta">
+                <p>Status: Unlocked</p>
+                <p>Origin: Wilmington, NC</p>
+                <p>Security: Enterprise Grade</p>
+            </div>
+        </header>
+
+        <!-- Skill Matrix Section -->
+        <section class="skills-matrix">
+            <div class="skill-group">
+                <h3>Core Frameworks</h3>
+                <div class="skill-list">
+                    <span class="skill-tag">WordPress VIP</span>
+                    <span class="skill-tag">PHP 8.x</span>
+                    <span class="skill-tag">BTM Framework</span>
+                    <span class="skill-tag">REST APIs</span>
+                    <span class="skill-tag">SQL</span>
+                </div>
+            </div>
+            <div class="skill-group">
+                <h3>Data & Analytics</h3>
+                <div class="skill-list">
+                    <span class="skill-tag">Looker Studio</span>
+                    <span class="skill-tag">GA4</span>
+                    <span class="skill-tag">sGTM</span>
+                    <span class="skill-tag">BigQuery</span>
+                    <span class="skill-tag">Meta CAPI</span>
+                </div>
+            </div>
+            <div class="skill-group">
+                <h3>Infrastructure</h3>
+                <div class="skill-list">
+                    <span class="skill-tag">Git / GitHub</span>
+                    <span class="skill-tag">DNS / Proxies</span>
+                    <span class="skill-tag">Zendesk</span>
+                    <span class="skill-tag">Kibana</span>
+                    <span class="skill-tag">SSO Integrations</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Grid -->
+        <div class="project-grid">
+            
+            <div class="category-header">
+                <h2>I. Compliance & Sovereignty</h2>
+            </div>
+
+            <div class="project-card">
+                <span class="card-ref">FILE: USETPA_AUDIT | EST. 2024</span>
+                <h4>USETPA Archival Infrastructure</h4>
+                <p>Managed technical updates for high-liability government contracts, ensuring 10-year data archival for federal and state auditors.</p>
+                <div class="tech-badges">
+                    <span class="badge">Google API</span>
+                    <span class="badge">PHP</span>
+                    <span class="badge">Compliance</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <span class="card-ref">FILE: DAVIS_SON | EST. 2026</span>
+                <h4>Tobacco Retail Compliance</h4>
+                <p>Engineered custom inventory and verification logic for high-regulation retail digital infrastructure on the BTM Framework.</p>
+                <div class="tech-badges">
+                    <span class="badge">Retainers</span>
+                    <span class="badge">Development</span>
+                </div>
+            </div>
+
+            <div class="category-header">
+                <h2>II. Operational Strategy</h2>
+            </div>
+
+            <div class="project-card">
+                <span class="card-ref">FILE: L10_MORATORIUM | EST. 2026</span>
+                <h4>Mobile App Strategic Pivot</h4>
+                <p>Identified critical 'Role Confusion' (zero PO/Dev/PM staff) and authored strategic pivot to halt high-liability development.</p>
+                <div class="tech-badges">
+                    <span class="badge">Consulting</span>
+                    <span class="badge">Leadership</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <span class="card-ref">FILE: COASTAL_NVG | EST. 2026</span>
+                <h4>Enterprise Training Protocol</h4>
+                <p>Orchestrated live-site onboarding sessions for leadership teams, ensuring 100% self-sufficiency for mission-critical web ops.</p>
+                <div class="tech-badges">
+                    <span class="badge">Onboarding</span>
+                    <span class="badge">Education</span>
+                </div>
+            </div>
+
+            <div class="category-header">
+                <h2>III. Revenue Forensics</h2>
+            </div>
+
+            <div class="project-card">
+                <span class="card-ref">FILE: WILM_BLINDS | EST. 2025</span>
+                <h4>$10k Web Infrastructure Merger</h4>
+                <p>Consolidated legacy digital assets into a single unified property. Maintained 100% SEO and tracking integrity over 112 hours of DEV logic.</p>
+                <div class="tech-badges">
+                    <span class="badge">Consolidation</span>
+                    <span class="badge">Migration</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <span class="card-ref">FILE: LOCAL_CATCH | EST. 2025</span>
+                <h4>Looker Studio ROI Auditing</h4>
+                <p>Built advanced data visualization models to verify marketing ROI and identify platform utilization leakage.</p>
+                <div class="tech-badges">
+                    <span class="badge">Looker Studio</span>
+                    <span class="badge">Statistics</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <span class="card-ref">FILE: BEAMING_BEAUTY | EST. 2026</span>
+                <h4>Resolution of Enterprise Lead Failure</h4>
+                <p>Diagnosed and remediated a systemic 777-message undelivered form failure, securing critical client lead-pipeline integrity.</p>
+                <div class="tech-badges">
+                    <span class="badge">Forensics</span>
+                    <span class="badge">Debugging</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <span class="card-ref">FILE: MAXIM_CONST | EST. 2026</span>
+                <h4>High-Volume Infrastructure Setup</h4>
+                <p>Managed large-scale administrative and development setup for construction enterprise properties on a compressed timeline.</p>
+                <div class="tech-badges">
+                    <span class="badge">Operational Rigor</span>
+                    <span class="badge">Admin</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <span class="card-ref">FILE: NEW_HOPE_LAB | EST. 2025</span>
+                <h4>87-Hour Technical Oversight</h4>
+                <p>Provided high-level development and administrative leadership for a dental laboratory enterprise property.</p>
+                <div class="tech-badges">
+                    <span class="badge">Leadership</span>
+                    <span class="badge">DevOps</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <span class="card-ref">FILE: GREENE_LIGHT | EST. 2026</span>
+                <h4>Logistics Resource Orchestration</h4>
+                <p>Managed a complex 42.75-hour resource allocation across DEV, DES, and ADMN disciplines for a major transport hub.</p>
+                <div class="tech-badges">
+                    <span class="badge">Project Management</span>
+                    <span class="badge">Logistics</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <span class="card-ref">FILE: GLOBAL_MFG | EST. 2025</span>
+                <h4>Search Engine Performance Audit</h4>
+                <p>Identified and resolved performance bottlenecks in enterprise-level search bar functionality for a global manufacturing client.</p>
+                <div class="tech-badges">
+                    <span class="badge">Optimization</span>
+                    <span class="badge">UX</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <span class="card-ref">FILE: REAL_ESTATE_EC | EST. 2024</span>
+                <h4>E-commerce Listings Integration</h4>
+                <p>Architected a fully integrated real-estate search and listing system with a custom e-commerce core.</p>
+                <div class="tech-badges">
+                    <span class="badge">System Architecture</span>
+                    <span class="badge">E-commerce</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <span class="card-ref">FILE: SUPP_EC | EST. 2024</span>
+                <h4>High-Engagement UI Implementation</h4>
+                <p>Implemented an 'Above and Beyond' website featuring custom animations and a conversion-first supplement storefront.</p>
+                <div class="tech-badges">
+                    <span class="badge">Animation</span>
+                    <span class="badge">Frontend</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <span class="card-ref">FILE: BRAND_MIGRATION | EST. 2025</span>
+                <h4>Smooth Multi-Server Migration</h4>
+                <p>Executed a server-side migration and exact-clone rebuild for a rebranding initiative with 0% downtime reported.</p>
+                <div class="tech-badges">
+                    <span class="badge">DevOps</span>
+                    <span class="badge">Migration</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <span class="card-ref">FILE: STEELE_ADMIN | EST. 2026</span>
+                <h4>Dormant Portfolio Stabilization</h4>
+                <p>Personally audited and reactivated high-value enterprise properties to restore marketing and operational continuity.</p>
+                <div class="tech-badges">
+                    <span class="badge">Portfolio Management</span>
+                    <span class="badge">Audit</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <span class="card-ref">FILE: NKTELCO_MARKETING | EST. 2026</span>
+                <h4>High-Volume AdSet Reactivation</h4>
+                <p>Managed the strategic restart of complex ad set projects for a major regional telecommunications provider.</p>
+                <div class="tech-badges">
+                    <span class="badge">Digital Marketing</span>
+                    <span class="badge">Ops</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <span class="card-ref">FILE: ORBITEL_CONTINUITY | EST. 2026</span>
+                <h4>Multi-Campaign Operational Stability</h4>
+                <p>Ensured 100% campaign continuity across multiple domains for a strategic communication leadership account.</p>
+                <div class="tech-badges">
+                    <span class="badge">Strategy</span>
+                    <span class="badge">Continuity</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <span class="card-ref">FILE: JOTFORM_PROTOCOLS | EST. 2026</span>
+                <h4>Enterprise Data Protocol Design</h4>
+                <p>Designed and established file naming and data handling protocols for high-volume JotForm-based client data ingestion.</p>
+                <div class="tech-badges">
+                    <span class="badge">Data Integrity</span>
+                    <span class="badge">SOP</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <span class="card-ref">FILE: SCOTT_PAYMENT | EST. 2025</span>
+                <h4>Payment System Re-Architecture</h4>
+                <p>Refactored legacy payment links into a high-performance system and empowered client with advanced technical training.</p>
+                <div class="tech-badges">
+                    <span class="badge">FinTech</span>
+                    <span class="badge">Enablement</span>
+                </div>
+            </div>
+            
+        </div>
+
+        <footer style="margin-top: 10rem; text-align: center; font-family: var(--mono); font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase;">
+            <p>End of Comprehensive Project Registry - Verified 2026.04</p>
+        </footer>
+    </div>
+
+</body>
+</html>
