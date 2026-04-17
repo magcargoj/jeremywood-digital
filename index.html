@@ -120,23 +120,23 @@
             align-items: center;
             position: relative;
             background: linear-gradient(rgba(10,12,16,0.85), rgba(10,12,16,0.85)), 
-                        url('https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Cape_Fear_Memorial_Bridge_-_Wilmington,_North_Carolina.jpg&width=2048') center/cover no-repeat;
+                        url('https://upload.wikimedia.org/wikipedia/commons/4/4b/Datacenter_informatique_de_l%27Ecole_Polytechnique_%2832544959853%29.jpg') center/cover no-repeat;
         }
 
         .container { max-width: 1300px; margin: 0 auto; padding: 0 4rem; width: 100%; }
 
         @media (max-width: 768px) {
             .container { padding: 0 2rem; }
-            h1 { font-size: 3.5rem !important; margin-bottom: 2rem; }
-            .tagline { font-size: 1.25rem !important; }
+            h1 { font-size: 2.8rem !important; margin-bottom: 2rem; } /* Scaled down even more */
+            .tagline { font-size: 1.1rem !important; }
         }
 
-        h1 { font-size: clamp(4rem, 10vw, 7.5rem); font-weight: 900; line-height: 0.9; margin-bottom: 3rem; }
+        h1 { font-size: clamp(3rem, 8vw, 7.5rem); font-weight: 900; line-height: 0.9; margin-bottom: 3rem; }
         h1 span { color: var(--primary); font-style: italic; }
 
         .tagline { font-size: 1.6rem; color: var(--text-muted); font-weight: 300; max-width: 700px; margin-bottom: 5rem; }
 
-        /* Bento Grid */
+        /* Bento Grid: CRITICAL MOBILE FIX */
         .bento-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 2.5rem; margin-bottom: 12rem; }
 
         .bento-card {
@@ -153,23 +153,27 @@
         }
 
         @media (max-width: 768px) {
-            .bento-card { padding: 2.5rem; min-height: 350px; }
-            .bento-grid { gap: 1.5rem; }
+            .bento-grid { 
+                grid-template-columns: 1fr !important; /* Force 1 column */
+                gap: 1.5rem;
+                margin-bottom: 8rem;
+            }
+            .bento-card { 
+                grid-column: 1 / -1 !important; /* Force full width overlaying any span classes */
+                padding: 2rem; 
+                min-height: 300px; 
+            }
         }
 
         .bento-card:hover { border-color: var(--primary); transform: translateY(-10px); }
 
         .card-id { font-family: var(--mono); font-size: 0.75rem; color: var(--primary); margin-bottom: 1.5rem; letter-spacing: 0.2em; font-weight: 600; }
-        .card-content h3 { font-size: clamp(2rem, 5vw, 2.5rem); margin-bottom: 1.5rem; font-weight: 700; }
-        .card-content p { color: var(--text-muted); font-size: 1.2rem; }
+        .card-content h3 { font-size: clamp(1.8rem, 4vw, 2.5rem); margin-bottom: 1rem; font-weight: 700; }
+        .card-content p { color: var(--text-muted); font-size: 1.1rem; }
 
-        .image-bg { position: absolute; top:0; left:0; width:100%; height:100%; background-size:cover; background-position:center; z-index:1; opacity:0.3; transition: transform 0.8s; }
-        .overlay { position: absolute; top:0; left:0; width:100%; height:100%; background: linear-gradient(to top, var(--bg) 15%, transparent 100%); z-index:2; }
-        .card-content { position: relative; z-index: 5; }
-
-        /* Stats */
-        .stat-value { font-family: 'Playfair Display', serif; font-size: clamp(5rem, 15vw, 8rem); font-style: italic; font-weight: 900; line-height: 0.8; margin-bottom: 1rem; }
-        .stat-label { font-size: 0.9rem; color: var(--primary); letter-spacing: 0.3em; font-weight: 800; text-transform: uppercase; }
+        /* Stats Scaling Fix */
+        .stat-value { font-family: 'Playfair Display', serif; font-size: clamp(4rem, 12vw, 8rem); font-style: italic; font-weight: 900; line-height: 0.8; margin-bottom: 1rem; }
+        .stat-label { font-size: 0.8rem; color: var(--primary); letter-spacing: 0.3em; font-weight: 800; text-transform: uppercase; }
 
         /* Navigation */
         .island-nav {
@@ -188,8 +192,8 @@
         }
 
         @media (max-width: 768px) {
-            .island-nav { bottom: 2rem; right: 50%; transform: translateX(50%); width: 92%; justify-content: center; gap: 2rem; padding: 1.25rem 1.5rem; }
-            .island-nav span { display: none; } /* Hide text on ultra-small */
+            .island-nav { bottom: 1.5rem; right: 50%; transform: translateX(50%); width: 92%; justify-content: center; gap: 1.5rem; padding: 1rem 1.5rem; }
+            .nav-item { font-size: 0.7rem !important; letter-spacing: 0.1rem !important; }
         }
 
         .nav-item {
@@ -213,16 +217,16 @@
         .reveal { opacity: 0; transform: translateY(40px); transition: all 1s ease-out; }
         .reveal.active { opacity: 1 !important; transform: translateY(0) !important; }
 
-        /* Profile Img Mobile Fix */
+        /* Hero Image - Global Anchor Perspective */
         .hero-portrait {
             position: absolute; 
             right: 8%; 
             top: 50%; 
             transform: translateY(-50%); 
-            width: 35vw; 
-            opacity: 0.8; 
+            width: 32vw; 
+            opacity: 0.9; 
             mix-blend-mode: screen; 
-            filter: contrast(1.2) grayscale(1);
+            filter: contrast(1.1) grayscale(1);
         }
 
         @media (max-width: 1024px) {
@@ -232,11 +236,11 @@
                 top: auto; 
                 transform: none; 
                 width: 100%; 
-                max-width: 400px; 
-                margin: 4rem auto 0;
+                max-width: 320px; 
+                margin: 3rem auto 0;
                 display: block;
             }
-            .hero { flex-direction: column; text-align: center; padding: 10rem 0 6rem; }
+            .hero { flex-direction: column; text-align: center; padding: 8rem 0 4rem; min-height: auto; }
             .hero-content { max-width: 100%; }
         }
     </style>
@@ -260,13 +264,13 @@
     <!-- Cinematic Hero -->
     <section class="hero">
         <div class="container" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;">
-            <div class="hero-content" style="opacity: 1;"> <!-- Removed reveal to ensure instant visibility -->
-                <div class="card-id" style="font-size: 0.9rem; margin-bottom: 2rem;">DOSSIER_ID: SENTINEL_001</div>
+            <div class="hero-content" style="opacity: 1;">
+                <div class="card-id" style="font-size: 0.8rem; margin-bottom: 2rem;">DOSSIER_ID: SENTINEL_ALPHA</div>
                 <h1>Jeremy Wood. <br>Technical <span>Sentinel.</span></h1>
-                <p class="tagline">Providing high-fidelity revenue forensics and operational integrity for the world's best remote teams.</p>
-                <a href="mailto:jeremy@jeremywood.digital" id="cta-email" style="color: white; font-size: 1.2rem; border-bottom: 2px solid var(--primary); padding-bottom: 8px; text-decoration: none; font-weight: 900;">Establish Connection →</a>
+                <p class="tagline">Engineering high-fidelity revenue forensics and data integrity for enterprise distributed systems.</p>
+                <a href="mailto:jeremy@jeremywood.digital" id="cta-email" style="color: white; font-size: 1.1rem; border-bottom: 2px solid var(--primary); padding-bottom: 8px; text-decoration: none; font-weight: 900;">Establish Connection →</a>
             </div>
-            <div class="hero-portrait" style="opacity: 0.8;"> <!-- Removed reveal to ensure instant visibility -->
+            <div class="hero-portrait" style="opacity: 0.9;">
                 <img src="jeremy-stylish.jpg" alt="Jeremy Wood" style="width: 100%; border-radius: var(--radius-lg);">
             </div>
         </div>
@@ -282,7 +286,7 @@
                 <div class="card-id">FILE_REF: FORENSIC_AUDIT</div>
                 <div class="card-content">
                     <h3>Revenue <br>Forensics.</h3>
-                    <p>Treating attribution discrepancies like forensic investigations to find the precise architectural root causes where complex code and enterprise revenue collide.</p>
+                    <p>Treating attribution discrepancies like high-stakes investigations to secure architectural data pipelines in complex enterprise environments.</p>
                 </div>
             </div>
 
@@ -291,37 +295,26 @@
                 <div class="card-id">FILE_REF: UPTIME_ENGINE</div>
                 <div class="stat-value">100%</div>
                 <div class="stat-label">Verified Uptime</div>
-                <p style="font-size: 1.1rem; margin-top: 2rem; color: var(--text-muted);">Autonomous overnight operations for critical global infrastructure.</p>
+                <p style="font-size: 1rem; margin-top: 1.5rem; color: var(--text-muted);">Maintaining bulletproof technical stability for global, always-on operations.</p>
             </div>
 
             <!-- The Stack -->
             <div class="bento-card reveal" style="grid-column: span 4;">
-                <div class="card-id">FILE_REF: STACK_INTEGRITY</div>
+                <div class="card-id">FILE_REF: INFRA_PIPELINE</div>
                 <div class="card-content">
                     <h3>Digital <br>Anchor.</h3>
-                    <p style="font-size: 1.1rem;">Architecting DataLayer schemas and GTM logic for Automattic, Buffer, and the distributed-first elite.</p>
+                    <p style="font-size: 1rem;">Deploying enterprise-grade DataLayer schemas and GTM logic optimized for the elite distributed-first SaaS tier.</p>
                 </div>
             </div>
 
-            <!-- Infrastructure -->
+            <!-- Global Reliability -->
             <div class="bento-card reveal" style="grid-column: span 8;">
-                <div class="image-bg" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/4b/Datacenter_informatique_de_l%27Ecole_Polytechnique_%2832544959853%29.jpg');"></div>
+                <div class="image-bg" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/2/23/Fiber_optic_illuminated.jpg');"></div>
                 <div class="overlay"></div>
-                <div class="card-id">FILE_REF: INFRA_DOMINANCE</div>
+                <div class="card-id">FILE_REF: GLOBAL_OPS</div>
                 <div class="card-content">
-                    <h3>Strategic <br>Redundancy.</h3>
-                    <p>Managing the silent systems that anchor global remote teams from a US base in Wilmington, NC.</p>
-                </div>
-            </div>
-
-            <!-- Global Reach -->
-            <div class="bento-card reveal" style="grid-column: span 12;">
-                <div class="image-bg" style="background-image: url('https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Cape_Fear_Memorial_Bridge_-_Wilmington,_North_Carolina.jpg&width=2048');"></div>
-                <div class="overlay"></div>
-                <div class="card-id">FILE_REF: OPERATIONAL_ANCHOR</div>
-                <div class="card-content" style="max-width: 800px;">
-                    <h3>High-Fidelity <br>Forward Deployment.</h3>
-                    <p>Natively comfortable in distributed-first environments. Persistent operational anchor in Wilmington, North Carolina, supporting teams from Automattic to Buffer.</p>
+                    <h3>Operational <br>Reliability.</h3>
+                    <p>US-Based technical anchor providing resilient, high-fidelity support for internationally distributed leadership teams.</p>
                 </div>
             </div>
 
