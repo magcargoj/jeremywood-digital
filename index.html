@@ -9,15 +9,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg: #0a0e14;
-            --surface: #161d29;
-            --surface-glass: rgba(22, 29, 41, 0.7);
+            --bg: #ffffff;
+            --surface: #f8fafc;
             --primary: #FF6347; /* Tomato */
-            --primary-glow: rgba(255, 99, 71, 0.3);
-            --text: #f8f9fa;
-            --text-muted: #94a3b8;
-            --border: rgba(255, 255, 255, 0.08);
-            --glass-blur: 12px;
+            --primary-light: #fff5f3;
+            --text: #0f172a;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --shadow: rgba(255, 99, 71, 0.1);
         }
 
         * {
@@ -35,85 +34,64 @@
             scroll-behavior: smooth;
         }
 
-        h1, h2, h3 { font-family: 'Outfit', sans-serif; }
+        h1, h2, h3 { font-family: 'Outfit', sans-serif; letter-spacing: -0.02em; }
 
         .container {
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 0 auto;
             padding: 2rem;
         }
 
-        /* Background Hero Asset */
-        .hero-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100vh;
-            background: linear-gradient(to bottom, rgba(10, 14, 20, 0) 60%, var(--bg) 100%), 
-                        url('technical_anchor_hero_1776452196811.png');
-            background-size: cover;
-            background-position: center;
-            opacity: 0.4;
-            z-index: -1;
-            filter: grayscale(20%) contrast(110%);
-        }
-
         /* Hero Content */
         .hero {
-            height: 80vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-start;
-            padding-top: 4rem;
+            padding: 10rem 0 6rem;
+            text-align: left;
         }
 
         .hero h1 {
-            font-size: clamp(3rem, 8vw, 5rem);
+            font-size: clamp(3rem, 7vw, 4.5rem);
             font-weight: 800;
             line-height: 1.1;
-            margin-bottom: 1.5rem;
-            letter-spacing: -0.03em;
+            margin-bottom: 2rem;
+            color: var(--text);
         }
 
         .hero h1 span {
             color: var(--primary);
-            text-shadow: 0 0 30px var(--primary-glow);
         }
 
         .hero p {
             font-size: 1.25rem;
             color: var(--text-muted);
             max-width: 600px;
-            margin-bottom: 2.5rem;
+            margin-bottom: 3rem;
+            font-weight: 400;
         }
 
         /* Bento Grid */
         .bento-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            grid-auto-rows: minmax(180px, auto);
+            grid-auto-rows: minmax(200px, auto);
             gap: 1.5rem;
             margin-bottom: 8rem;
         }
 
         .bento-item {
-            background: var(--surface-glass);
-            backdrop-filter: blur(var(--glass-blur));
-            -webkit-backdrop-filter: blur(var(--glass-blur));
+            background: var(--surface);
             border: 1px solid var(--border);
-            border-radius: 24px;
-            padding: 2rem;
-            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s;
+            border-radius: 32px;
+            padding: 2.5rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             display: flex;
             flex-direction: column;
             justify-content: space-between;
         }
 
         .bento-item:hover {
-            transform: translateY(-5px);
+            transform: translateY(-8px);
             border-color: var(--primary);
+            box-shadow: 0 20px 40px var(--shadow);
         }
 
         /* Layout Combinations */
@@ -123,7 +101,7 @@
 
         @media (max-width: 992px) {
             .bento-grid { grid-template-columns: repeat(2, 1fr); }
-            .hero { height: auto; padding: 10rem 0 4rem; }
+            .hero { padding: 8rem 0 4rem; }
         }
 
         @media (max-width: 576px) {
@@ -134,57 +112,54 @@
         /* Floating Nav */
         .floating-nav {
             position: fixed;
-            bottom: 2rem;
+            bottom: 2.5rem;
             left: 50%;
             transform: translateX(-50%);
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 0.75rem 1.5rem;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--border);
+            padding: 0.8rem 2rem;
             border-radius: 100px;
             display: flex;
-            gap: 2rem;
+            gap: 2.5rem;
             z-index: 1000;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 15px 35px rgba(15, 23, 42, 0.08);
         }
 
         .nav-item {
             color: var(--text-muted);
             text-decoration: none;
-            font-size: 0.875rem;
+            font-size: 0.9rem;
             font-weight: 600;
             transition: color 0.2s;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
         }
 
         .nav-item:hover, .nav-item.active {
             color: var(--primary);
         }
 
-        /* 3D Vibrant Icons (CSS based) */
+        /* 3D Vibrant Icons (Clean White & Tomato) */
         .icon-box {
-            width: 48px;
-            height: 48px;
-            border-radius: 12px;
-            background: linear-gradient(135deg, var(--primary), #ff8a65);
+            width: 56px;
+            height: 56px;
+            border-radius: 16px;
+            background: white;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 1.5rem;
-            box-shadow: 0 8px 16px rgba(255, 99, 71, 0.2), 
-                        inset 0 -4px 6px rgba(0, 0, 0, 0.1);
-            color: white;
-            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+            color: var(--primary);
+            font-size: 1.75rem;
+            border: 1px solid #f1f5f9;
         }
 
         /* Animations */
         .reveal {
             opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
         }
 
         .reveal.visible {
@@ -194,32 +169,47 @@
 
         /* Typography Utilities */
         .label {
-            font-size: 0.75rem;
+            font-size: 0.8rem;
             text-transform: uppercase;
-            letter-spacing: 0.15em;
+            letter-spacing: 0.2em;
             color: var(--primary);
             font-weight: 700;
-            margin-bottom: 0.5rem;
+            margin-bottom: 1rem;
             display: block;
         }
 
-        h3 { font-size: 1.5rem; margin-bottom: 1rem; }
-        p.small { font-size: 0.9375rem; color: var(--text-muted); }
+        h3 { font-size: 1.75rem; margin-bottom: 1.25rem; font-weight: 700; }
+        p.small { font-size: 1rem; color: var(--text-muted); font-weight: 400; }
+
+        .btn-main {
+            background: var(--primary);
+            color: white;
+            padding: 1.25rem 2.5rem;
+            border-radius: 16px;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-block;
+            transition: all 0.3s;
+            box-shadow: 0 10px 20px var(--shadow);
+        }
+
+        .btn-main:hover {
+            transform: scale(1.02);
+            box-shadow: 0 15px 30px var(--shadow);
+        }
 
     </style>
 </head>
 <body>
 
-    <div class="hero-bg"></div>
-
     <div class="container">
         <!-- Hero Section -->
         <header class="hero">
-            <span class="label reveal">The Digital Anchor</span>
-            <h1 class="reveal">Technical Support <span>Sniper.</span></h1>
+            <span class="label reveal">Technical Anchor</span>
+            <h1 class="reveal">Built for the <span>Support Trenches.</span></h1>
             <p class="reveal">Identifing root causes where code, content, and revenue collide. 4 years of mission-critical overnight operations.</p>
             <div class="reveal">
-                <a href="#contact" style="background: var(--primary); padding: 1rem 2rem; border-radius: 12px; color: white; text-decoration: none; font-weight: 700; display: inline-block;">Deploy Site</a>
+                <a href="mailto:jeremy@jeremywood.digital" class="btn-main">Connect via Email</a>
             </div>
         </header>
 
@@ -228,25 +218,25 @@
             
             <!-- Large Focus: The Anchor -->
             <div class="bento-item large reveal">
-                <div class="icon-box">⚓</div>
+                <div class="icon-box">🛡️</div>
                 <div>
-                    <span class="label">The Persona</span>
-                    <h3>The Global Anchor</h3>
-                    <p class="small">Master of asynchronous communication. After managing overnights solo for 4 years, I thrive in the technical trenches where autonomy is the only option.</p>
+                    <span class="label">Autonomy</span>
+                    <h3>The Overnight Anchor</h3>
+                    <p class="small">I specialize in high-stakes, solo technical support. After managing overnights at scale for 4 years, I thrive in environments where 'Deep Work' is the primary engine of results.</p>
                 </div>
             </div>
 
             <!-- Tall Focus: Technical Arsenal -->
             <div class="bento-item tall reveal">
-                <span class="label">Skills</span>
-                <h3>The Arsenal</h3>
-                <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.75rem; color: var(--text-muted); font-size: 0.9375rem;">
-                    <li>→ JS Troubleshooting</li>
-                    <li>→ DOM & CSS Audits</li>
+                <span class="label">The Arsenal</span>
+                <h3>SaaS Sourcing</h3>
+                <ul style="list-style: none; display: flex; flex-direction: column; gap: 1rem; color: var(--text-muted); font-size: 1rem;">
+                    <li>→ JS DOM Audits</li>
                     <li>→ REST API & JSON</li>
                     <li>→ WordPress VIP Ops</li>
                     <li>→ DNS & Domain Mgmt</li>
-                    <li>→ GTM Tag Integration</li>
+                    <li>→ GTM Tag Monitoring</li>
+                    <li>→ Network Diagnostics</li>
                 </ul>
             </div>
 
@@ -260,26 +250,26 @@
             </div>
 
             <!-- Small: Reliability -->
-            <div class="bento-item reveal">
+            <div class="bento-item reveal" style="background: var(--primary-light); border-color: var(--primary);">
                 <span class="label">Reliability</span>
-                <h3 style="color: var(--primary);">100%</h3>
-                <p class="small">Overnight Uptime Record</p>
+                <h3 style="color: var(--primary); font-size: 2.5rem;">100%</h3>
+                <p class="small" style="color: var(--primary);">Uptime Record</p>
             </div>
 
             <!-- Wide Focus: Human Angle -->
             <div class="bento-item wide reveal">
                 <div>
-                    <span class="label">Values</span>
-                    <h3>Intentional Nomadism</h3>
+                    <span class="label">Mission</span>
+                    <h3>Intentional Living</h3>
                 </div>
-                <p class="small">Providing a "roadschooling" education for my family of six while providing 24/7 technical stability for global partners.</p>
+                <p class="small">Providing a 'roadschooling' education for my family of six while ensuring 24/7 technical stability for my global professional partners.</p>
             </div>
 
             <!-- Small: GBA Project -->
             <div class="bento-item reveal">
-                <div style="font-size: 2rem;">🎮</div>
-                <h3 style="font-size: 1rem;">GBA Platformer</h3>
-                <p class="small" style="font-size: 0.75rem;">C / Hardware Coding</p>
+                <div style="font-size: 2.25rem; margin-bottom: 1rem;">🎮</div>
+                <h3 style="font-size: 1.1rem;">C Development</h3>
+                <p class="small" style="font-size: 0.85rem;">GBA Engineering</p>
             </div>
 
         </main>
@@ -288,12 +278,12 @@
     <!-- Floating Nav -->
     <nav class="floating-nav">
         <a href="#" class="nav-item active">Home</a>
-        <a href="#about" class="nav-item">About</a>
-        <a href="#contact" class="nav-item">Connect</a>
+        <a href="https://linkedin.com" target="_blank" class="nav-item">LinkedIn</a>
+        <a href="mailto:jeremy@jeremywood.digital" class="nav-item">Contact</a>
     </nav>
 
     <script>
-        // Simple Intersection Observer for Reveal animations
+        // Intersection Observer for Reveal animations
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
