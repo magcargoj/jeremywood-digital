@@ -17,20 +17,20 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Outfit:wght@800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Inter:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet">
     
     <style>
         :root {
-            --bg: #0a0c10; /* Deep Obsidian */
+            --bg: #0a0c10; 
             --surface: #12151c;
             --primary: #FF6347; /* Tomato */
-            --primary-glow: rgba(255, 99, 71, 0.3);
+            --primary-glow: rgba(255, 99, 71, 0.4);
             --text-light: #f8fafc;
             --text-muted: #94a3b8;
-            --border: rgba(255, 255, 255, 0.05);
-            --shadow-premium: 0 40px 100px rgba(0, 0, 0, 0.5);
+            --border: rgba(255, 255, 255, 0.08);
             --radius-lg: 40px;
             --radius-md: 24px;
+            --mono: 'IBM Plex Mono', monospace;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -42,131 +42,91 @@
             line-height: 1.6;
             overflow-x: hidden;
             scroll-behavior: smooth;
+            cursor: default;
         }
 
-        h1, h2, h3 { font-family: 'Playfair Display', serif; letter-spacing: -0.02em; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
 
-        .container {
-            max-width: 1300px;
-            margin: 0 auto;
-            padding: 0 4rem;
+        /* Custom Reticle Cursor */
+        #reticle {
+            position: fixed;
+            width: 40px;
+            height: 40px;
+            border: 1px solid var(--primary);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 10000;
+            display: none;
+            transform: translate(-50%, -50%);
+            mix-blend-mode: exclusion;
         }
 
-        /* Digital Scan Interaction */
-        .scan-line {
+        #reticle::before, #reticle::after {
+            content: "";
+            position: absolute;
+            background: var(--primary);
+        }
+
+        #reticle::before { top: 50%; left: -10px; width: 60px; height: 1px; }
+        #reticle::after { left: 50%; top: -10px; width: 1px; height: 60px; }
+
+        /* Audit Mode HUD */
+        #hud-overlay {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            height: 2px;
-            background: linear-gradient(to right, transparent, var(--primary), transparent);
-            z-index: 9999;
-            opacity: 0.3;
+            height: 100%;
+            background: rgba(10, 12, 16, 0.4);
+            backdrop-filter: blur(10px) brightness(0.8);
+            -webkit-backdrop-filter: blur(10px);
+            z-index: 9000;
+            display: none;
             pointer-events: none;
-            animation: scan 6s infinite linear;
+            border: 20px solid rgba(255, 99, 71, 0.05);
         }
 
-        @keyframes scan {
-            0% { top: -5%; }
-            100% { top: 105%; }
+        #hud-dataport {
+            position: fixed;
+            top: 6rem;
+            left: 4rem;
+            width: 320px;
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            color: var(--primary);
+            z-index: 9001;
+            display: none;
+            pointer-events: auto;
+            background: rgba(18, 21, 28, 0.9);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            max-height: 70vh;
+            overflow-y: auto;
         }
 
-        /* Cinematic Hero */
+        .data-log { margin-bottom: 0.75rem; border-left: 2px solid var(--primary); padding-left: 1rem; }
+        .data-log span { color: var(--text-muted); display: block; filter: brightness(0.8); }
+
+        /* Cinematic Layout */
         .hero {
             height: 100vh;
             display: flex;
             align-items: center;
             position: relative;
-            overflow: hidden;
-            background-image: linear-gradient(rgba(10, 12, 16, 0.8), rgba(10, 12, 16, 0.8)), 
-                              url('https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Cape_Fear_Memorial_Bridge_-_Wilmington,_North_Carolina.jpg&width=2048');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            margin-bottom: 8rem;
+            background: linear-gradient(rgba(10,12,16,0.85), rgba(10,12,16,0.85)), 
+                        url('https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Cape_Fear_Memorial_Bridge_-_Wilmington,_North_Carolina.jpg&width=2048') center/cover fixed;
         }
 
-        .hero-content {
-            position: relative;
-            z-index: 10;
-            max-width: 900px;
-        }
+        .container { max-width: 1300px; margin: 0 auto; padding: 0 4rem; }
 
-        .label {
-            font-family: 'Inter', sans-serif;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 0.4em;
-            color: var(--primary);
-            font-weight: 800;
-            margin-bottom: 2rem;
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-        }
+        h1 { font-size: clamp(4rem, 10vw, 7.5rem); font-weight: 900; line-height: 0.85; margin-bottom: 3rem; }
+        h1 span { color: var(--primary); font-style: italic; }
 
-        .label::before {
-            content: "";
-            width: 14px;
-            height: 14px;
-            background-color: var(--primary);
-            border-radius: 50%;
-            box-shadow: 0 0 25px var(--primary);
-            animation: pulse 2s infinite;
-        }
+        .tagline { font-size: 1.6rem; color: var(--text-muted); font-weight: 300; max-width: 700px; margin-bottom: 5rem; }
 
-        @keyframes pulse {
-            0% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.2; transform: scale(1.5); }
-            100% { opacity: 1; transform: scale(1); }
-        }
-
-        h1 {
-            font-size: clamp(4rem, 10vw, 7.5rem);
-            font-weight: 900;
-            line-height: 0.9;
-            margin-bottom: 3rem;
-            color: var(--text-light);
-        }
-
-        h1 i { font-weight: 700; font-style: italic; }
-        h1 span { color: var(--primary); }
-
-        .tagline {
-            font-size: 1.6rem;
-            color: var(--text-muted);
-            max-width: 700px;
-            margin-bottom: 5rem;
-            font-weight: 300;
-        }
-
-        .hero-profile {
-            position: absolute;
-            right: 10%;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 30vw;
-            max-width: 500px;
-            z-index: 5;
-            opacity: 0.9;
-        }
-
-        .profile-img {
-            width: 100%;
-            border-radius: var(--radius-lg);
-            filter: grayscale(100%) contrast(1.1);
-            mix-blend-mode: screen;
-            transition: all 0.6s cubic-bezier(0.15, 0, 0, 1);
-        }
-        .hero:hover .profile-img { filter: grayscale(0%); transform: scale(1.02); }
-
-        /* Signature Sentinel Bento Evolution */
-        .bento-grid {
-            display: grid;
-            grid-template-columns: repeat(12, 1fr);
-            gap: 2.5rem;
-            margin-bottom: 12rem;
-        }
+        /* Bento Grid: Signature Sentinel */
+        .bento-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 2.5rem; margin-bottom: 12rem; }
 
         .bento-card {
             background: var(--surface);
@@ -181,125 +141,69 @@
             transition: all 0.6s cubic-bezier(0.15, 0, 0, 1);
         }
 
-        .bento-card.col-8 { grid-column: span 8; }
-        .bento-card.col-4 { grid-column: span 4; }
-        .bento-card.tall { grid-row: span 2; }
-        .bento-card.square { aspect-ratio: 1; }
+        .bento-card:hover { border-color: var(--primary); transform: translateY(-15px); }
 
-        .bento-card:hover {
-            border-color: var(--primary);
-            box-shadow: 0 50px 100px rgba(0, 0, 0, 0.4);
-            transform: translateY(-20px);
-        }
+        .card-id { font-family: var(--mono); font-size: 0.7rem; color: var(--primary); opacity: 0.6; margin-bottom: 1rem; letter-spacing: 0.2em; }
+        .card-content h3 { font-size: 2.5rem; margin-bottom: 1.5rem; font-weight: 700; }
+        .card-content p { color: var(--text-muted); font-size: 1.25rem; }
 
-        /* Image Overlays */
-        .image-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-size: cover;
-            background-position: center;
-            z-index: 1;
-            opacity: 0.4;
-            transition: transform 0.8s cubic-bezier(0.15, 0, 0, 1);
-        }
-        .bento-card:hover .image-bg { transform: scale(1.1); opacity: 0.6; }
-
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to top, var(--bg) 15%, transparent 100%);
-            z-index: 2;
-        }
-
-        /* Text Styles */
+        .image-bg { position: absolute; top:0; left:0; width:100%; height:100%; background-size:cover; background-position:center; z-index:1; opacity:0.3; transition: transform 0.8s; }
+        .bento-card:hover .image-bg { transform: scale(1.1); opacity: 0.5; }
+        .overlay { position: absolute; top:0; left:0; width:100%; height:100%; background: linear-gradient(to top, var(--bg) 10%, transparent 100%); z-index:2; }
         .card-content { position: relative; z-index: 5; }
-        .card-content h3 { font-size: 2.5rem; color: white; margin-bottom: 1.5rem; font-weight: 700; }
-        .card-content p { color: var(--text-muted); font-size: 1.25rem; max-width: 500px; }
 
-        .card-detail {
-            font-family: 'Inter', sans-serif;
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 0.3em;
-            color: var(--primary);
-            font-weight: 800;
-            margin-bottom: 1.5rem;
-        }
+        /* Utility */
+        .stat-value { font-family: 'Playfair Display', serif; font-size: 8rem; font-style: italic; font-weight: 900; line-height: 0.8; margin-bottom: 1rem; }
+        .stat-label { font-size: 0.9rem; color: var(--primary); letter-spacing: 0.3em; font-weight: 800; text-transform: uppercase; }
 
-        /* Stats Component - Sentinel Style */
-        .stat-value { 
-            font-family: 'Playfair Display', serif;
-            font-size: 8rem; 
-            font-weight: 900; 
-            color: var(--text-light); 
-            line-height: 0.8;
-            margin-bottom: 1rem;
-            font-style: italic;
-        }
-        .stat-label { 
-            font-size: 1rem; 
-            color: var(--primary); 
-            text-transform: uppercase; 
-            letter-spacing: 0.3em; 
-            font-weight: 900; 
-        }
-
-        /* Floating Sentinel Nav */
-        nav {
+        /* Floating Nav & Audit Toggle */
+        .island-nav {
             position: fixed;
             bottom: 3.5rem;
             right: 4rem;
-            background: rgba(18, 21, 28, 0.8);
-            backdrop-filter: blur(30px);
-            -webkit-backdrop-filter: blur(30px);
+            background: rgba(18, 21, 28, 0.9);
+            backdrop-filter: blur(20px);
             border: 1px solid var(--border);
-            padding: 1.5rem 4rem;
+            padding: 1.25rem 3.5rem;
             border-radius: 100px;
             display: flex;
             gap: 4rem;
-            z-index: 1000;
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+            z-index: 10000;
         }
 
-        nav a {
+        .island-nav a, .btn-audit {
             text-decoration: none;
             color: var(--text-muted);
             font-weight: 800;
-            font-size: 1rem;
+            font-size: 0.9rem;
             transition: all 0.3s;
             text-transform: uppercase;
-            letter-spacing: 0.2em;
+            letter-spacing: 0.2rem;
+            cursor: pointer;
+            border: none;
+            background: none;
         }
-        nav a:hover { color: var(--primary); transform: translateY(-2px); }
+        .island-nav a:hover, .btn-audit:hover { color: var(--primary); }
+        .btn-audit.active { color: var(--primary); text-shadow: 0 0 10px var(--primary); }
 
-        /* Animation */
-        .reveal {
-            opacity: 0;
-            transform: translateY(60px);
-            transition: all 1.2s cubic-bezier(0.15, 0, 0, 1);
-        }
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
+        .reveal { opacity: 0; transform: translateY(50px); transition: all 1s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
 
         @media (max-width: 1024px) {
             .container { padding: 0 2rem; }
-            .hero-profile { display: none; }
             .bento-grid { grid-template-columns: repeat(1, 1fr); }
-            .bento-card.col-8, .bento-card.col-4 { grid-column: span 1; }
-            nav { right: 50%; transform: translateX(50%); width: 90%; justify-content: center; }
+            .col-8, .col-4 { grid-column: span 1 !important; }
+            .island-nav { right: 50%; transform: translateX(50%); width: 90%; justify-content: center; }
         }
     </style>
 </head>
-<body>
-    <div class="scan-line"></div>
+<body id="sentinel-body">
+    <div id="reticle"></div>
+    <div id="hud-overlay"></div>
+    <div id="hud-dataport">
+        <div style="font-weight: 800; margin-bottom: 2rem; border-bottom: 1px solid var(--primary); padding-bottom: 0.5rem;">[ LIVE_SIGNAL_FEED ]</div>
+        <div id="data-stream"></div>
+    </div>
 
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WHQFSJKB"
@@ -310,95 +214,127 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content reveal">
-                <span class="label">System Identity: Sentinel</span>
-                <h1>Jeremy Wood. <br><i>Technical</i> <span>Sentinel.</span></h1>
-                <p class="tagline">Engineering the invisible infrastructure that protects enterprise revenue and attribution integrity.</p>
-                <a href="mailto:jeremy@jeremywood.digital" class="cta-link" style="color: white; text-decoration: none; font-weight: 900; font-size: 1.2rem; border-bottom: 2px solid var(--primary); padding-bottom: 10px;">Establish Connection →</a>
+                <div class="card-id" style="font-size: 0.9rem; margin-bottom: 2rem;">DOSSIER_ID: SENTINEL_001</div>
+                <h1>Jeremy Wood. <br>Technical <span>Sentinel.</span></h1>
+                <p class="tagline">Providing high-fidelity revenue forensics and operational integrity for the world's best remote teams.</p>
+                <a href="mailto:jeremy@jeremywood.digital" id="cta-email" class="btn-audit" style="color: white; font-size: 1.1rem; border-bottom: 2px solid var(--primary); padding-bottom: 8px;">Audit Operational State →</a>
             </div>
         </div>
-        <div class="hero-profile reveal">
-            <img src="jeremy-stylish.jpg" alt="Jeremy Wood" class="profile-img">
+        <div style="position: absolute; right: 8%; top: 50%; transform: translateY(-50%); width: 35vw; opacity: 0.8; mix-blend-mode: screen; filter: contrast(1.2);">
+            <img src="jeremy-stylish.jpg" alt="Jeremy Wood" style="width: 100%; border-radius: var(--radius-lg); filter: grayscale(1);">
         </div>
     </section>
 
     <div class="container">
-        <!-- Sentinel Bento Grid -->
         <main class="bento-grid">
             
-            <!-- Strategic Forensics (Magnifying Glass) -->
-            <div class="bento-card col-8 tall reveal">
+            <!-- Strategic Forensics -->
+            <div class="bento-card col-8 tall reveal" style="grid-column: span 8;">
                 <div class="image-bg" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/d/df/Magnifying_glass_01.jpg');"></div>
                 <div class="overlay"></div>
-                <div class="card-detail">Methodology</div>
+                <div class="card-id">FILE_REF: FORENSIC_AUDIT</div>
                 <div class="card-content">
-                    <h3>Attribution <br>Forensics.</h3>
-                    <p>I treat every attribution discrepancy like a forensic investigation. Identifying the precise architectural root causes where complex code and enterprise revenue collide.</p>
+                    <h3>Revenue <br>Forensics.</h3>
+                    <p>Treating attribution discrepancies like forensic investigations to find the precise architectural root causes where complex code and enterprise revenue collide.</p>
                 </div>
             </div>
 
             <!-- Reliability Stats -->
-            <div class="bento-card col-4 reveal">
-                <div class="card-detail">Operational Anchor</div>
+            <div class="bento-card col-4 reveal" style="grid-column: span 4;">
+                <div class="card-id">FILE_REF: UPTIME_ENGINE</div>
                 <div class="stat-value">100%</div>
                 <div class="stat-label">Verified Uptime</div>
-                <p style="font-size: 1rem; margin-top: 2rem;">4 years of mission-critical, autonomous overnight operations for a distributed global base.</p>
+                <p style="font-size: 1.1rem; margin-top: 2rem; color: var(--text-muted);">Autonomous overnight operations for critical global infrastructure.</p>
             </div>
 
-            <!-- The Stack (Light Card) -->
-            <div class="bento-card col-4 square reveal">
-                <div class="card-detail">Technical Stack</div>
+            <!-- The Stack -->
+            <div class="bento-card col-4 reveal" style="grid-column: span 4;">
+                <div class="card-id">FILE_REF: STACK_INTEGRITY</div>
                 <div class="card-content">
-                    <h3>Digital <br>Integrity.</h3>
-                    <p style="font-size: 1rem;">Architecting standardized DataLayer schemas, GTM logic, and server-side tracking (CAPI) that scales with business growth.</p>
+                    <h3>Digital <br>Anchor.</h3>
+                    <p style="font-size: 1.1rem;">Architecting DataLayer schemas and GTM logic for Automattic, Buffer, and the distributed-first elite.</p>
                 </div>
             </div>
 
-            <!-- Infrastructure (Server Rack) -->
-            <div class="bento-card col-8 reveal">
+            <!-- Infrastructure -->
+            <div class="bento-card col-8 reveal" style="grid-column: span 8;">
                 <div class="image-bg" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/4b/Datacenter_informatique_de_l%27Ecole_Polytechnique_%2832544959853%29.jpg');"></div>
                 <div class="overlay"></div>
-                <div class="card-detail">Base Operations</div>
-                <div class="card-content" style="display: flex; justify-content: space-between; align-items: flex-end;">
-                    <h3>Infrastructure <br>Security.</h3>
-                    <p>Managing the silent systems that anchor the world's most innovative remote teams.</p>
-                </div>
-            </div>
-
-            <!-- Global Reach (Fiber) -->
-            <div class="bento-card col-12 reveal" style="min-height: 400px; grid-column: span 12;">
-                <div class="image-bg" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/2/23/Fiber_optic_illuminated.jpg');"></div>
-                <div class="overlay"></div>
-                <div class="card-detail">Operational Reach</div>
-                <div class="card-content" style="max-width: 800px;">
-                    <h3>High-Fidelity <br>Forward Deployment.</h3>
-                    <p>Natively comfortable in distributed-first environments. Persistent operational anchor in Wilmington, North Carolina, supporting teams from Automattic to Buffer.</p>
+                <div class="card-id">FILE_REF: INFRA_DOMINANCE</div>
+                <div class="card-content">
+                    <h3>Strategic <br>Redundancy.</h3>
+                    <p>Managing the silent systems that anchor global remote teams from a US base in Wilmington, NC.</p>
                 </div>
             </div>
 
         </main>
     </div>
 
-    <!-- Floating Sentinel Nav -->
-    <nav>
+    <!-- Island Nav -->
+    <nav class="island-nav">
         <a href="#">Focus</a>
-        <a href="https://linkedin.com" target="_blank">Signals</a>
-        <a href="mailto:jeremy@jeremywood.digital">Audit</a>
+        <button class="btn-audit" id="btn-audit-toggle">Diagnose</button>
+        <a href="mailto:jeremy@jeremywood.digital">Connect</a>
     </nav>
 
     <script>
-        // DataLayer Initialization
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        
-        // Intersection Observer for Premium Reveal
-        const observerOptions = { threshold: 0.15 };
+        // --- AUDIT MODE LOGIC ---
+        const auditBtn = document.getElementById('btn-audit-toggle');
+        const hud = document.getElementById('hud-overlay');
+        const dataport = document.getElementById('hud-dataport');
+        const reticle = document.getElementById('reticle');
+        const stream = document.getElementById('data-stream');
+        let auditActive = false;
+
+        // Toggling Audit Mode
+        auditBtn.addEventListener('click', () => {
+            auditActive = !auditActive;
+            auditBtn.classList.toggle('active');
+            hud.style.display = auditActive ? 'block' : 'none';
+            dataport.style.display = auditActive ? 'block' : 'none';
+            reticle.style.display = auditActive ? 'block' : 'none';
+            document.body.style.cursor = auditActive ? 'none' : 'default';
+            
+            if (auditActive) logEvent('SYSTEM_AUDIT', 'INITIALIZED');
+        });
+
+        // Reticle Following
+        window.addEventListener('mousemove', (e) => {
+            if (auditActive) {
+                reticle.style.left = e.clientX + 'px';
+                reticle.style.top = e.clientY + 'px';
+            }
+        });
+
+        // DataStream Feed
+        function logEvent(event, value) {
+            const entry = document.createElement('div');
+            entry.className = 'data-log';
+            entry.innerHTML = `<span>[${new Date().toLocaleTimeString()}]</span> ${event}: ${value}`;
+            stream.prepend(entry);
+        }
+
+        // Hook into DataLayer for Real-time Display
+        const originalPush = window.dataLayer.push;
+        window.dataLayer.push = function() {
+            const args = Array.prototype.slice.call(arguments);
+            args.forEach(arg => {
+                if (arg.event) logEvent('DATALAYER_EVENT', arg.event);
+            });
+            return originalPush.apply(window.dataLayer, arguments);
+        };
+
+        // Track CTA
+        document.getElementById('cta-email').addEventListener('click', () => {
+            window.dataLayer.push({'event': 'cta_audit_click'});
+        });
+
+        // Reveal Animation
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                }
+                if (entry.isIntersecting) entry.target.classList.add('active');
             });
-        }, observerOptions);
+        }, { threshold: 0.1 });
 
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
     </script>
