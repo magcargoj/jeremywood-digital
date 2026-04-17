@@ -1,33 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WHQFSJKB');</script>
+    <!-- End Google Tag Manager -->
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jeremy Wood | Technical Anchor</title>
+    <title>Jeremy Wood | AdOps Specialist & Technical Anchor</title>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@400;700;800&display=swap" rel="stylesheet">
+    
     <style>
         :root {
-            --bg: #ffffff;
-            --surface: #f8fafc;
+            --bg: #F1F5F9; /* Software Gray */
+            --white: #ffffff;
             --primary: #FF6347; /* Tomato */
-            --primary-light: #fff5f3;
-            --text: #0f172a;
+            --primary-glow: rgba(255, 99, 71, 0.15);
+            --text-dark: #0f172a;
             --text-muted: #64748b;
             --border: #e2e8f0;
-            --shadow: rgba(255, 99, 71, 0.1);
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            --radius: 24px;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             background-color: var(--bg);
-            color: var(--text);
+            color: var(--text-dark);
             font-family: 'Inter', sans-serif;
             line-height: 1.6;
             overflow-x: hidden;
@@ -37,35 +46,94 @@
         h1, h2, h3 { font-family: 'Outfit', sans-serif; letter-spacing: -0.02em; }
 
         .container {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 2rem;
         }
 
-        /* Hero Content */
+        /* Hero Section */
         .hero {
-            padding: 10rem 0 6rem;
-            text-align: left;
+            padding: 8rem 0 4rem;
+            display: flex;
+            align-items: center;
+            gap: 4rem;
         }
 
-        .hero h1 {
-            font-size: clamp(3rem, 7vw, 4.5rem);
-            font-weight: 800;
-            line-height: 1.1;
-            margin-bottom: 2rem;
-            color: var(--text);
+        .hero-content { flex: 1.2; }
+        .hero-image { 
+            flex: 0.8; 
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--border);
         }
 
-        .hero h1 span {
+        .hero-image img {
+            width: 100%;
+            display: block;
+            filter: grayscale(10%) contrast(105%);
+        }
+
+        .label {
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
             color: var(--primary);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
 
-        .hero p {
+        .label::before {
+            content: "";
+            width: 8px;
+            height: 8px;
+            background-color: var(--primary);
+            border-radius: 50%;
+            display: inline-block;
+            box-shadow: 0 0 10px var(--primary);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.2); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+
+        h1 {
+            font-size: clamp(3rem, 6vw, 4.5rem);
+            font-weight: 800;
+            line-height: 1;
+            margin-bottom: 1.5rem;
+        }
+
+        h1 span { color: var(--primary); }
+
+        .tagline {
             font-size: 1.25rem;
             color: var(--text-muted);
             max-width: 600px;
-            margin-bottom: 3rem;
-            font-weight: 400;
+            margin-bottom: 2.5rem;
+        }
+
+        .btn-main {
+            background: var(--primary);
+            color: var(--white);
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-block;
+            transition: all 0.2s;
+            box-shadow: 0 10px 20px var(--primary-glow);
+        }
+
+        .btn-main:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px var(--primary-glow);
         }
 
         /* Bento Grid */
@@ -74,223 +142,234 @@
             grid-template-columns: repeat(4, 1fr);
             grid-auto-rows: minmax(200px, auto);
             gap: 1.5rem;
-            margin-bottom: 8rem;
+            margin-bottom: 6rem;
         }
 
-        .bento-item {
-            background: var(--surface);
+        .bento-card {
+            background: var(--white);
             border: 1px solid var(--border);
-            border-radius: 32px;
+            border-radius: var(--radius);
             padding: 2.5rem;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            position: relative;
+            overflow: hidden;
         }
 
-        .bento-item:hover {
+        .bento-card:hover {
             transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
             border-color: var(--primary);
-            box-shadow: 0 20px 40px var(--shadow);
         }
 
-        /* Layout Combinations */
-        .large { grid-column: span 2; grid-row: span 2; }
-        .wide { grid-column: span 2; }
-        .tall { grid-row: span 2; }
+        .bento-card.large { grid-column: span 2; grid-row: span 2; }
+        .bento-card.wide { grid-column: span 2; }
+        .bento-card.tall { grid-row: span 2; }
 
-        @media (max-width: 992px) {
-            .bento-grid { grid-template-columns: repeat(2, 1fr); }
-            .hero { padding: 8rem 0 4rem; }
-        }
-
-        @media (max-width: 576px) {
-            .bento-grid { grid-template-columns: 1fr; }
-            .large, .wide, .tall { grid-column: span 1; grid-row: span 1; }
-        }
-
-        /* Floating Nav */
-        .floating-nav {
-            position: fixed;
-            bottom: 2.5rem;
-            left: 50%;
-            transform: translateX(-50%);
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid var(--border);
-            padding: 0.8rem 2rem;
-            border-radius: 100px;
-            display: flex;
-            gap: 2.5rem;
-            z-index: 1000;
-            box-shadow: 0 15px 35px rgba(15, 23, 42, 0.08);
-        }
-
-        .nav-item {
-            color: var(--text-muted);
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 600;
-            transition: color 0.2s;
-        }
-
-        .nav-item:hover, .nav-item.active {
-            color: var(--primary);
-        }
-
-        /* 3D Vibrant Icons (Clean White & Tomato) */
         .icon-box {
             width: 56px;
             height: 56px;
             border-radius: 16px;
-            background: white;
+            background: var(--bg);
             display: flex;
             align-items: center;
             justify-content: center;
             margin-bottom: 2rem;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
             color: var(--primary);
-            font-size: 1.75rem;
-            border: 1px solid #f1f5f9;
+            font-size: 1.5rem;
+            box-shadow: var(--shadow-sm);
         }
 
-        /* Animations */
+        h3 { font-size: 1.5rem; margin-bottom: 1rem; font-weight: 700; }
+        .content { font-size: 1rem; color: var(--text-muted); }
+
+        /* Technical List */
+        .tech-list { list-style: none; margin-top: 1rem; }
+        .tech-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.9375rem;
+            color: var(--text-muted);
+        }
+        .tech-item::before { content: "→"; color: var(--primary); }
+
+        /* Stats Component */
+        .stat-value { font-size: 3rem; font-weight: 800; color: var(--primary); line-height: 1; }
+        .stat-label { font-size: 0.875rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; }
+
+        /* Reveal Animation */
         .reveal {
             opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+            transform: translateY(20px);
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
         }
-
-        .reveal.visible {
+        .reveal.active {
             opacity: 1;
             transform: translateY(0);
         }
 
-        /* Typography Utilities */
-        .label {
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 0.2em;
-            color: var(--primary);
-            font-weight: 700;
-            margin-bottom: 1rem;
-            display: block;
+        /* Floating Nav */
+        nav {
+            position: fixed;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--border);
+            padding: 0.75rem 2rem;
+            border-radius: 100px;
+            display: flex;
+            gap: 2.5rem;
+            z-index: 1000;
+            box-shadow: var(--shadow-md);
         }
 
-        h3 { font-size: 1.75rem; margin-bottom: 1.25rem; font-weight: 700; }
-        p.small { font-size: 1rem; color: var(--text-muted); font-weight: 400; }
-
-        .btn-main {
-            background: var(--primary);
-            color: white;
-            padding: 1.25rem 2.5rem;
-            border-radius: 16px;
+        nav a {
             text-decoration: none;
-            font-weight: 700;
-            display: inline-block;
-            transition: all 0.3s;
-            box-shadow: 0 10px 20px var(--shadow);
+            color: var(--text-muted);
+            font-weight: 600;
+            font-size: 0.875rem;
+            transition: color 0.2s;
+        }
+        nav a:hover { color: var(--primary); }
+
+        @media (max-width: 992px) {
+            .hero { flex-direction: column; text-align: center; padding: 6rem 0 3rem; }
+            .hero-content { order: 2; }
+            .hero-image { order: 1; width: 100%; max-width: 500px; }
+            .bento-grid { grid-template-columns: repeat(2, 1fr); }
         }
 
-        .btn-main:hover {
-            transform: scale(1.02);
-            box-shadow: 0 15px 30px var(--shadow);
+        @media (max-width: 576px) {
+            .bento-grid { grid-template-columns: 1fr; }
+            .bento-card.large, .bento-card.wide, .bento-card.tall { grid-column: span 1; grid-row: span 1; }
         }
-
     </style>
 </head>
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WHQFSJKB"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
     <div class="container">
         <!-- Hero Section -->
-        <header class="hero">
-            <span class="label reveal">Technical Anchor</span>
-            <h1 class="reveal">Built for the <span>Support Trenches.</span></h1>
-            <p class="reveal">Identifing root causes where code, content, and revenue collide. 4 years of mission-critical overnight operations.</p>
-            <div class="reveal">
-                <a href="mailto:jeremy@jeremywood.digital" class="btn-main">Connect via Email</a>
+        <section class="hero">
+            <div class="hero-content reveal">
+                <span class="label">Operational Readiness: Active</span>
+                <h1>AdOps Specialist & Technical <span>Anchor.</span></h1>
+                <p class="tagline">Providing high-fidelity revenue protection and attribution forensics for teams that demand 100% data integrity.</p>
+                <a href="mailto:jeremy@jeremywood.digital" id="cta-email" class="btn-main">Get the Data Foundation</a>
             </div>
-        </header>
+            <div class="hero-image reveal">
+                <img src="technical_anchor_hero_1776452196811.png" alt="Technical Anchor Branding">
+            </div>
+        </section>
 
-        <!-- Bento Grid Section -->
+        <!-- Bento Grid -->
         <main class="bento-grid">
             
-            <!-- Large Focus: The Anchor -->
-            <div class="bento-item large reveal">
-                <div class="icon-box">🛡️</div>
+            <!-- Tracking Card -->
+            <div class="bento-card large reveal">
+                <div class="icon-box">🏷️</div>
                 <div>
-                    <span class="label">Autonomy</span>
-                    <h3>The Overnight Anchor</h3>
-                    <p class="small">I specialize in high-stakes, solo technical support. After managing overnights at scale for 4 years, I thrive in environments where 'Deep Work' is the primary engine of results.</p>
+                    <span class="label">Live Implementation</span>
+                    <h3>High-Fidelity Tracking Stack</h3>
+                    <p class="content">This site is a live technical case study. I have implemented a robust Data Layer, Google Tag Manager (GTM-WHQFSJKB), and GA4 event tracking to prove operational proficiency.</p>
+                    <ul class="tech-list">
+                        <li class="tech-item">Server-Side Tracking Configuration</li>
+                        <li class="tech-item">Meta Pixel Deduplication</li>
+                        <li class="tech-item">Cross-Domain Attribution Bridge</li>
+                        <li class="tech-item">Custom Event Schema (JSON)</li>
+                    </ul>
                 </div>
             </div>
 
-            <!-- Tall Focus: Technical Arsenal -->
-            <div class="bento-item tall reveal">
-                <span class="label">The Arsenal</span>
-                <h3>SaaS Sourcing</h3>
-                <ul style="list-style: none; display: flex; flex-direction: column; gap: 1rem; color: var(--text-muted); font-size: 1rem;">
-                    <li>→ JS DOM Audits</li>
-                    <li>→ REST API & JSON</li>
-                    <li>→ WordPress VIP Ops</li>
-                    <li>→ DNS & Domain Mgmt</li>
-                    <li>→ GTM Tag Monitoring</li>
-                    <li>→ Network Diagnostics</li>
-                </ul>
-            </div>
-
-            <!-- Wide Focus: Ad-Tech Specialist -->
-            <div class="bento-item wide reveal">
-                <div>
-                    <span class="label">Expertise</span>
-                    <h3>Ad-Tech Revenue Protection</h3>
-                </div>
-                <p class="small">Treating every ticket like a forensic investigation. I fix the underlying architectural weakness, not just the symptom.</p>
-            </div>
-
-            <!-- Small: Reliability -->
-            <div class="bento-item reveal" style="background: var(--primary-light); border-color: var(--primary);">
+            <!-- Reliability Card -->
+            <div class="bento-card reveal">
                 <span class="label">Reliability</span>
-                <h3 style="color: var(--primary); font-size: 2.5rem;">100%</h3>
-                <p class="small" style="color: var(--primary);">Uptime Record</p>
+                <div class="stat-value">100%</div>
+                <div class="stat-label">Overnight Uptime Record</div>
+                <p class="content" style="margin-top: 1rem; font-size: 0.875rem;">Managed mission-critical solo overnights for 4 years.</p>
             </div>
 
-            <!-- Wide Focus: Human Angle -->
-            <div class="bento-item wide reveal">
+            <!-- Forensic Card -->
+            <div class="bento-card tall reveal">
+                <div class="icon-box">🔍</div>
                 <div>
-                    <span class="label">Mission</span>
-                    <h3>Intentional Living</h3>
+                    <span class="label">Specialization</span>
+                    <h3>Attribution Forensics</h3>
+                    <p class="content">I specialize in identifying root causes where code and revenue collide. I treat every ticket like a forensic investigation to protect your ad spend.</p>
                 </div>
-                <p class="small">Providing a 'roadschooling' education for my family of six while ensuring 24/7 technical stability for my global professional partners.</p>
             </div>
 
-            <!-- Small: GBA Project -->
-            <div class="bento-item reveal">
-                <div style="font-size: 2.25rem; margin-bottom: 1rem;">🎮</div>
-                <h3 style="font-size: 1.1rem;">C Development</h3>
-                <p class="small" style="font-size: 0.85rem;">GBA Engineering</p>
+            <!-- WP Card -->
+            <div class="bento-card reveal">
+                <div class="icon-box">🚀</div>
+                <div>
+                    <h3>WordPress VIP Ops</h3>
+                    <p class="content">Expert in enterprise-scale WordPress environments, from DNS mapping to plugin conflict resolution.</p>
+                </div>
+            </div>
+
+            <!-- Global Availability -->
+            <div class="bento-card wide reveal">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <div>
+                        <span class="label">Availability</span>
+                        <h3>Global Remote Partner</h3>
+                    </div>
+                    <div style="font-size: 2rem;">🌎</div>
+                </div>
+                <p class="content">Natively comfortable in distributed-first environments. I have the infrastructure (US Tax Base, NC) to support teams in any time zone, at any scale.</p>
+            </div>
+
+            <!-- GBA Card -->
+            <div class="bento-card reveal">
+                <div class="icon-box">🕹️</div>
+                <h3>C Development</h3>
+                <p class="content" style="font-size: 0.875rem;">Low-level hardware coding for GBA platformers.</p>
             </div>
 
         </main>
     </div>
 
     <!-- Floating Nav -->
-    <nav class="floating-nav">
-        <a href="#" class="nav-item active">Home</a>
-        <a href="https://linkedin.com" target="_blank" class="nav-item">LinkedIn</a>
-        <a href="mailto:jeremy@jeremywood.digital" class="nav-item">Contact</a>
+    <nav>
+        <a href="#">Home</a>
+        <a href="https://linkedin.com" target="_blank" id="nav-linkedin">LinkedIn</a>
+        <a href="mailto:jeremy@jeremywood.digital" id="nav-email">Contact</a>
     </nav>
 
     <script>
-        // Intersection Observer for Reveal animations
+        // DataLayer Initialization
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        
+        // Track CTA Clicks
+        document.getElementById('cta-email').addEventListener('click', function() {
+            window.dataLayer.push({
+                'event': 'cta_click',
+                'cta_location': 'hero',
+                'cta_type': 'email'
+            });
+        });
+
+        // Simple Intersection Observer for Animations
+        const observerOptions = { threshold: 0.1 };
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
+                    entry.target.classList.add('active');
                 }
             });
-        }, { threshold: 0.1 });
+        }, observerOptions);
 
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
     </script>
