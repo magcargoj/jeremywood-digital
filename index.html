@@ -332,50 +332,6 @@
     </nav>
 
     <script>
-        const auditBtn = document.getElementById('btn-audit-toggle');
-        const hud = document.getElementById('hud-overlay');
-        const dataport = document.getElementById('hud-dataport');
-        const reticle = document.getElementById('reticle');
-        const stream = document.getElementById('data-stream');
-        const closeHud = document.getElementById('close-hud');
-        let auditActive = false;
-
-        function toggleAudit() {
-            auditActive = !auditActive;
-            auditBtn.classList.toggle('active');
-            hud.style.display = auditActive ? 'block' : 'none';
-            dataport.style.display = auditActive ? 'block' : 'none';
-            if (reticle) reticle.style.display = (auditActive && window.matchMedia('(hover: hover)').matches) ? 'block' : 'none';
-            document.body.style.cursor = (auditActive && window.matchMedia('(hover: hover)').matches) ? 'none' : 'default';
-            if (auditActive) logEvent('SYSTEM_AUDIT', 'INITIALIZED');
-        }
-
-        auditBtn.addEventListener('click', toggleAudit);
-        closeHud.addEventListener('click', toggleAudit);
-
-        window.addEventListener('mousemove', (e) => {
-            if (auditActive && reticle) {
-                reticle.style.left = e.clientX + 'px';
-                reticle.style.top = e.clientY + 'px';
-            }
-        });
-
-        function logEvent(event, value) {
-            const entry = document.createElement('div');
-            entry.className = 'data-log';
-            entry.innerHTML = `<span>[${new Date().toLocaleTimeString()}]</span> ${event}: ${value}`;
-            stream.prepend(entry);
-        }
-
-        const originalPush = window.dataLayer.push;
-        window.dataLayer.push = function() {
-            const args = Array.prototype.slice.call(arguments);
-            args.forEach(arg => {
-                if (arg.event) logEvent('DATALAYER_EVENT', arg.event);
-            });
-            return originalPush.apply(window.dataLayer, arguments);
-        };
-
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) entry.target.classList.add('active');
