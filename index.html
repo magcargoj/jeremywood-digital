@@ -4,7 +4,7 @@
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    j=d.createElement(s),dl=l!='dataLayer'?'&ldataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-WHQFSJKB');</script>
     <!-- End Google Tag Manager -->
@@ -42,33 +42,27 @@
             line-height: 1.6;
             overflow-x: hidden;
             scroll-behavior: smooth;
-            cursor: default;
         }
 
         h1, h2, h3 { font-family: 'Playfair Display', serif; }
 
-        /* Custom Reticle Cursor */
-        #reticle {
-            position: fixed;
-            width: 40px;
-            height: 40px;
-            border: 1px solid var(--primary);
-            border-radius: 50%;
-            pointer-events: none;
-            z-index: 10000;
-            display: none;
-            transform: translate(-50%, -50%);
-            mix-blend-mode: exclusion;
+        /* Custom Reticle Cursor (Desktop Only) */
+        @media (hover: hover) {
+            #reticle {
+                position: fixed;
+                width: 40px;
+                height: 40px;
+                border: 1px solid var(--primary);
+                border-radius: 50%;
+                pointer-events: none;
+                z-index: 10000;
+                display: none;
+                transform: translate(-50%, -50%);
+                mix-blend-mode: exclusion;
+            }
+            #reticle::before { content: ""; position: absolute; top: 50%; left: -10px; width: 60px; height: 1px; background: var(--primary); }
+            #reticle::after { content: ""; position: absolute; left: 50%; top: -10px; width: 1px; height: 60px; background: var(--primary); }
         }
-
-        #reticle::before, #reticle::after {
-            content: "";
-            position: absolute;
-            background: var(--primary);
-        }
-
-        #reticle::before { top: 50%; left: -10px; width: 60px; height: 1px; }
-        #reticle::after { left: 50%; top: -10px; width: 1px; height: 60px; }
 
         /* Audit Mode HUD */
         #hud-overlay {
@@ -77,55 +71,72 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(10, 12, 16, 0.4);
-            backdrop-filter: blur(10px) brightness(0.8);
-            -webkit-backdrop-filter: blur(10px);
+            background: rgba(10, 12, 16, 0.6);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
             z-index: 9000;
             display: none;
             pointer-events: none;
-            border: 20px solid rgba(255, 99, 71, 0.05);
         }
 
         #hud-dataport {
             position: fixed;
             top: 6rem;
             left: 4rem;
-            width: 320px;
+            width: 380px;
             font-family: var(--mono);
-            font-size: 0.75rem;
+            font-size: 0.8rem;
             color: var(--primary);
             z-index: 9001;
             display: none;
-            pointer-events: auto;
-            background: rgba(18, 21, 28, 0.9);
-            padding: 2rem;
-            border-radius: 12px;
-            border: 1px solid var(--border);
+            background: rgba(18, 21, 28, 0.95);
+            padding: 2.5rem;
+            border-radius: 20px;
+            border: 1px solid var(--primary);
             max-height: 70vh;
             overflow-y: auto;
+            box-shadow: 0 50px 100px rgba(0,0,0,0.8);
         }
 
-        .data-log { margin-bottom: 0.75rem; border-left: 2px solid var(--primary); padding-left: 1rem; }
-        .data-log span { color: var(--text-muted); display: block; filter: brightness(0.8); }
+        @media (max-width: 1024px) {
+            #hud-dataport {
+                top: auto;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                border-radius: 30px 30px 0 0;
+                max-height: 50vh;
+                padding: 2rem;
+            }
+        }
 
-        /* Cinematic Layout */
+        .data-log { margin-bottom: 1rem; border-left: 2px solid var(--primary); padding-left: 1.5rem; }
+        .data-log span { color: var(--text-muted); display: block; font-size: 0.7rem; }
+
+        /* Cinematic Hero */
         .hero {
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             align-items: center;
             position: relative;
             background: linear-gradient(rgba(10,12,16,0.85), rgba(10,12,16,0.85)), 
-                        url('https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Cape_Fear_Memorial_Bridge_-_Wilmington,_North_Carolina.jpg&width=2048') center/cover fixed;
+                        url('https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Cape_Fear_Memorial_Bridge_-_Wilmington,_North_Carolina.jpg&width=2048') center/cover no-repeat;
         }
 
-        .container { max-width: 1300px; margin: 0 auto; padding: 0 4rem; }
+        .container { max-width: 1300px; margin: 0 auto; padding: 0 4rem; width: 100%; }
 
-        h1 { font-size: clamp(4rem, 10vw, 7.5rem); font-weight: 900; line-height: 0.85; margin-bottom: 3rem; }
+        @media (max-width: 768px) {
+            .container { padding: 0 2rem; }
+            h1 { font-size: 3.5rem !important; margin-bottom: 2rem; }
+            .tagline { font-size: 1.25rem !important; }
+        }
+
+        h1 { font-size: clamp(4rem, 10vw, 7.5rem); font-weight: 900; line-height: 0.9; margin-bottom: 3rem; }
         h1 span { color: var(--primary); font-style: italic; }
 
         .tagline { font-size: 1.6rem; color: var(--text-muted); font-weight: 300; max-width: 700px; margin-bottom: 5rem; }
 
-        /* Bento Grid: Signature Sentinel */
+        /* Bento Grid */
         .bento-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 2.5rem; margin-bottom: 12rem; }
 
         .bento-card {
@@ -141,59 +152,92 @@
             transition: all 0.6s cubic-bezier(0.15, 0, 0, 1);
         }
 
-        .bento-card:hover { border-color: var(--primary); transform: translateY(-15px); }
+        @media (max-width: 768px) {
+            .bento-card { padding: 2.5rem; min-height: 350px; }
+            .bento-grid { gap: 1.5rem; }
+        }
 
-        .card-id { font-family: var(--mono); font-size: 0.7rem; color: var(--primary); opacity: 0.6; margin-bottom: 1rem; letter-spacing: 0.2em; }
-        .card-content h3 { font-size: 2.5rem; margin-bottom: 1.5rem; font-weight: 700; }
-        .card-content p { color: var(--text-muted); font-size: 1.25rem; }
+        .bento-card:hover { border-color: var(--primary); transform: translateY(-10px); }
+
+        .card-id { font-family: var(--mono); font-size: 0.75rem; color: var(--primary); margin-bottom: 1.5rem; letter-spacing: 0.2em; font-weight: 600; }
+        .card-content h3 { font-size: clamp(2rem, 5vw, 2.5rem); margin-bottom: 1.5rem; font-weight: 700; }
+        .card-content p { color: var(--text-muted); font-size: 1.2rem; }
 
         .image-bg { position: absolute; top:0; left:0; width:100%; height:100%; background-size:cover; background-position:center; z-index:1; opacity:0.3; transition: transform 0.8s; }
-        .bento-card:hover .image-bg { transform: scale(1.1); opacity: 0.5; }
-        .overlay { position: absolute; top:0; left:0; width:100%; height:100%; background: linear-gradient(to top, var(--bg) 10%, transparent 100%); z-index:2; }
+        .overlay { position: absolute; top:0; left:0; width:100%; height:100%; background: linear-gradient(to top, var(--bg) 15%, transparent 100%); z-index:2; }
         .card-content { position: relative; z-index: 5; }
 
-        /* Utility */
-        .stat-value { font-family: 'Playfair Display', serif; font-size: 8rem; font-style: italic; font-weight: 900; line-height: 0.8; margin-bottom: 1rem; }
+        /* Stats */
+        .stat-value { font-family: 'Playfair Display', serif; font-size: clamp(5rem, 15vw, 8rem); font-style: italic; font-weight: 900; line-height: 0.8; margin-bottom: 1rem; }
         .stat-label { font-size: 0.9rem; color: var(--primary); letter-spacing: 0.3em; font-weight: 800; text-transform: uppercase; }
 
-        /* Floating Nav & Audit Toggle */
+        /* Navigation */
         .island-nav {
             position: fixed;
             bottom: 3.5rem;
             right: 4rem;
             background: rgba(18, 21, 28, 0.9);
-            backdrop-filter: blur(20px);
+            backdrop-filter: blur(25px);
             border: 1px solid var(--border);
             padding: 1.25rem 3.5rem;
             border-radius: 100px;
             display: flex;
             gap: 4rem;
             z-index: 10000;
+            box-shadow: 0 40px 100px rgba(0,0,0,0.6);
         }
 
-        .island-nav a, .btn-audit {
+        @media (max-width: 768px) {
+            .island-nav { bottom: 2rem; right: 50%; transform: translateX(50%); width: 92%; justify-content: center; gap: 2rem; padding: 1.25rem 1.5rem; }
+            .island-nav span { display: none; } /* Hide text on ultra-small */
+        }
+
+        .nav-item {
             text-decoration: none;
             color: var(--text-muted);
             font-weight: 800;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             transition: all 0.3s;
             text-transform: uppercase;
             letter-spacing: 0.2rem;
             cursor: pointer;
             border: none;
             background: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
-        .island-nav a:hover, .btn-audit:hover { color: var(--primary); }
-        .btn-audit.active { color: var(--primary); text-shadow: 0 0 10px var(--primary); }
+        .nav-item:hover { color: var(--primary); }
+        .nav-item.active { color: var(--primary); }
 
-        .reveal { opacity: 0; transform: translateY(50px); transition: all 1s ease-out; }
+        .reveal { opacity: 0; transform: translateY(40px); transition: all 1s ease-out; }
         .reveal.active { opacity: 1; transform: translateY(0); }
 
+        /* Profile Img Mobile Fix */
+        .hero-portrait {
+            position: absolute; 
+            right: 8%; 
+            top: 50%; 
+            transform: translateY(-50%); 
+            width: 35vw; 
+            opacity: 0.8; 
+            mix-blend-mode: screen; 
+            filter: contrast(1.2) grayscale(1);
+        }
+
         @media (max-width: 1024px) {
-            .container { padding: 0 2rem; }
-            .bento-grid { grid-template-columns: repeat(1, 1fr); }
-            .col-8, .col-4 { grid-column: span 1 !important; }
-            .island-nav { right: 50%; transform: translateX(50%); width: 90%; justify-content: center; }
+            .hero-portrait { 
+                position: relative; 
+                right: auto; 
+                top: auto; 
+                transform: none; 
+                width: 100%; 
+                max-width: 400px; 
+                margin: 4rem auto 0;
+                display: block;
+            }
+            .hero { flex-direction: column; text-align: center; padding: 10rem 0 6rem; }
+            .hero-content { max-width: 100%; }
         }
     </style>
 </head>
@@ -201,7 +245,10 @@
     <div id="reticle"></div>
     <div id="hud-overlay"></div>
     <div id="hud-dataport">
-        <div style="font-weight: 800; margin-bottom: 2rem; border-bottom: 1px solid var(--primary); padding-bottom: 0.5rem;">[ LIVE_SIGNAL_FEED ]</div>
+        <div style="font-weight: 800; margin-bottom: 2rem; border-bottom: 1px solid var(--primary); padding-bottom: 0.5rem; display: flex; justify-content: space-between;">
+            <span>[ LIVE_SIGNAL_FEED ]</span>
+            <button id="close-hud" style="background: none; border: none; color: var(--primary); cursor: pointer; font-family: var(--mono); font-weight: 900;">[X]</button>
+        </div>
         <div id="data-stream"></div>
     </div>
 
@@ -217,11 +264,11 @@
                 <div class="card-id" style="font-size: 0.9rem; margin-bottom: 2rem;">DOSSIER_ID: SENTINEL_001</div>
                 <h1>Jeremy Wood. <br>Technical <span>Sentinel.</span></h1>
                 <p class="tagline">Providing high-fidelity revenue forensics and operational integrity for the world's best remote teams.</p>
-                <a href="mailto:jeremy@jeremywood.digital" id="cta-email" class="btn-audit" style="color: white; font-size: 1.1rem; border-bottom: 2px solid var(--primary); padding-bottom: 8px;">Audit Operational State →</a>
+                <a href="mailto:jeremy@jeremywood.digital" id="cta-email" style="color: white; font-size: 1.2rem; border-bottom: 2px solid var(--primary); padding-bottom: 8px; text-decoration: none; font-weight: 900;">Establish Connection →</a>
             </div>
-        </div>
-        <div style="position: absolute; right: 8%; top: 50%; transform: translateY(-50%); width: 35vw; opacity: 0.8; mix-blend-mode: screen; filter: contrast(1.2);">
-            <img src="jeremy-stylish.jpg" alt="Jeremy Wood" style="width: 100%; border-radius: var(--radius-lg); filter: grayscale(1);">
+            <div class="hero-portrait reveal">
+                <img src="jeremy-stylish.jpg" alt="Jeremy Wood" style="width: 100%; border-radius: var(--radius-lg);">
+            </div>
         </div>
     </section>
 
@@ -229,7 +276,7 @@
         <main class="bento-grid">
             
             <!-- Strategic Forensics -->
-            <div class="bento-card col-8 tall reveal" style="grid-column: span 8;">
+            <div class="bento-card reveal" style="grid-column: span 8;">
                 <div class="image-bg" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/d/df/Magnifying_glass_01.jpg');"></div>
                 <div class="overlay"></div>
                 <div class="card-id">FILE_REF: FORENSIC_AUDIT</div>
@@ -240,7 +287,7 @@
             </div>
 
             <!-- Reliability Stats -->
-            <div class="bento-card col-4 reveal" style="grid-column: span 4;">
+            <div class="bento-card reveal" style="grid-column: span 4;">
                 <div class="card-id">FILE_REF: UPTIME_ENGINE</div>
                 <div class="stat-value">100%</div>
                 <div class="stat-label">Verified Uptime</div>
@@ -248,7 +295,7 @@
             </div>
 
             <!-- The Stack -->
-            <div class="bento-card col-4 reveal" style="grid-column: span 4;">
+            <div class="bento-card reveal" style="grid-column: span 4;">
                 <div class="card-id">FILE_REF: STACK_INTEGRITY</div>
                 <div class="card-content">
                     <h3>Digital <br>Anchor.</h3>
@@ -257,7 +304,7 @@
             </div>
 
             <!-- Infrastructure -->
-            <div class="bento-card col-8 reveal" style="grid-column: span 8;">
+            <div class="bento-card reveal" style="grid-column: span 8;">
                 <div class="image-bg" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/4b/Datacenter_informatique_de_l%27Ecole_Polytechnique_%2832544959853%29.jpg');"></div>
                 <div class="overlay"></div>
                 <div class="card-id">FILE_REF: INFRA_DOMINANCE</div>
@@ -267,46 +314,57 @@
                 </div>
             </div>
 
+            <!-- Global Reach -->
+            <div class="bento-card reveal" style="grid-column: span 12;">
+                <div class="image-bg" style="background-image: url('https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Cape_Fear_Memorial_Bridge_-_Wilmington,_North_Carolina.jpg&width=2048');"></div>
+                <div class="overlay"></div>
+                <div class="card-id">FILE_REF: OPERATIONAL_ANCHOR</div>
+                <div class="card-content" style="max-width: 800px;">
+                    <h3>High-Fidelity <br>Forward Deployment.</h3>
+                    <p>Natively comfortable in distributed-first environments. Persistent operational anchor in Wilmington, North Carolina, supporting teams from Automattic to Buffer.</p>
+                </div>
+            </div>
+
         </main>
     </div>
 
     <!-- Island Nav -->
     <nav class="island-nav">
-        <a href="#">Focus</a>
-        <button class="btn-audit" id="btn-audit-toggle">Diagnose</button>
-        <a href="mailto:jeremy@jeremywood.digital">Connect</a>
+        <a href="#" class="nav-item"><span>Focus</span></a>
+        <a href="https://www.linkedin.com/in/jeremy-wood-nc" target="_blank" class="nav-item" id="nav-linkedin"><span>LinkedIn</span></a>
+        <button class="nav-item" id="btn-audit-toggle"><span>Diagnose</span></button>
+        <a href="mailto:jeremy@jeremywood.digital" class="nav-item"><span>Connect</span></a>
     </nav>
 
     <script>
-        // --- AUDIT MODE LOGIC ---
         const auditBtn = document.getElementById('btn-audit-toggle');
         const hud = document.getElementById('hud-overlay');
         const dataport = document.getElementById('hud-dataport');
         const reticle = document.getElementById('reticle');
         const stream = document.getElementById('data-stream');
+        const closeHud = document.getElementById('close-hud');
         let auditActive = false;
 
-        // Toggling Audit Mode
-        auditBtn.addEventListener('click', () => {
+        function toggleAudit() {
             auditActive = !auditActive;
             auditBtn.classList.toggle('active');
             hud.style.display = auditActive ? 'block' : 'none';
             dataport.style.display = auditActive ? 'block' : 'none';
-            reticle.style.display = auditActive ? 'block' : 'none';
-            document.body.style.cursor = auditActive ? 'none' : 'default';
-            
+            if (reticle) reticle.style.display = (auditActive && window.matchMedia('(hover: hover)').matches) ? 'block' : 'none';
+            document.body.style.cursor = (auditActive && window.matchMedia('(hover: hover)').matches) ? 'none' : 'default';
             if (auditActive) logEvent('SYSTEM_AUDIT', 'INITIALIZED');
-        });
+        }
 
-        // Reticle Following
+        auditBtn.addEventListener('click', toggleAudit);
+        closeHud.addEventListener('click', toggleAudit);
+
         window.addEventListener('mousemove', (e) => {
-            if (auditActive) {
+            if (auditActive && reticle) {
                 reticle.style.left = e.clientX + 'px';
                 reticle.style.top = e.clientY + 'px';
             }
         });
 
-        // DataStream Feed
         function logEvent(event, value) {
             const entry = document.createElement('div');
             entry.className = 'data-log';
@@ -314,7 +372,6 @@
             stream.prepend(entry);
         }
 
-        // Hook into DataLayer for Real-time Display
         const originalPush = window.dataLayer.push;
         window.dataLayer.push = function() {
             const args = Array.prototype.slice.call(arguments);
@@ -324,12 +381,6 @@
             return originalPush.apply(window.dataLayer, arguments);
         };
 
-        // Track CTA
-        document.getElementById('cta-email').addEventListener('click', () => {
-            window.dataLayer.push({'event': 'cta_audit_click'});
-        });
-
-        // Reveal Animation
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) entry.target.classList.add('active');
