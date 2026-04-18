@@ -1,0 +1,21 @@
+{
+    "household_size": 6,
+    "location": "North Carolina",
+    "thresholds": {
+        "snap": {
+            "gross_monthly_limit": 7192,
+            "annual_limit": 86304,
+            "benefit_value_est": 800,
+            "label": "SNAP (Food Stamps)"
+        },
+        "medicaid": {
+            "adult_limit": 53000,
+            "child_cap_chip": 100000,
+            "label": "Medicaid / NC Health Choice",
+            "warning": "Adult Cliff occurs at $53k. Transition to 100% employer-paid insurance required."
+        }
+    },
+    "current_salary": 55000,
+    "target_salary_range": [62000, 75000],
+    "july_deadline": "2026-07-15"
+}

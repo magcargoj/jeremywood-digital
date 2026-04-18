@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work Style Dossier | Jeremy Wood</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .radar-container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: var(--bg-card);
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            text-align: center;
+        }
+        .radar-svg {
+            width: 100%;
+            height: auto;
+            max-width: 400px;
+        }
+        .trait-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+        .trait-item {
+            background: var(--bg-card);
+            padding: 30px;
+            border-radius: 12px;
+            border-left: 4px solid var(--primary);
+            text-align: left;
+        }
+        .trait-item h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .verified-badge {
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--primary);
+            padding: 4px 12px;
+            border-radius: 100px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body class="dark-theme">
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="index.html" class="logo">JW<span>.dev</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Back to Home</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="./Jeremy_Wood_AdOps_Resume.pdf" target="_blank" class="btn-primary">Resume</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero" style="min-height: 60vh;">
+        <div class="hero-content text-center">
+            <span class="verified-badge">Third-Party Validated</span>
+            <h1 class="headline">Workplace <span class="highlight">DNA</span></h1>
+            <p class="sub-headline" style="margin-left: auto; margin-right: auto;">A forensic breakdown of my professional temperament, interaction style, and technical motivators based on the Criteria Corp Workplace Insights assessment.</p>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="section-content">
+            <div class="radar-container fade-in">
+                <h2 style="margin-bottom: 30px;">Profile Overview</h2>
+                <!-- Simple SVG Spider Chart representation -->
+                <svg viewBox="0 0 400 400" class="radar-svg">
+                    <!-- Background Circles -->
+                    <circle cx="200" cy="200" r="150" fill="none" stroke="var(--border)" stroke-width="1" />
+                    <circle cx="200" cy="200" r="100" fill="none" stroke="var(--border)" stroke-width="1" />
+                    <circle cx="200" cy="200" r="50" fill="none" stroke="var(--border)" stroke-width="1" />
+                    
+                    <!-- Axes -->
+                    <line x1="200" y1="50" x2="200" y2="350" stroke="var(--border)" stroke-width="1" />
+                    <line x1="50" y1="200" x2="350" y2="200" stroke="var(--border)" stroke-width="1" />
+
+                    <!-- The Data Shape (Based on PDF results) -->
+                    <!-- High: Motivation, Cooperation, Patience, Self-Confidence, Goal-Orientation -->
+                    <!-- Mid: Assertiveness, Extroversion -->
+                    <polygon points="200,60 330,130 310,280 200,340 90,280 70,130" fill="rgba(56, 189, 248, 0.2)" stroke="var(--primary)" stroke-width="3" />
+                    
+                    <!-- Labels -->
+                    <text x="200" y="40" text-anchor="middle" fill="var(--text-main)" font-size="12">Motivation</text>
+                    <text x="360" y="200" text-anchor="start" fill="var(--text-main)" font-size="12">Cooperation</text>
+                    <text x="200" y="370" text-anchor="middle" fill="var(--text-main)" font-size="12">Patience</text>
+                    <text x="40" y="200" text-anchor="end" fill="var(--text-main)" font-size="12">Confidence</text>
+                </svg>
+                <p style="margin-top: 20px; color: var(--text-muted);">Assessment Date: April 17, 2026</p>
+            </div>
+
+            <div class="trait-grid">
+                <div class="trait-item fade-in-up">
+                    <h3><i data-lucide="zap"></i> Highly Motivated</h3>
+                    <p>Validated as having an exceptionally strong inner drive. I am viewed as committed and driven, finding intrinsic satisfaction in achieving high-impact technical goals.</p>
+                </div>
+                <div class="trait-item fade-in-up">
+                    <h3><i data-lucide="users"></i> Exceptionally Cooperative</h3>
+                    <p>I place a strong emphasis on treating others fairly and valuing social harmony. This makes me a natural fit for distributed, 'Happiness'-focused cultures where empathy is a requirement.</p>
+                </div>
+                <div class="trait-item fade-in-up">
+                    <h3><i data-lucide="clock"></i> Extremely Patient</h3>
+                    <p>I stay calm and level-headed under pressure. I am unruffled by complex technical setbacks or obstacle-heavy troubleshooting sessions, ensuring clear-headed resolution.</p>
+                </div>
+                <div class="trait-item fade-in-up">
+                    <h3><i data-lucide="shield-check"></i> Self-Assured</h3>
+                    <p>I have a strong sense of professional value and minimal self-doubt when executing complex technical audits. I trust my process and my data.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 Jeremy Wood. Validated Workplace Insights Dossier.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

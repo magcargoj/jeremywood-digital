@@ -1,0 +1,66 @@
+[
+    {
+        "name": "Prezi",
+        "category": "Hungarian-Linked",
+        "remote_maturity": "Global-First (EOR)",
+        "benefits": "Often full EOR coverage",
+        "roles": ["Support Operations", "Technical Coordinator"],
+        "notes": "HQ in Budapest. Good for citizenship goals."
+    },
+    {
+        "name": "LogMeIn (GoTo)",
+        "category": "Hungarian-Linked",
+        "remote_maturity": "Remote-First",
+        "benefits": "Strong US presence",
+        "roles": ["Product Support", "Implementation Specialist"],
+        "notes": "Founded in Budapest."
+    },
+    {
+        "name": "SEON",
+        "category": "Hungarian-Linked",
+        "remote_maturity": "Remote-Friendly",
+        "benefits": "Standard",
+        "roles": ["Customer Success Operations", "Technical Support"],
+        "notes": "Budapest HQ. Fraud prevention."
+    },
+    {
+        "name": "Help Scout",
+        "category": "100% Coverage (Tech)",
+        "remote_maturity": "All-Remote",
+        "benefits": "100% Health/Dental Family",
+        "roles": ["Support", "Operations"],
+        "notes": "Perfect for replacing Medicaid."
+    },
+    {
+        "name": "Buffer",
+        "category": "100% Coverage (Tech)",
+        "remote_maturity": "All-Remote",
+        "benefits": "100% Premium Coverage",
+        "roles": ["AdOps", "Support"],
+        "notes": "High transparency."
+    },
+    {
+        "name": "Atlassian",
+        "category": "100% Coverage (Tech)",
+        "remote_maturity": "Distributed",
+        "benefits": "100% Dependents Covered",
+        "roles": ["Technical Traffic", "Coordinator"],
+        "notes": "Massive enterprise scale."
+    },
+    {
+        "name": "Progressive",
+        "category": "Enterprise Stability",
+        "remote_maturity": "Remote Teams",
+        "benefits": "Day 1 Coverage",
+        "roles": ["Ad Operations", "Technical Coordinator"],
+        "notes": "Retirement-track stability."
+    },
+    {
+        "name": "Future PLC",
+        "category": "Enterprise Stability",
+        "remote_maturity": "Remote Teams",
+        "benefits": "Strong UK/US Benefits",
+        "roles": ["Digital Ad Operations Associate"],
+        "notes": "Large publisher. Quiet 40 hours."
+    }
+]

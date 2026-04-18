@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Career 2026 | Transition Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo-section">
+                <div class="logo-icon">NC</div>
+                <span class="logo-text">Career2026</span>
+            </div>
+            
+            <nav class="nav-menu">
+                <a href="#overview" class="nav-item active">
+                    <i data-lucide="layout-dashboard"></i>
+                    <span>Overview</span>
+                </a>
+                <a href="#pipeline" class="nav-item">
+                    <i data-lucide="layers"></i>
+                    <span>Pipeline</span>
+                </a>
+                <a href="#branding" class="nav-item">
+                    <i data-lucide="award"></i>
+                    <span>Resume & Brand</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="user-card">
+                    <div class="avatar">JW</div>
+                    <div class="user-info">
+                        <span class="user-name">Jeremy Wood</span>
+                        <span class="user-role">Tech Support Specialist</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="search-bar">
+                    <i data-lucide="search"></i>
+                    <input type="text" placeholder="Search companies, roles, or skills...">
+                </div>
+                <div class="top-actions">
+                    <button class="action-btn"><i data-lucide="bell"></i></button>
+                    <button class="action-btn primary"><i data-lucide="plus"></i> New Application</button>
+                </div>
+            </header>
+
+            <div class="content-wrapper">
+                <!-- Overview Section -->
+                <section id="overview" class="view">
+                    <div class="header-section">
+                        <h1>Transition Engine</h1>
+                        <p class="subtitle">Ensuring a secure, 100% remote IC pivot before the July 15th Central America launch.</p>
+                    </div>
+
+                    <div class="stats-grid">
+                        <div class="card pulse-card">
+                            <div class="card-header">
+                                <span class="card-label">July 15 Hard Deadline</span>
+                                <i data-lucide="clock"></i>
+                            </div>
+                            <div class="pulse-display">
+                                <div class="countdown">
+                                    <span class="value" id="days-left">90</span>
+                                    <span class="unit">Days to Launch</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 25%;"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header">
+                                <span class="card-label">Family Security Buffer</span>
+                                <i data-lucide="shield"></i>
+                            </div>
+                            <div class="finance-bar-wrap">
+                                <div class="finance-label">
+                                    <span>Current: $47.8k</span>
+                                    <span>Lifestyle Target: $75k</span>
+                                </div>
+                                <div class="finance-track">
+                                    <!-- 47.8k out of approx 100k scale = 48% -->
+                                    <div class="finance-fill-current" style="width: 48%;"></div>
+                                    <!-- Sweet Spot Target 75k -->
+                                    <div class="finance-fill-nomad" style="left: 75%; background: var(--accent-orange)" title="Family Security Sweet Spot ($75k)"></div>
+                                </div>
+                            </div>
+                            <div class="card-note" style="margin-top: 12px; font-size: 12px; color: var(--text-muted)">
+                                <i data-lucide="heart" style="width: 14px; height: 14px; display: inline-block; vertical-align: middle; color: #ef4444"></i>
+                                <b>Constraint: Low Stress > More Money.</b> Targeting the 70k-85k Sweet Spot.
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header">
+                                <span class="card-label">Hungarian Prospects</span>
+                                <i data-lucide="flag"></i>
+                            </div>
+                            <div class="card-value">3</div>
+                            <div class="card-trend pos">
+                                <i data-lucide="check-circle"></i> High priority for Naturalization
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="main-grid">
+                        <div class="card main-table-card">
+                            <div class="card-header">
+                                <h3 class="card-title">Retirement-Track Target Map</h3>
+                            </div>
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Company</th>
+                                        <th>Strategy Focus</th>
+                                        <th>Insurance</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="company-cell">
+                                                <div class="company-logo" style="background: #0f172a;">A</div>
+                                                <span>Affirm</span>
+                                            </div>
+                                        </td>
+                                        <td><span class="badge mature">100% Unicorn TGT</span></td>
+                                        <td>100% Total Family</td>
+                                        <td><span style="color:var(--accent-green); font-weight: 500;">Applied (Raleigh)</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="company-cell">
+                                                <div class="company-logo" style="background: #e24329;">G</div>
+                                                <span>GitLab</span>
+                                            </div>
+                                        </td>
+                                        <td><span class="badge mature">Strategic High-Value</span></td>
+                                        <td>Remote-Native / Global</td>
+                                        <td><span style="color:var(--accent-orange); font-weight: 500;">Drafting Cover Letter</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="company-cell">
+                                                <div class="company-logo" style="background: #0087be;">A</div>
+                                                <span>Automattic</span>
+                                            </div>
+                                        </td>
+                                        <td><span class="badge warn">Culture/Nomad Hit</span></td>
+                                        <td>Work From Anywhere</td>
+                                        <td>Sourcing</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="company-cell">
+                                                <div class="company-logo" style="background: #3b82f6;">P</div>
+                                                <span>Prezi</span>
+                                            </div>
+                                        </td>
+                                        <td><span class="badge mature">Hungarian-Linked</span></td>
+                                        <td>EOR Options</td>
+                                        <td>Sourcing</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="company-cell">
+                                                <div class="company-logo" style="background: #10b981;">S</div>
+                                                <span>Stedi</span>
+                                            </div>
+                                        </td>
+                                        <td><span class="badge mature">100% Unicorn TGT</span></td>
+                                        <td>Standard US</td>
+                                        <td>Drafting App</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="company-cell">
+                                                <div class="company-logo" style="background: #10b981;">G</div>
+                                                <span>GoTo (LogMeIn)</span>
+                                            </div>
+                                        </td>
+                                        <td><span class="badge mature">Hungarian-Linked</span></td>
+                                        <td>Standard US</td>
+                                        <td>Research</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="company-cell">
+                                                <div class="company-logo" style="background: #f59e0b;">P</div>
+                                                <span>Progressive</span>
+                                            </div>
+                                        </td>
+                                        <td><span class="badge warn">Enterprise Stable</span></td>
+                                        <td>Day-1 Med</td>
+                                        <td>Backup Plan</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="card task-list-card">
+                            <div class="card-header">
+                                <h3 class="card-title">Pivot Checklist</h3>
+                            </div>
+                            <ul class="milestone-list" style="list-style: none;">
+                                <li style="margin-bottom: 12px; display: flex; align-items: flex-start; gap: 8px;">
+                                    <i data-lucide="check-square" style="color: var(--accent-green)"></i>
+                                    <div>
+                                        <div style="font-weight: 500;">Review Financials</div>
+                                        <div style="font-size: 12px; color: var(--text-muted)">Verified $75k+ Lifestyle Sweet Spot</div>
+                                    </div>
+                                </li>
+                                <li style="margin-bottom: 12px; display: flex; align-items: flex-start; gap: 8px;">
+                                    <i data-lucide="check-square" style="color: var(--accent-green)"></i>
+                                    <div>
+                                        <div style="font-weight: 500;">Draft Technical/AdOps Resume</div>
+                                        <div style="font-size: 12px; color: var(--text-muted)">Completed: Jeremy_Wood_AdOps_Resume.pdf <a href="Jeremy_Wood_AdOps_Resume.pdf" target="_blank" style="color: var(--primary)">[View]</a></div>
+                                    </div>
+                                </li>
+                                <li style="margin-bottom: 12px; display: flex; align-items: flex-start; gap: 8px;">
+                                    <i data-lucide="check-square" style="color: var(--accent-green)"></i>
+                                    <div>
+                                        <div style="font-weight: 500;">Build Developer Portfolio</div>
+                                        <div style="font-size: 12px; color: var(--text-muted)">Completed: Vanilla code architecture <a href="portfolio/index.html" target="_blank" style="color: var(--primary)">[View]</a></div>
+                                    </div>
+                                </li>
+                                <li style="display: flex; align-items: flex-start; gap: 8px; margin-bottom: 12px;">
+                                    <i data-lucide="check-square" style="color: var(--accent-green)"></i>
+                                    <div>
+                                        <div style="font-weight: 500;">Apply to Core Targets</div>
+                                        <div style="font-size: 12px; color: var(--text-muted)">Cold outreach prepped <a href="../LINKEDIN_NETWORKING_TEMPLATES.md" target="_blank" style="color: var(--primary)">[View Templates]</a></div>
+                                    </div>
+                                </li>
+                                <li style="display: flex; align-items: flex-start; gap: 8px;">
+                                    <i data-lucide="square" style="color: var(--text-muted)"></i>
+                                    <div>
+                                        <div style="font-weight: 500;">Draft Target Applications</div>
+                                        <div style="font-size: 12px; color: var(--text-muted)">
+                                            GitLab Prepped <a href="../cover_letter_gitlab.md" target="_blank" style="color: var(--primary)">[View]</a> | 
+                                            Automattic Prepped <a href="../cover_letter_automattic.md" target="_blank" style="color: var(--primary)">[View]</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li style="display: flex; align-items: flex-start; gap: 8px; margin-bottom: 12px;">
+                                    <i data-lucide="square" style="color: var(--text-muted)"></i>
+                                    <div>
+                                        <div style="font-weight: 500;">June 1st Trigger: Request PTO Shield</div>
+                                        <div style="font-size: 12px; color: var(--text-muted)">Lock in the 6 days of PTO for July 15 departure.</div>
+                                    </div>
+                                </li>
+                                <li style="display: flex; align-items: flex-start; gap: 8px; margin-bottom: 12px;">
+                                    <i data-lucide="square" style="color: var(--text-muted)"></i>
+                                    <div>
+                                        <div style="font-weight: 500;">Phased Disclosure Transition</div>
+                                        <div style="font-size: 12px; color: var(--text-muted)">June PTO Req (Vacation Status) | July 15: Trip | July 23: The Reveal (Stay & Work)</div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card" style="margin-top: 24px;">
+                            <div class="card-header">
+                                <h3 class="card-title">Strategic Research & Roadmaps</h3>
+                            </div>
+                            <div style="padding: 24px;">
+                                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+                                    <div style="background: rgba(59, 130, 246, 0.05); padding: 16px; border-radius: 8px; border: 1px solid rgba(59, 130, 246, 0.1);">
+                                        <h4 style="margin-top: 0; font-size: 14px; color: var(--primary);">Career Horizons</h4>
+                                        <p style="font-size: 12px; color: var(--text-muted); margin: 8px 0;">Expanded roles beyond AdOps including RevOps and TPM.</p>
+                                        <div style="display: flex; gap: 8px;">
+                                            <a href="../EXPANDED_JOB_TITLES.md" target="_blank" style="color: var(--primary); text-decoration: none; font-size: 12px; font-weight: 600;">View MD</a>
+                                            <span style="color: rgba(0,0,0,0.1)">|</span>
+                                            <a href="POTENTIAL_JOB_TITLES.csv" target="_blank" style="color: var(--primary); text-decoration: none; font-size: 12px; font-weight: 600;">CSV</a>
+                                        </div>
+                                    </div>
+                                    <div style="background: rgba(16, 185, 129, 0.05); padding: 16px; border-radius: 8px; border: 1px solid rgba(16, 185, 129, 0.1);">
+                                        <h4 style="margin-top: 0; font-size: 14px; color: var(--accent-green);">90-Day Upskill</h4>
+                                        <p style="font-size: 12px; color: var(--text-muted); margin: 8px 0;">Technical roadmap for API, JSON, and DevTools mastery.</p>
+                                        <a href="../UPSKILL_ROADMAP.md" target="_blank" style="color: var(--accent-green); text-decoration: none; font-size: 12px; font-weight: 600;">View Plan &rarr;</a>
+                                    </div>
+                                    <div style="background: rgba(245, 158, 11, 0.05); padding: 16px; border-radius: 8px; border: 1px solid rgba(245, 158, 11, 0.1);">
+                                        <h4 style="margin-top: 0; font-size: 14px; color: var(--accent-orange);">Domain Strategy</h4>
+                                        <p style="font-size: 12px; color: var(--text-muted); margin: 8px 0;">Branding and TLD recommendations for dev-portfolios.</p>
+                                        <a href="../DOMAIN_STRATEGY.md" target="_blank" style="color: var(--accent-orange); text-decoration: none; font-size: 12px; font-weight: 600;">View Guide &rarr;</a>
+                                    </div>
+                                    <div style="background: rgba(139, 92, 246, 0.05); padding: 16px; border-radius: 8px; border: 1px solid rgba(139, 92, 246, 0.1);">
+                                        <h4 style="margin-top: 0; font-size: 14px; color: var(--accent-purple);">Nomad Strategy</h4>
+                                        <p style="font-size: 12px; color: var(--text-muted); margin: 8px 0;">Managing health insurance, tax EOR, and homeschooling on the road.</p>
+                                        <a href="../NOMAD_FAMILY_STRATEGY.md" target="_blank" style="color: var(--accent-purple); text-decoration: none; font-size: 12px; font-weight: 600;">View Nomad Guide &rarr;</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        lucide.createIcons();
+        
+        // Simple script to correctly calculate days to July 15, 2026
+        const today = new Date('2026-04-16');
+        const deadline = new Date('2026-07-15');
+        const diffTime = Math.abs(deadline - today);
+        const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
+        document.getElementById('days-left').innerText = diffDays;
+    </script>
+</body>
+</html>

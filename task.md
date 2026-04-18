@@ -1,0 +1,32 @@
+- `[x]` Dashboard Upgrade
+    - `[x]` Add Affirm and Stedi to Pipeline
+    - `[x]` Mark Resume and Portfolio as checked off in checklist
+    - `[x]` Inject Quick Links to local assets
+- `[x]` Interview Prep Playbook
+    - `[x]` Handle the "Director" spin
+    - `[x]` AdOps Technical Screen answers
+- `[x]` Portfolio Deployment Architecture
+    - `[x]` Create `vercel.json`
+    - `[x]` Create `README.md`
+- `[x]` Hungarian Tech Vocabulary Guide
+- `[x]` Career Expansion Research
+    - `[x]` Expand beyond AdOps to RevOps/TPM
+    - `[x]` Generate `EXPANDED_JOB_TITLES.md`
+    - `[x]` Generate `POTENTIAL_JOB_TITLES.csv`
+- `[x]` 90-Day Technical Upskill Plan
+    - `[x]` Map out API/JSON/DevTools curriculum
+- `[x]` Workplace Insights Integration
+    - `[x]` Update `AUTOMATTIC_APPLICATION_DRAFT.md` with behavioral traits
+    - `[x]` Add "Scientific Evidence" section to `INTERVIEW_PLAYBOOK.md`
+    - `[x]` Create `portfolio/work-style.html` visualization
+    - `[x]` Update `portfolio/index.html` with "Workplace DNA" section
+- `[x]` Hard Skills Overhaul (The "Engineer" Pivot)
+    - `[x]` Update `RESUME_AD_OPS.html` with SQL, Extensions, and GAS
+    - `[x]` Inject Tooling achievements into `BlueTone` job bullets
+    - `[x]` Update `SUPPORT_SPECIALIST_RESUME.md` with C/GBA and Hard Logic
+    - `[x]` Create "Tooling & Automation" case study in `portfolio/index.html`
+- `[x]` The Application Sprint
+    - `[x]` Draft Automattic Application
+    - `[x]` Draft GitLab Application
+    - `[x]` Draft Buffer 'Happiness Hero' Application
+    - `[x]` Draft Doist Support Application
