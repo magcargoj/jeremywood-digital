@@ -47,6 +47,15 @@ This is the most critical technical upgrade. We are moving you from "someone who
 - **[MODIFY]** `portfolio/index.html`: 
     - Overhaul the "Case Studies" section to include a **"Tooling & Automation"** entry, specifically highlighting the Chrome extensions and lead-gen audit tools.
 
+### 7. Targeted Application Sprint: Duende Software
+The RevOps Engineer role at Duende is the "Perfect Match." I will prioritize a hyper-tailored application ecosystem for this target.
+- **[NEW]** `RESUME_REVOPS_ENGINEER_DUENDE.html`: 
+    - Tailored resume highlighting **.NET Ecosystem experience** (from BTM), CRM architecture, and AI-assisted automation.
+- **[NEW]** `COVER_LETTER_DUENDE.md`: 
+    - A narrative focusing on bridging the gap between engineering rigor and GTM operations.
+- **[NEW]** `OUTREACH_DAN_VANHOOZER.md`: 
+    - A "Wolfpack" (NC State) networking script for LinkedIn.
+
 
 ## User Review Required
 > [!IMPORTANT]

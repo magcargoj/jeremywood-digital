@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cover Letter - Jeremy Wood</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --primary-900: #0f172a; 
+            --accent: #0ea5e9;
+            --text-main: #334155;
+            --text-light: #64748b;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', sans-serif; background-color: #f1f5f9; color: var(--text-main); line-height: 1.6; padding: 40px 20px; }
+
+        .letter-container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: white;
+            padding: 60px 80px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        header { border-bottom: 2px solid #f1f5f9; padding-bottom: 30px; margin-bottom: 40px; }
+        .name { font-family: 'Outfit', sans-serif; font-size: 2.5rem; font-weight: 800; color: var(--primary-900); }
+        .contact-info { display: flex; gap: 20px; margin-top: 10px; font-size: 0.9rem; color: var(--text-light); }
+        .contact-info i { width: 14px; margin-right: 5px; color: var(--accent); }
+
+        .date { font-weight: 600; color: var(--text-light); margin-bottom: 30px; display: block; }
+        .recipient { margin-bottom: 30px; }
+        .recipient p { font-weight: 700; color: var(--primary-900); }
+
+        .content p { margin-bottom: 20px; text-align: justify; }
+        .content ul { margin-bottom: 20px; list-style: none; }
+        .content ul li { margin-bottom: 15px; position: relative; padding-left: 20px; }
+        .content ul li::before { content: "→"; position: absolute; left: 0; color: var(--accent); font-weight: 700; }
+
+        footer { margin-top: 50px; }
+        .signature { font-family: 'Outfit', sans-serif; font-size: 1.2rem; font-weight: 700; color: var(--primary-900); }
+
+        @media print {
+            body { background: white; padding: 0; }
+            .letter-container { box-shadow: none; border-radius: 0; max-width: 100%; padding: 40px 60px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="letter-container">
+    <header>
+        <h1 class="name">Jeremy Wood</h1>
+        <div class="contact-info">
+            <span><i data-lucide="mail"></i> jeremy@jeremywood.digital</span>
+            <span><i data-lucide="phone"></i> 919-637-1198</span>
+            <span><i data-lucide="map-pin"></i> Raleigh, NC / Remote</span>
+        </div>
+    </header>
+
+    <div class="content">
+        <span class="date">April 18, 2026</span>
+
+        <div class="recipient">
+            <p>Hiring Team</p>
+            <span>Sand Cherry Associates (via Swooped)</span>
+        </div>
+
+        <p>Dear Hiring Team,</p>
+
+        <p>I am writing to express my strong interest in the <strong>Ticketing Analyst</strong> position at Sand Cherry Associates. As a technical operations professional with over 6 years of experience managing complex digital environments and production service delivery, I am deeply drawn to Sand Cherry’s culture of <strong>self-responsibility</strong> and your commitment to a digitally native workforce.</p>
+
+        <p>My professional background is built on two core pillars: <strong>Technical Forensics</strong> and <strong>Rigid Data Integrity.</strong> This combination makes me a "Master of the Queue" who can ensure that every incident, request, and work-order is not just triaged, but resolved with absolute precision and adherence to service-level expectations.</p>
+
+        <p><strong>Why I am a natural fit for the Sand Cherry team:</strong></p>
+
+        <ul>
+            <li><strong>Triage & Queue Mastery:</strong> In my tenure at BlueTone Media, I have managed the technical fulfillment and incident queues for an enterprise SaaS platform. I’ve engineered internal <strong>automation scripts</strong> and Chrome Extensions specifically to audit aging tickets and eliminate bottlenecks, ensuring 100% data fidelity across all tracked fields.</li>
+            <li><strong>A Foundation in Precision:</strong> Before moving into digital operations, I spent my career in environmental data analysis at <strong>Pace Analytical.</strong> Working within high-stakes <strong>LIMS protocols</strong> taught me that in operational support, data integrity must be absolute. I bring this same level of meticulous detail to my ticketing and reporting workflows today.</li>
+            <li><strong>Digital Autonomy:</strong> I thrive in environments that prioritize self-responsibility. I manage my own workloads, build my own tools, and consistently deliver high-quality work without the need for micromanagement. This aligns perfectly with Sand Cherry’s "digital workforce" model.</li>
+        </ul>
+
+        <p>I am eager to contribute my technical ease and operational discipline to the Sand Cherry team and support your strategic customer-centric initiatives. Thank you for your time and consideration.</p>
+
+        <footer>
+            <p>Best regards,</p>
+            <p class="signature">Jeremy Wood</p>
+        </footer>
+    </div>
+</div>
+
+<script>lucide.createIcons();</script>
+</body>
+</html>

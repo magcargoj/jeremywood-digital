@@ -1,28 +1,26 @@
-# Tailored Cover Letter: Automattic (Happiness Engineer)
+# Cover Letter: Happiness Engineer
 
-**Target Role:** Happiness Engineer
-**Core Strategy:** Leverage deep agency-side WordPress expertise and "Roadschooling" nomad alignment.
+**To:** Hiring Team, Automattic  
+**Subject:** Technical Master & Happiness Engineer
 
----
+Dear Team at Automattic,
 
-Dear Automattic Hiring Team,
+I am writing to express my strong interest in the **Happiness Engineer** position. As a technical operations professional with 6+ years of experience troubleshooting the architectures that power the modern web—including extensive work with **WooCommerce and WordPress VIP** ecosystems—I am seeking a role where my technical depth can be used to empower others.
 
-I am a Technical Support Specialist who has spent the last year deeply immersed in the WordPress ecosystem at a digital agency. When I saw the opening for a Happiness Engineer, I knew it was the perfect intersection of my two greatest strengths: technical surgical precision and human-first empathy.
+I have long admired Automattic’s commitment to a 100% distributed, asynchronous culture. My goal is to find a long-term professional home where I can be a **master of my craft**, providing elite technical support without the "always-on" stress of traditional management.
 
-In my current role at BlueTone Media, I am the technical anchor for dozens of WordPress sites. I’m not just a "user"—I am the person who jumps into the backend when a WooCommerce checkout is failing or a Jetpack sync is causing server-side timeouts. I use Chrome DevTools and raw JS/HTML inspection to find the "why" behind every ticket, and I thrive on the satisfaction of turning a technical hiba (Hungarian for 'error') into a resolved mission for a customer.
+**Why I am a natural fit for Automattic:**
 
-Why I’m excited about being a Happiness Engineer:
+*   **Platform Proficiency:** I have spent years in the trenches of WooCommerce and WordPress, auditing front-end code, managing SQL data pipelines, and resolving complex pixel/tracking discrepancies. I don't just use WordPress; I understand its technical infrastructure.
+*   **The "Happiness" Mindset:** My workplace personality is validated as **Highly Cooperative and Extremely Patient.** I thrive in high-stakes troubleshooting scenarios by remaining calm, level-headed, and focused on clear, empathetic communication.
+*   **Proven Autonomy:** Working autonomously isn't just a preference for me; it's a proven track record. I’ve engineered internal Chrome Extensions and Google Apps Script automations to streamline my own workflows, demonstrating the exact "self-starting" DNA required of a Happiness Engineer.
 
-*   **WordPress Under the Hood:** I’ve spent years troubleshooting themes, plugins, and custom script injections. I understand that "Good Support" isn't just about answering questions—it's about understanding the underlying architecture and ensuring data fidelity.
-*   **The Nomad Heart:** My family of six (including four homeschooled children) is currently transitioning to a nomadic lifestyle. Automattic’s distributed culture isn’t just a "vibe" to me; it is exactly how I perform my best work. I thrive in an asynchronous environment where documentation, Slack, and P2 posts are the primary source of truth.
-*   **Empathy for the Builder:** Because I’ve worked agency-side, I know how high the stakes are for people building on WordPress. Whether they are a solo blogger or an enterprise eCommerce site, they need more than a technician—they need a "Happiness Engineer" who understands their business goals.
+I am eager to contribute to the Automattic mission and am ready for the challenge of a hiring trial to prove my technical and communicative fit.
 
-I am eager to bring my agency-honed technical troubleshooting skills and my passion for WordPress to the Automattic team. I’m ready to contribute to the successes of our customers, no matter what timezone I’m in.
+Sincerely,
 
-I look forward to the chance to chat more about how I can help engineers some happiness for our users.
-
-Cheers,
-
-Jeremy Wood
-[Certs: PMP, Google Analytics Expert]
-[Portfolio: jeremywood.dev]
+Jeremy Wood  
+[LinkedIn Profile Link]  
+jeremy@jeremywood.digital  
+NC State University, B.S.  
+PMP / CSM Certified

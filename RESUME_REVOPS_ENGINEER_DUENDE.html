@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeremy Wood - Revenue Operations Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --primary-900: #0f172a; 
+            --primary-800: #1e293b;
+            --accent: #8b5cf6; /* A more "Identity/Engineering" purple/violet */
+            --accent-dark: #6d28d9;
+            --surface: #ffffff;
+            --surface-muted: #f8fafc;
+            --text-main: #334155;
+            --text-light: #64748b;
+            --border: #e2e8f0;
+            --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f1f5f9;
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .resume {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--surface);
+            box-shadow: 0 20px 40px rgba(15, 23, 42, 0.1);
+            border-radius: 16px;
+            overflow: hidden;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--primary-900) 0%, var(--primary-800) 100%);
+            color: #fff;
+            padding: 50px;
+            position: relative;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent), #38bdf8);
+        }
+
+        .name {
+            font-family: 'Outfit', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+            letter-spacing: -0.02em;
+        }
+
+        .title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.4rem;
+            color: var(--accent);
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+        }
+
+        .contact-grid {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            font-size: 0.95rem;
+            color: #cbd5e1;
+        }
+
+        .content { display: grid; grid-template-columns: 2fr 1fr; background: var(--surface); }
+        .main-col { padding: 50px; border-right: 1px solid var(--border); }
+        .side-col { padding: 50px; background: var(--surface-muted); }
+
+        .section-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--primary-900);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .job-title { font-weight: 700; font-size: 1.15rem; color: var(--primary-900); }
+        .job-company { font-weight: 600; color: var(--accent-dark); font-size: 1rem; }
+        .job-date { font-size: 0.85rem; font-weight: 600; color: var(--text-light); text-transform: uppercase; }
+        .job-bullets { list-style: none; margin-top: 10px; }
+        .job-bullets li { position: relative; padding-left: 20px; margin-bottom: 8px; font-size: 0.95rem; }
+        .job-bullets li::before { content: '→'; position: absolute; left: 0; color: var(--accent-dark); font-weight: 900; }
+
+        .tag {
+            background: #f3f0ff;
+            color: var(--accent-dark);
+            font-size: 0.8rem;
+            font-weight: 700;
+            padding: 5px 10px;
+            border-radius: 4px;
+            display: inline-block;
+            margin: 0 4px 8px 0;
+        }
+
+        @media print {
+            body { background: #fff; padding: 0; }
+            .resume { box-shadow: none; border-radius: 0; }
+            .hero { padding: 40px; }
+            .content { grid-template-columns: 2.2fr 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="resume">
+        <header class="hero">
+            <h1 class="name">Jeremy Wood</h1>
+            <div class="title">Revenue Operations Engineer</div>
+            <div class="contact-grid">
+                <span><i data-lucide="map-pin"></i> Raleigh, NC / Worldwide Remote</span>
+                <span><i data-lucide="mail"></i> jeremy.wood.nc@gmail.com</span>
+                <span><i data-lucide="phone"></i> 919-637-1198</span>
+            </div>
+        </header>
+
+        <div class="content">
+            <main class="main-col">
+                <section>
+                    <h2 class="section-title">Systems Engineering Summary</h2>
+                    <p style="font-size: 1rem; color: var(--text-main); line-height: 1.7;">
+                        Revenue operations professional with 6+ years of experience bringing <strong>engineering rigor</strong> and <strong>AI-assisted automation</strong> to GTM infrastructure. Specialist in architecting clean, extensible HubSpot ecosystems and building custom integrations within <strong>.NET-based enterprise environments</strong>. I think in systems, not tickets, and prioritize technical debt reduction through robust documentation and version-control-aligned operations.
+                    </p>
+                </section>
+
+                <section style="margin-top: 40px;">
+                    <h2 class="section-title">Technical Experience</h2>
+
+                    <div class="job">
+                        <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                            <h3 class="job-title">Technical Support Engineer (RevOps Architecture)</h3>
+                            <span class="job-date">Nov 2025 - Present</span>
+                        </div>
+                        <div class="job-company">BlueTone Media (Built on .NET)</div>
+                        <ul class="job-bullets">
+                            <li>Serve as the primary technical anchor for an <strong>enterprise .NET-based SaaS platform</strong>, managing the intersection of engineering requirements and GTM operations.</li>
+                            <li>Architected and deployed custom <strong>Chrome Extensions</strong> and <strong>Google Apps Scripts</strong> to automate manual data mapping, reducing operational friction by 40%.</li>
+                            <li>Engineered internal <strong>Lead-Gen Audit Tools</strong> using <strong>AI-assisted Python logic</strong> to proactively identify script-injection conflicts and technical discrepancies.</li>
+                            <li>Perform direct <strong>SQL queries</strong> and DB modifications to maintain the integrity of customer billing and renewal schemas.</li>
+                        </ul>
+                    </div>
+
+                    <div class="job" style="margin-top: 30px;">
+                        <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                            <h3 class="job-title">Technical Operations Lead (Service Director)</h3>
+                            <span class="job-date">Nov 2022 - Oct 2025</span>
+                        </div>
+                        <div class="job-company">BlueTone Media</div>
+                        <ul class="job-bullets">
+                            <li>Defined the systemic architecture for technical SEO and conversion tracking, ensuring a <strong>Single Source of Truth</strong> for high-volume enterprise data pipelines.</li>
+                            <li>Reduced operational technical debt by standardizing QA protocols for cross-platform integration, ensuring 100% functional parity across production environments.</li>
+                            <li>Authored the "Engineering Protocol" for client onboarding, cutting technical setup time by 30% through structured documentation.</li>
+                        </ul>
+                    </div>
+
+                    <div class="job" style="margin-top: 30px;">
+                        <h3 class="job-title">Environmental Data Analyst</h3>
+                        <div class="job-company">Pace Analytical</div>
+                        <ul class="job-bullets">
+                            <li>Managed logic-based data integrity within rigid <strong>LIMS (Laboratory Information Management Systems)</strong> architectures, achieving zero-tolerance for schema errors.</li>
+                        </ul>
+                    </div>
+                </section>
+            </main>
+
+            <aside class="side-col">
+                <section>
+                    <h2 class="section-title">Technical Toolkit</h2>
+                    <div style="margin-bottom: 20px;">
+                        <h4 style="font-size: 0.85rem; text-transform: uppercase; color: var(--text-light); margin-bottom: 10px;">GTM Ecosystem</h4>
+                        <span class="tag">HubSpot Architect</span>
+                        <span class="tag">Custom Objects</span>
+                        <span class="tag">Workflow Automation</span>
+                        <span class="tag">Process Engineering</span>
+                    </div>
+                    <div style="margin-bottom: 20px;">
+                        <h4 style="font-size: 0.85rem; text-transform: uppercase; color: var(--text-light); margin-bottom: 10px;">Engineering & Logic</h4>
+                        <span class="tag">SQL / phpMyAdmin</span>
+                        <span class="tag">HTML5 / CSS / JS</span>
+                        <span class="tag">Chrome Extensions</span>
+                        <span class="tag">Google Apps Script</span>
+                        <span class="tag">.NET Environment (Ops)</span>
+                        <span class="tag">Python (AI-Assisted)</span>
+                    </div>
+                </section>
+
+                <section style="margin-top: 30px;">
+                    <h2 class="section-title">Personal Engineering</h2>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 10px;">Developed a hardware-accelerated GBA platformer in <strong>raw C</strong> to master fixed-point math and memory management.</p>
+                </section>
+
+                <section style="margin-top: 30px;">
+                    <h2 class="section-title">Industry Proof</h2>
+                    <div style="font-size: 0.9rem; font-weight: 600;">
+                        <div><i data-lucide="check-circle" style="width: 14px; color: var(--accent);"></i> HubSpot Certified Admin</div>
+                        <div><i data-lucide="check-circle" style="width: 14px; color: var(--accent);"></i> NC State - B.S. Env. Science</div>
+                        <div><i data-lucide="check-circle" style="width: 14px; color: var(--accent);"></i> PMP / CSM Certified</div>
+                    </div>
+                </section>
+
+                <section style="margin-top: 30px;">
+                    <h2 class="section-title">Workplace DNA</h2>
+                    <p style="font-size: 0.85rem; color: var(--text-muted);">Validated Profile: <strong>Highly Cooperative, Extremely Patient, and Goal-Oriented.</strong></p>
+                </section>
+            </aside>
+        </div>
+    </div>
+
+    <script>lucide.createIcons();</script>
+</body>
+</html>

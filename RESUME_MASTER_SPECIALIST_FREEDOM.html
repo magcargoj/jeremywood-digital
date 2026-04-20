@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeremy Wood - Technical Implementation Master</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --primary-900: #0f172a; 
+            --primary-800: #1e293b;
+            --accent: #10b981; /* A more "Nurturing/Support" Emerald Green */
+            --accent-dark: #059669;
+            --surface: #ffffff;
+            --surface-muted: #f8fafc;
+            --text-main: #334155;
+            --text-light: #64748b;
+            --border: #e2e8f0;
+            --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f1f5f9;
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .resume {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--surface);
+            box-shadow: 0 20px 40px rgba(15, 23, 42, 0.1);
+            border-radius: 16px;
+            overflow: hidden;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--primary-900) 0%, var(--primary-800) 100%);
+            color: #fff;
+            padding: 50px;
+            position: relative;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent), #38bdf8);
+        }
+
+        .name {
+            font-family: 'Outfit', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+            letter-spacing: -0.02em;
+        }
+
+        .title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.4rem;
+            color: var(--accent);
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+        }
+
+        .contact-grid {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            font-size: 0.95rem;
+            color: #cbd5e1;
+        }
+
+        .content { display: grid; grid-template-columns: 2fr 1fr; background: var(--surface); }
+        .main-col { padding: 50px; border-right: 1px solid var(--border); }
+        .side-col { padding: 50px; background: var(--surface-muted); }
+
+        .section-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--primary-900);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .job-title { font-weight: 700; font-size: 1.15rem; color: var(--primary-900); }
+        .job-company { font-weight: 600; color: var(--accent-dark); font-size: 1rem; }
+        .job-date { font-size: 0.85rem; font-weight: 600; color: var(--text-light); text-transform: uppercase; }
+        .job-bullets { list-style: none; margin-top: 10px; }
+        .job-bullets li { position: relative; padding-left: 20px; margin-bottom: 8px; font-size: 0.95rem; }
+        .job-bullets li::before { content: '→'; position: absolute; left: 0; color: var(--accent-dark); font-weight: 900; }
+
+        .tag {
+            background: #ecfdf5;
+            color: var(--accent-dark);
+            font-size: 0.8rem;
+            font-weight: 700;
+            padding: 5px 10px;
+            border-radius: 4px;
+            display: inline-block;
+            margin: 0 4px 8px 0;
+        }
+
+        @media print {
+            body { background: #fff; padding: 0; }
+            .resume { box-shadow: none; border-radius: 0; }
+            .hero { padding: 40px; }
+            .content { grid-template-columns: 2.2fr 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="resume">
+        <header class="hero">
+            <h1 class="name">Jeremy Wood</h1>
+            <div class="title">Technical Implementation Master</div>
+            <div class="contact-grid">
+                <span><i data-lucide="map-pin"></i> Raleigh, NC / Worldwide Remote</span>
+                <span><i data-lucide="mail"></i> jeremy@jeremywood.digital</span>
+                <span><i data-lucide="phone"></i> 919-637-1198</span>
+            </div>
+        </header>
+
+        <div class="content">
+            <main class="main-col">
+                <section>
+                    <h2 class="section-title">Reliable Support & Mastery</h2>
+                    <p style="font-size: 1rem; color: var(--text-main); line-height: 1.7;">
+                        Technical specialist with 6+ years of experience providing <strong>high-fidelity support</strong> and <strong>flawless implementation</strong> for enterprise GTM systems. I specialize in solving complex technical friction with ease, ensuring client happiness and operational stability. I am a low-context, highly autonomous professional who excels in <strong>distributed, asynchronous environments</strong> where Clear communication is the primary source of truth.
+                    </p>
+                </section>
+
+                <section style="margin-top: 40px;">
+                    <h2 class="section-title">Technical Experience</h2>
+
+                    <div class="job">
+                        <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                            <h3 class="job-title">Technical Support & Implementation Lead</h3>
+                            <span class="job-date">Nov 2025 - Present</span>
+                        </div>
+                        <div class="job-company">BlueTone Media</div>
+                        <ul class="job-bullets">
+                            <li>Primary technical point of contact for an <strong>enterprise SaaS platform</strong>, managing technical troubleshooting and platform stability with a focus on ease-of-use.</li>
+                            <li>Engineered internal <strong>automation scripts</strong> and Chrome Extensions to eliminate manual errors and streamline the technical onboarding process for new accounts.</li>
+                            <li>Provide forensic-level support for tracking, pixels (GTM/GA4), and <strong>technical SEO</strong>, resolving complex integration issues with a zero-friction approach.</li>
+                            <li>Maintain data integrity through direct <strong>SQL queries</strong> and database troubleshooting, ensuring consistent platform uptime for high-spend campaigns.</li>
+                        </ul>
+                    </div>
+
+                    <div class="job" style="margin-top: 30px;">
+                        <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                            <h3 class="job-title">Technical Operations Lead</h3>
+                            <span class="job-date">Nov 2022 - Oct 2025</span>
+                        </div>
+                        <div class="job-company">BlueTone Media</div>
+                        <ul class="job-bullets">
+                            <li>Established the "Reliability Protocol" for technical deployments, leading to a 30% reduction in support ticket volume through proactive systems auditing.</li>
+                            <li>Mastered the implementation of complex conversion tracking architectures across diverse CMS platforms (WordPress, Shopify, WooCommerce).</li>
+                            <li>Empowered a distributed team by authoring <strong>comprehensive technical documentation</strong>, making complex integrations accessible and repeatable.</li>
+                        </ul>
+                    </div>
+
+                    <div class="job" style="margin-top: 30px;">
+                        <h3 class="job-title">Environmental Data Analyst</h3>
+                        <div class="job-company">Pace Analytical</div>
+                        <ul class="job-bullets">
+                            <li>Ensured 100% technical accuracy within high-stakes data environments (LIMS), maintaining a flawless track record for data integrity performance.</li>
+                        </ul>
+                    </div>
+                </section>
+            </main>
+
+            <aside class="side-col">
+                <section>
+                    <h2 class="section-title">Technical Toolkit</h2>
+                    <div style="margin-bottom: 20px;">
+                        <h4 style="font-size: 0.85rem; text-transform: uppercase; color: var(--text-light); margin-bottom: 10px;">The "Freedom" Stack</h4>
+                        <span class="tag">GTM / GA4 Mastery</span>
+                        <span class="tag">HubSpot Implementation</span>
+                        <span class="tag">WordPress Specialist</span>
+                        <span class="tag">WooCommerce / Shopify</span>
+                    </div>
+                    <div style="margin-bottom: 20px;">
+                        <h4 style="font-size: 0.85rem; text-transform: uppercase; color: var(--text-light); margin-bottom: 10px;">Technical Logic</h4>
+                        <span class="tag">SQL / phpMyAdmin</span>
+                        <span class="tag">HTML / CSS / JS</span>
+                        <span class="tag">API Implementations</span>
+                        <span class="tag">Google Apps Script</span>
+                        <span class="tag">Python (Automation)</span>
+                    </div>
+                </section>
+
+                <section style="margin-top: 30px;">
+                    <h2 class="section-title">Nomad Readiness</h2>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 10px;">Autonomous, asynchronous-first, and experienced in 100% distributed environments. <strong>Japan 2029 Target.</strong></p>
+                </section>
+
+                <section style="margin-top: 30px;">
+                    <h2 class="section-title">Industry Proof</h2>
+                    <div style="font-size: 0.9rem; font-weight: 600;">
+                        <div><i data-lucide="check-circle" style="width: 14px; color: var(--accent);"></i> HubSpot Certified</div>
+                        <div><i data-lucide="check-circle" style="width: 14px; color: var(--accent);"></i> NC State - B.S.</div>
+                        <div><i data-lucide="check-circle" style="width: 14px; color: var(--accent);"></i> PMP / CSM Certified</div>
+                    </div>
+                </section>
+
+                <section style="margin-top: 30px;">
+                    <h2 class="section-title">Workplace DNA</h2>
+                    <p style="font-size: 0.85rem; color: var(--text-muted);">Validated Strengths: <strong>Highly Patient, Cooperative, and Low-Context.</strong></p>
+                </section>
+            </aside>
+        </div>
+    </div>
+
+    <script>lucide.createIcons();</script>
+</body>
+</html>

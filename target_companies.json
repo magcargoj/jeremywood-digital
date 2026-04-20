@@ -1,66 +1,72 @@
 [
     {
-        "name": "Prezi",
-        "category": "Hungarian-Linked",
-        "remote_maturity": "Global-First (EOR)",
-        "benefits": "Often full EOR coverage",
-        "roles": ["Support Operations", "Technical Coordinator"],
-        "notes": "HQ in Budapest. Good for citizenship goals."
+        "name": "Automattic",
+        "ats": "greenhouse",
+        "slug": "automattic",
+        "priority": "Tier 1",
+        "notes": "Dream job. Elite nomad support."
     },
     {
-        "name": "LogMeIn (GoTo)",
-        "category": "Hungarian-Linked",
-        "remote_maturity": "Remote-First",
-        "benefits": "Strong US presence",
-        "roles": ["Product Support", "Implementation Specialist"],
-        "notes": "Founded in Budapest."
+        "name": "GitLab",
+        "ats": "greenhouse",
+        "slug": "gitlab",
+        "priority": "Tier 1",
+        "notes": "The gold standard for distributed documentation."
     },
     {
-        "name": "SEON",
-        "category": "Hungarian-Linked",
-        "remote_maturity": "Remote-Friendly",
-        "benefits": "Standard",
-        "roles": ["Customer Success Operations", "Technical Support"],
-        "notes": "Budapest HQ. Fraud prevention."
+        "name": "Stedi",
+        "ats": "ashby",
+        "slug": "stedi",
+        "priority": "Tier 1",
+        "notes": "High technical rigor. Scaling rapidly."
     },
     {
-        "name": "Help Scout",
-        "category": "100% Coverage (Tech)",
-        "remote_maturity": "All-Remote",
-        "benefits": "100% Health/Dental Family",
-        "roles": ["Support", "Operations"],
-        "notes": "Perfect for replacing Medicaid."
+        "name": "Kraken",
+        "ats": "ashby",
+        "slug": "kraken.com",
+        "priority": "Tier 1",
+        "notes": "Distributed-native crypto powerhouse."
     },
     {
         "name": "Buffer",
-        "category": "100% Coverage (Tech)",
-        "remote_maturity": "All-Remote",
-        "benefits": "100% Premium Coverage",
-        "roles": ["AdOps", "Support"],
-        "notes": "High transparency."
+        "ats": "ashby",
+        "slug": "buffer",
+        "priority": "Tier 2",
+        "notes": "Transparent pay, great culture."
     },
     {
-        "name": "Atlassian",
-        "category": "100% Coverage (Tech)",
-        "remote_maturity": "Distributed",
-        "benefits": "100% Dependents Covered",
-        "roles": ["Technical Traffic", "Coordinator"],
-        "notes": "Massive enterprise scale."
+        "name": "Affirm",
+        "ats": "greenhouse",
+        "slug": "affirm",
+        "priority": "Tier 2",
+        "notes": "Implementation focused roles."
     },
     {
-        "name": "Progressive",
-        "category": "Enterprise Stability",
-        "remote_maturity": "Remote Teams",
-        "benefits": "Day 1 Coverage",
-        "roles": ["Ad Operations", "Technical Coordinator"],
-        "notes": "Retirement-track stability."
+        "name": "Harvey",
+        "ats": "ashby",
+        "slug": "harvey",
+        "priority": "Tier 2",
+        "notes": "AI-forward legal tech."
     },
     {
-        "name": "Future PLC",
-        "category": "Enterprise Stability",
-        "remote_maturity": "Remote Teams",
-        "benefits": "Strong UK/US Benefits",
-        "roles": ["Digital Ad Operations Associate"],
-        "notes": "Large publisher. Quiet 40 hours."
+        "name": "Docker",
+        "ats": "ashby",
+        "slug": "docker",
+        "priority": "Tier 2",
+        "notes": "Core infra, standardizing on Ashby."
+    },
+    {
+        "name": "Canonical",
+        "ats": "greenhouse",
+        "slug": "canonical",
+        "priority": "Tier 2",
+        "notes": "Ubuntu makers. Global reach."
+    },
+    {
+        "name": "Duende Software",
+        "ats": "manual",
+        "slug": "duendesoftware.com",
+        "priority": "Tier 1",
+        "notes": "Primary Target. Check careers@duendesoftware.com weekly."
     }
 ]

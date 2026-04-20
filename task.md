@@ -25,6 +25,10 @@
     - `[x]` Inject Tooling achievements into `BlueTone` job bullets
     - `[x]` Update `SUPPORT_SPECIALIST_RESUME.md` with C/GBA and Hard Logic
     - `[x]` Create "Tooling & Automation" case study in `portfolio/index.html`
+- `[x]` Targeted Application Sprint: Duende Software
+    - `[x]` Create `RESUME_REVOPS_ENGINEER_DUENDE.html`
+    - `[x]` Create `COVER_LETTER_DUENDE.md`
+    - `[x]` Create `OUTREACH_DAN_VANHOOZER.md` (LinkedIn Script)
 - `[x]` The Application Sprint
     - `[x]` Draft Automattic Application
     - `[x]` Draft GitLab Application
