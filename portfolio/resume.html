@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DNJTR4388W"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DNJTR4388W');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeremy Wood | Technical CV</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;0,900;1,900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0a0c10;
+            --surface: #12151c;
+            --primary: #ff5233;
+            --text: #ffffff;
+            --text-muted: #94a3b8;
+            --border: rgba(255, 255, 255, 0.1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            padding: 4rem 2rem;
+        }
+
+        .resume-container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            padding: 5rem;
+            box-shadow: 0 40px 100px rgba(0,0,0,0.5);
+        }
+
+        header {
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 3rem;
+            margin-bottom: 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 900;
+            line-height: 1;
+        }
+
+        .header-meta {
+            text-align: right;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .header-meta a { color: var(--primary); text-decoration: none; font-weight: 700; }
+
+        section { margin-bottom: 3rem; }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
+        }
+
+        .job-entry { margin-bottom: 2.5rem; }
+        .job-header { display: flex; justify-content: space-between; margin-bottom: 0.5rem; }
+        .job-title { font-weight: 800; font-size: 1.25rem; }
+        .job-date { color: var(--text-muted); font-size: 0.9rem; font-weight: 600; }
+        .job-company { color: var(--primary); font-weight: 700; margin-bottom: 1rem; font-size: 1rem; }
+
+        ul { list-style: none; }
+        li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: #f8fafc;
+        }
+        li::before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: 900;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        .skill-category { font-weight: 800; color: var(--primary); margin-bottom: 0.5rem; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; }
+
+        @media print {
+            body { background: white; color: black; padding: 0; }
+            .resume-container { 
+                box-shadow: none; 
+                border: none; 
+                width: 100%; 
+                max-width: 100%; 
+                padding: 0;
+                background: white;
+            }
+            .job-date, .header-meta, li { color: #334155 !important; }
+            h1, h2, .job-company, .job-title { color: black !important; }
+            header { border-bottom: 2px solid black; }
+            li::before { color: black !important; }
+        }
+
+        .btn-print {
+            position: fixed;
+            top: 2rem;
+            right: 2rem;
+            background: var(--primary);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            box-shadow: 0 10px 30px rgba(255, 82, 51, 0.4);
+            border: none;
+            cursor: pointer;
+        }
+
+        @media print { .btn-print { display: none; } }
+    </style>
+</head>
+<body>
+
+    <button class="btn-print" onclick="window.print()">Print to PDF</button>
+
+    <div class="resume-container">
+        <header>
+            <div class="header-left">
+                <h1>Jeremy Wood.</h1>
+                <p style="font-weight: 800; letter-spacing: 0.1em; font-size: 0.9rem; margin-top: 0.5rem; color: var(--primary);">TECHNICAL SENTINEL | ADOPS INFRASTRUCTURE</p>
+            </div>
+            <div class="header-meta">
+                <p>Establishing Connection</p>
+                <p><a href="mailto:jeremy@jeremywood.digital">jeremy@jeremywood.digital</a></p>
+                <p><a href="https://jeremywood.digital">jeremywood.digital</a></p>
+                <p>+1 919.637.1198</p>
+                <p>US-Based | Remote Global</p>
+            </div>
+        </header>
+
+        <section id="summary">
+            <h2>Operational Directive</h2>
+            <p style="font-size: 1.1rem; font-weight: 500;">
+                High-fidelity AdOps specialist focused on revenue forensics and enterprise tracking integrity. 
+                Expert in deploying resilient, "No-Failure" data architectures for distributed SaaS leadership teams. 
+                Treats data attribution discrepancies as high-stakes investigations to secure architectural stability.
+            </p>
+        </section>
+
+        <section id="experience">
+            <h2>Core Engagements</h2>
+            
+            <div class="job-entry">
+                <div class="job-header">
+                    <span class="job-title">AdOps Infrastructure Architect</span>
+                    <span class="job-date">2023 — PRESENT</span>
+                </div>
+                <div class="job-company">SENTINEL REVENUE OPERATIONS</div>
+                <ul>
+                    <li>Designed and deployed enterprise-grade DataLayer schemas for high-traffic SaaS environments, ensuring 100% attribution accuracy.</li>
+                    <li>Developed "Revenue Forensics" audit protocols to identify and remediate tracking leakage across global advertising funnel.</li>
+                    <li>Integrated comprehensive GA4/GTM server-side tracking pipelines to bypass browser-side signal loss.</li>
+                </ul>
+            </div>
+
+            <div class="job-entry">
+                <div class="job-header">
+                    <span class="job-title">Technical Support Anchor</span>
+                    <span class="job-date">PREVIOUS</span>
+                </div>
+                <div class="job-company">DISTRIBUTED SAAS OPERATIONS</div>
+                <ul>
+                    <li>Provided Tier-3 technical support for global leadership teams in distributed-first environments (Automattic/Buffer scale capability).</li>
+                    <li>Automated internal workflow logic using platform-agnostic tools to reduce manual audit time by 40%.</li>
+                    <li>Managed resilient technical communication channels during critical system outages and infrastructure migrations.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="expertise">
+            <h2>Technical Stack</h2>
+            <div class="skills-grid">
+                <div>
+                    <p class="skill-category">Tracking & Analytics</p>
+                    <p>GTM (Server & Client), GA4, Meta CAPI, Pinterest/Snap/LI Tagging Architecture.</p>
+                </div>
+                <div>
+                    <p class="skill-category">Operational Logic</p>
+                    <p>Revenue Forensics, DataLayer Schemas, Attribution Auditing, CRM Integration.</p>
+                </div>
+                <div>
+                    <p class="skill-category">Platform Knowledge</p>
+                    <p>Automattic/WordPress Ecosystem, Buffer/Social Infrastructure, Git-based workflows.</p>
+                </div>
+                <div>
+                    <p class="skill-category">Direct Communications</p>
+                    <p>High-Fidelity Client Response, Technical Documentation, Remote Global Ops.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p style="text-align: center; color: var(--text-muted); font-size: 0.75rem; margin-top: 4rem; text-transform: uppercase; letter-spacing: 0.2em;">
+                Verified Archive: File_Ref: SENTINEL_CV_2026.04
+            </p>
+        </footer>
+    </div>
+
+</body>
+</html>
