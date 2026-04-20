@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-WHQFSJKB');</script>
-    <!-- End Google Tag Manager -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DNJTR4388W"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-DNJTR4388W');
+    </script>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -339,10 +341,7 @@
         <div id="data-stream"></div>
     </div>
 
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WHQFSJKB"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+
 
     <!-- Cinematic Hero -->
     <section class="hero">
@@ -362,44 +361,60 @@
     <div class="container">
         <main class="bento-grid">
             
-            <!-- Strategic Forensics -->
-            <div class="bento-card reveal" style="grid-column: span 8;">
-                <div class="image-bg" style="background-image: url('forensics_bg.jpg');"></div>
-                <div class="overlay"></div>
-                <div class="card-id">FILE_REF: FORENSIC_AUDIT</div>
-                <div class="card-content">
-                    <h2>Revenue <br>Forensics.</h2>
-                    <p>Treating attribution discrepancies like high-stakes investigations to secure architectural data pipelines in complex enterprise environments.</p>
-                </div>
-            </div>
-
-            <!-- Reliability Stats -->
-            <div class="bento-card reveal" style="grid-column: span 4;">
-                <div class="card-id">FILE_REF: UPTIME_ENGINE</div>
-                <div class="stat-value">100%</div>
-                <div class="stat-label">Verified Uptime</div>
-                <p style="font-size: 1rem; margin-top: 1.5rem; color: var(--text-muted);">Maintaining bulletproof technical stability for global, always-on operations.</p>
-            </div>
-
             <!-- The Stack -->
             <div class="bento-card reveal" style="grid-column: span 4;">
                 <div class="image-bg" style="background-image: url('infra_bg.jpg');"></div>
                 <div class="overlay"></div>
                 <div class="card-id">FILE_REF: INFRA_PIPELINE</div>
+                <div class="card-content" style="padding: 1.5rem; background: rgba(10, 12, 16, 0.9);">
+                    <h3>Digital <br>Anchor.</h3>
+                    <p style="font-size: 1rem;">Deploying enterprise DataLayer schemas and GTM logic for elite distributed SaaS.</p>
+                </div>
+            </div>
+
+            <!-- Reliability Stats -->
+            <div class="bento-card reveal" style="grid-column: span 4;">
+                <div class="image-bg" style="background-image: url('uptime_bg.jpg');"></div>
+                <div class="overlay"></div>
+                <div class="card-id">FILE_REF: UPTIME_ENGINE</div>
+                <div class="card-content" style="padding: 1.5rem; background: rgba(10, 12, 16, 0.9);">
+                    <div class="stat-value" style="font-size: 3rem; font-weight: 900; color: white; margin-bottom: 0.5rem; font-family: var(--mono);">100%</div>
+                    <div class="stat-label">Verified Uptime</div>
+                    <p style="font-size: 0.95rem; margin-top: 1rem; color: var(--text-muted);">Maintaining bulletproof technical stability for global operations.</p>
+                </div>
+            </div>
+
+            <!-- Magyar Learning -->
+            <div class="bento-card reveal" style="grid-column: span 4;">
+                <div class="image-bg" style="background-image: url('magyar_bg.jpg');"></div>
+                <div class="overlay"></div>
+                <div class="card-id">FILE_REF: LINGUISTIC_PIPELINE</div>
+                <div class="card-content" style="padding: 1.5rem; background: rgba(10, 12, 16, 0.9);">
+                    <div style="font-size: 2.2rem; font-weight: 900; color: white; margin-bottom: 0.5rem; font-family: 'Playfair Display', serif;">Magyar <br>Learning.</div>
+                    <div class="stat-label">Active Acquisition</div>
+                    <p style="font-size: 0.95rem; margin-top: 1rem; color: var(--text-muted);">Deciphering complex grammar patterns as a cognitive objective.</p>
+                </div>
+            </div>
+
+            <!-- Strategic Forensics -->
+            <div class="bento-card reveal" style="grid-column: span 6;">
+                <div class="image-bg" style="background-image: url('forensics_bg.jpg');"></div>
+                <div class="overlay"></div>
+                <div class="card-id">FILE_REF: FORENSIC_AUDIT</div>
                 <div class="card-content">
-                    <h2>Digital <br>Anchor.</h2>
-                    <p style="font-size: 1rem;">Deploying enterprise-grade DataLayer schemas and GTM logic optimized for the elite distributed-first SaaS tier.</p>
+                    <h2>Revenue <br>Forensics.</h2>
+                    <p>Treating attribution discrepancies like high-stakes investigations to secure architectural data pipelines.</p>
                 </div>
             </div>
 
             <!-- Global Reliability -->
-            <div class="bento-card reveal" style="grid-column: span 8;">
+            <div class="bento-card reveal" style="grid-column: span 6;">
                 <div class="image-bg" style="background-image: url('reliability_bg.jpg');"></div>
                 <div class="overlay"></div>
                 <div class="card-id">FILE_REF: GLOBAL_OPS</div>
                 <div class="card-content">
                     <h2>Operational <br>Reliability.</h2>
-                    <p>US-Based technical anchor providing resilient, high-fidelity support for internationally distributed leadership teams.</p>
+                    <p>US-Based technical anchor providing resilient support for distributed leadership teams.</p>
                 </div>
             </div>
 
