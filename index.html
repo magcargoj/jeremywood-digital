@@ -8,7 +8,13 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'G-DNJTR4388W');
+      gtag('config', 'G-DNJTR4388W', {
+        'custom_map': {
+          'dimension1': 'hirer_location',
+          'dimension2': 'read_depth',
+          'dimension3': 'bento_engagement'
+        }
+      });
     </script>
 
     <meta charset="UTF-8">
@@ -498,6 +504,46 @@
         }, { threshold: 0.05 });
 
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // --- RECRUITER FORENSICS SUITE ---
+        
+        // 1. Scroll Depth Tracking
+        let scrollMarks = [25, 50, 75, 100];
+        let marksHit = [];
+        window.addEventListener('scroll', () => {
+            let scrollPercent = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight * 100;
+            scrollMarks.forEach(mark => {
+                if (scrollPercent >= mark && !marksHit.includes(mark)) {
+                    marksHit.push(mark);
+                    gtag('event', 'read_depth', { 'depth_percent': mark + '%' });
+                }
+            });
+        });
+
+        // 2. Outbound Link Sentinel
+        document.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                gtag('event', 'outbound_sentinel_click', {
+                    'link_text': link.innerText || 'icon_link',
+                    'destination': link.href
+                });
+            });
+        });
+
+        // 3. Bento Card Hover Intelligence
+        document.querySelectorAll('.bento-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                const cardRef = card.querySelector('.card-id')?.innerText || 'unknown_pillar';
+                gtag('event', 'bento_engagement', { 'pillar_ref': cardRef });
+            });
+        });
+
+        // 4. Time on Dossier Tracking
+        let startTime = Date.now();
+        window.addEventListener('beforeunload', () => {
+            let timeSpent = Math.round((Date.now() - startTime) / 1000);
+            gtag('event', 'time_on_dossier', { 'seconds': timeSpent });
+        });
     </script>
 </body>
 </html>
