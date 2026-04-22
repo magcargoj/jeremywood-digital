@@ -213,6 +213,17 @@
                 padding: 2rem; 
                 min-height: 300px; 
             }
+            .partner-card {
+                flex-direction: column !important;
+                min-height: auto !important;
+                text-align: center;
+            }
+            .partner-content {
+                padding: 2rem !important;
+            }
+            .partner-image-wrap {
+                padding: 1rem !important;
+            }
         }
 
         .bento-card:hover { border-color: var(--primary); transform: translateY(-10px); }
@@ -428,6 +439,21 @@
                 <div class="card-content">
                     <h2>Operational <br>Reliability.</h2>
                     <p>US-Based technical anchor providing resilient support for distributed leadership teams.</p>
+                </div>
+            </div>
+
+            <!-- Strategic Automation (Buffer Partner) -->
+            <div class="bento-card reveal partner-card" style="grid-column: span 12; min-height: 450px; background: linear-gradient(135deg, var(--surface) 0%, #1a1d24 100%); border: 2px solid var(--primary); display: flex; flex-direction: row; align-items: center; overflow: hidden;">
+                <div class="card-content partner-content" style="flex: 1; background: transparent; border: none; padding: 4rem; z-index: 10;">
+                    <div class="card-id">STRATEGIC_PARTNERSHIP: BUFFER_API</div>
+                    <h2 style="font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: 1.5rem; color: white; font-weight: 900;">Strategic <br>Automation.</h2>
+                    <p style="max-width: 500px; margin-bottom: 2.5rem; color: var(--text-muted); font-size: 1.1rem;">Orchestrating high-fidelity content distribution via the Buffer API to protect deep-work cycles while scaling professional reach.</p>
+                    <a href="https://join.buffer.com/jeremy-wood" target="_blank" class="nav-item partner-link" style="display: inline-flex; border: 1px solid var(--primary); padding: 1.25rem 2.5rem; border-radius: 4px; color: var(--primary); font-weight: 900; letter-spacing: 0.1rem; text-decoration: none;">
+                        Scale with Buffer (Strategic Partner) →
+                    </a>
+                </div>
+                <div class="partner-image-wrap" style="flex: 1; display: flex; justify-content: center; align-items: center; padding: 2rem; position: relative;">
+                    <img src="img/buffer_partner_badge.png" alt="Buffer Partner Badge" style="width: 100%; max-width: 500px; filter: drop-shadow(0 0 30px var(--primary-glow)); position: relative; z-index: 5;">
                 </div>
             </div>
 
