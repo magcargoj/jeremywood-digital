@@ -19,7 +19,8 @@ The "Technical Sentinel" aesthetic represents a commitment to technical forensic
 
 ## 🚀 Key Projects
 - **The Forensic Vault Distiller (MCP):** Bridging the gap between technical vaults and the Buffer API.
-- **Magyar Localization:** Forensic analysis and localization of legacy gaming assets (Pikmin).
+- **Ancestry Data Forensics:** A high-fidelity data aggregation project leveraging Markdown-based relational modeling.
+- **Handheld Storage Optimizer:** Data-driven utility for optimizing storage allocation in embedded systems.
 - **Nomad Flight Intelligence:** Python-based deal scanning for family travel.
 
 ---
