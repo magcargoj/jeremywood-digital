@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeremy Wood | Hopper RevOps AI Strategy Strike</title>
+    <style>
+        :root {
+            --primary: #ff4d4d; /* Hopper Red-ish */
+            --bg: #0f172a;
+            --card-bg: #1e293b;
+            --text: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #3b82f6;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .resume-container {
+            max-width: 850px;
+            background: var(--card-bg);
+            padding: 50px;
+            border-radius: 12px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        header {
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .header-left h1 {
+            margin: 0;
+            font-size: 32px;
+            letter-spacing: -0.025em;
+            color: var(--primary);
+        }
+
+        .header-left p {
+            margin: 5px 0 0;
+            font-size: 18px;
+            font-weight: 500;
+            color: var(--text-muted);
+        }
+
+        .contact-info {
+            text-align: right;
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        .contact-info a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-size: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--primary);
+            border-left: 4px solid var(--primary);
+            padding-left: 15px;
+            margin-bottom: 20px;
+        }
+
+        .summary {
+            font-style: italic;
+            color: var(--text);
+            background: rgba(255, 255, 255, 0.03);
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .job {
+            margin-bottom: 25px;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .job-title {
+            color: var(--accent);
+        }
+
+        .job-bullets {
+            margin: 10px 0;
+            padding-left: 20px;
+            color: var(--text-muted);
+        }
+
+        .job-bullets li {
+            margin-bottom: 8px;
+        }
+
+        .job-bullets b {
+            color: var(--text);
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .project-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .project-card h3 {
+            margin: 0 0 10px;
+            font-size: 16px;
+            color: var(--accent);
+        }
+
+        .project-card p {
+            font-size: 13px;
+            margin: 0;
+            color: var(--text-muted);
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-tag {
+            background: rgba(59, 130, 246, 0.1);
+            color: var(--accent);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+        }
+
+        @media print {
+            body { padding: 0; background: white; color: black; }
+            .resume-container { box-shadow: none; border: none; max-width: 100%; padding: 0; }
+            .job-bullets li { color: #333; }
+            .summary { background: #f0f0f0; color: black; }
+            .skill-tag { border: 1px solid #ccc; color: black; }
+        }
+    </style>
+</head>
+<body>
+    <div class="resume-container">
+        <header>
+            <div class="header-left">
+                <h1>Jeremy Wood</h1>
+                <p>Sr. Revenue Operations | AI Strategy & Systems Architect</p>
+            </div>
+            <div class="contact-info">
+                <div>jeremy@jeremywood.digital</div>
+                <div><a href="https://jeremywood.digital">jeremywood.digital</a></div>
+                <div>Raleigh, NC (100% Remote USA)</div>
+                <div><a href="https://github.com/magcargoj">github.com/magcargoj</a></div>
+            </div>
+        </header>
+
+        <section>
+            <h2>Strategic Summary</h2>
+            <div class="summary">
+                Technical RevOps leader and "Agentic Native" with 10+ years of experience bridging the gap between commercial strategy and engineering implementation. Specialist in architecting AI-powered revenue workflows, forensic data modeling in BigQuery, and building autonomous tools to eliminate friction in high-volume supply funnels. Proven track record of moving from first-principles analysis to direct, code-level execution using modern AI orchestration tools (Claude/Cursor/Python).
+            </div>
+        </section>
+
+        <section>
+            <h2>Core Mastery</h2>
+            <div class="skills-list">
+                <span class="skill-tag">AI Strategy & Implementation</span>
+                <span class="skill-tag">Revenue Analytics (SQL/BigQuery/Looker)</span>
+                <span class="skill-tag">GTM Systems Architecture</span>
+                <span class="skill-tag">Agentic AI Workflows (Claude/Cursor)</span>
+                <span class="skill-tag">Forensic Data Integrity (GA4/GTM)</span>
+                <span class="skill-tag">Python & API Orchestration</span>
+                <span class="skill-tag">Process Engineering</span>
+                <span class="skill-tag">Stakeholder Management (Eng/Product/Sales)</span>
+            </div>
+        </section>
+
+        <section>
+            <h2>Elite Projects: Building the Future</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>Nomad Flight Intelligence Monitor</h3>
+                    <p>Built a custom Python/AI data engine to scan and orchestrate travel supply inventory for a family of six. Leverages forensic data scraping and LLM-driven anomaly detection to identify high-value travel windows within volatile inventory sets.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Vault Distiller (MCP)</h3>
+                    <p>Architected an Model Context Protocol (MCP) server to automate the surfacing of technical documentation and technical debt within RevOps systems. Designed to bridge the "context gap" for AI agents working in complex SaaS environments.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Professional Experience</h2>
+            
+            <div class="job">
+                <div class="job-header">
+                    <span class="job-company">BlueThrone (Acquisition-Focused SaaS)</span>
+                    <span class="job-date">2023 – Present</span>
+                </div>
+                <div class="job-title">Director of Revenue Operations & Technical Strategy</div>
+                <ul class="job-bullets">
+                    <li><b>Revenue Infrastructure:</b> Designed and built the "Forensic Signal" infrastructure for tracking 100+ high-value SaaS acquisitions, reducing data entropy across the portfolio by 40%.</li>
+                    <li><b>AI Tooling:</b> Directly implemented AI-powered process audits for GTM squads, using custom prompts and API scripts to automate 20+ hours of manual reporting per week.</li>
+                    <li><b>Systems Alignment:</b> Acted as the technical bridge between Product and Sales, translating commercial requirements into well-defined engineering briefs for CRM and billing integrations.</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <span class="job-company">Pikmin (AdTech & Gaming Logistics)</span>
+                    <span class="job-date">2021 – 2023</span>
+                </div>
+                <div class="job-title">Senior GTM Systems Manager</div>
+                <ul class="job-bullets">
+                    <li><b>Supply Funnel Optimization:</b> Re-engineered the supply-side data models for a high-volume mobile inventory platform, improving forecasting accuracy by 25% through SQL-driven process redesign.</li>
+                    <li><b>Forensic Auditing:</b> Led "Post-Mortem" forensic audits on failed conversion funnels, identifying $150k+ in annual leaked revenue through technical tracking misconfigurations.</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <span class="job-company">Walgreens (Enterprise Digital)</span>
+                    <span class="job-date">2018 – 2021</span>
+                </div>
+                <div class="job-title">Marketing Operations & Analytics Lead</div>
+                <ul class="job-bullets">
+                    <li><b>Scale Operations:</b> Managed the operational infrastructure for multi-million dollar digital campaigns, ensuring data integrity across complex, multi-channel customer journeys.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Education & Values</h2>
+            <div style="font-size: 14px; color: var(--text-muted);">
+                <b>B.S. Environmental Science:</b> Foundation in systems thinking, first-principles analysis, and forensic observation.<br>
+                <b>Personal Mission:</b> Engineering high-autonomy, async-first systems to support a 100% nomadic family lifestyle.
+            </div>
+        </section>
+    </div>
+</body>
+</html>

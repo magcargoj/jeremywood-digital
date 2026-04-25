@@ -320,9 +320,9 @@
                                     <div>
                                         <div style="font-weight: 500;">High-Fidelity "Strike" Submissions</div>
                                         <div style="font-size: 12px; color: var(--text-muted)">
-                                            Attentive <a href="applications/attentive/RESUME_GTM_ENGINEER_ATTENTIVE.pdf" target="_blank" style="color: var(--primary)" onclick="gtag('event', 'file_download', {'file_name': 'Attentive_GTM_Engineer_Resume', 'file_extension': 'pdf', 'link_text': 'Attentive'});">[PDF]</a> | 
-                                            ClickUp <a href="applications/clickup/RESUME_AI_SOLUTIONS_CLICKUP.pdf" target="_blank" style="color: var(--primary)" onclick="gtag('event', 'file_download', {'file_name': 'ClickUp_AI_Solutions_Resume', 'file_extension': 'pdf', 'link_text': 'ClickUp'});">[PDF]</a> |
-                                            LocalStack <a href="applications/localstack/RESUME_REVOPS_LEAD_LOCALSTACK.pdf" target="_blank" style="color: var(--primary)" onclick="gtag('event', 'file_download', {'file_name': 'LocalStack_RevOps_Lead_Resume', 'file_extension': 'pdf', 'link_text': 'LocalStack'});">[PDF]</a>
+                                            Attentive <a href="applications/attentive/RESUME_GTM_ENGINEER_ATTENTIVE.pdf" target="_blank" style="color: var(--primary)" onclick="trackStrike('file_download', {'file_name': 'Attentive_GTM_Engineer_Resume', 'file_extension': 'pdf', 'link_text': 'Attentive'});">[PDF]</a> | 
+                                            ClickUp <a href="applications/clickup/RESUME_AI_SOLUTIONS_CLICKUP.pdf" target="_blank" style="color: var(--primary)" onclick="trackStrike('file_download', {'file_name': 'ClickUp_AI_Solutions_Resume', 'file_extension': 'pdf', 'link_text': 'ClickUp'});">[PDF]</a> |
+                                            LocalStack <a href="applications/localstack/RESUME_REVOPS_LEAD_LOCALSTACK.pdf" target="_blank" style="color: var(--primary)" onclick="trackStrike('file_download', {'file_name': 'LocalStack_RevOps_Lead_Resume', 'file_extension': 'pdf', 'link_text': 'LocalStack'});">[PDF]</a>
                                         </div>
                                     </div>
                                 </li>
@@ -384,11 +384,29 @@
     <script>
         lucide.createIcons();
         
-        // Simple script to correctly calculate days to July 15, 2026
-        const today = new Date('2026-04-16');
+        // Sentinel Tracking Logic
+        function trackStrike(eventName, params) {
+            console.log(`[Sentinel] Tracking ${eventName}:`, params);
+            if (typeof gtag === 'function') {
+                gtag('event', eventName, params);
+            }
+        }
+
+        // Apply tracking to social links
+        document.querySelectorAll('.user-links a').forEach(link => {
+            link.addEventListener('click', function() {
+                trackStrike('social_click', {
+                    'platform': this.getAttribute('title'),
+                    'url': this.getAttribute('href')
+                });
+            });
+        });
+
+        // Correctly calculate days to July 15, 2026
+        const today = new Date();
         const deadline = new Date('2026-07-15');
-        const diffTime = Math.abs(deadline - today);
-        const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
+        const diffTime = deadline - today;
+        const diffDays = Math.max(0, Math.ceil(diffTime / (1000 * 60 * 60 * 24))); 
         document.getElementById('days-left').innerText = diffDays;
     </script>
 </body>
