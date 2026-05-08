@@ -1,56 +1,119 @@
 Date,Company,Title,Posted Range,My Expectation,Status,Email Used,URL / Job Link,Notes
-2026-04-24,Pdftools,RevOps Specialist,EU Remote,"$146,000",Applied,jeremy@jeremywood.digital,,Swiss Precision Strike. HubSpot/n8n/Automation focus. 🇨🇭🛠️
-2026-04-24,CETIN Hungary,Automation Expert,HUF 2.8M - 3.8M,"$144,000",Applied,jeremy@jeremywood.digital,,Ancestral Homecoming 1895. Focus on Agentic AI-Ops/Workflow Orchestration.
-2026-04-24,PandaDoc,GTM Engineer,Automatic Confirmation,"$140,000",Applied,jeremy@jeremywood.digital,,Elite Strike. RevOps/GTM orchestration focus.
-2026-04-24,One Identity,Solution Architect,6 days ago,"$145,000",Applied,jeremy@jeremywood.digital,,Ancestral Homecoming 1895. Focus on Identity Governance/PAM.
-2026-04-24,Cloudera,Principal Solutions Engineer - AI,2 days ago,"$165,000",Applied,jeremy@jeremywood.digital,,NCSU Alum hook. Magyar Homecoming narrative.
-2026-04-24,VulnCheck,Revenue Operations Sentinel,RevOps / Data Forensics,"$155,000",Applied,jeremy@jeremywood.digital,,GTM Systems Architect strike. Focus on revenue forensics and data entropy mitigation.
-2026-04-24,Attentive,Senior Automation Architect,AI / Automation,"$165,000",Applied,jeremy@jeremywood.digital,,Elite Strike. AI Systems Sentinel narrative. Focus on autonomous MCP agents and GTM forensics.
-2026-04-24,Jobot,Solutions Architect (Cloud Ops),Snowflake / AWS,"$145,000",Interview Complete (Jenni),jeremy@jeremywood.digital,,Architect-level strike. Focus on production-grade automation and managed services.
-2026-04-24,Bitrise,Senior/Staff Infrastructure Engineer - Hungary,Budapest HQ,"$175,000",Applied,jeremy@jeremywood.digital,https://hu.linkedin.com/jobs/view/4222045656/,"ELITE STRIKE. Combined dossier with ""Magyar Homecoming"" narrative. 🇭🇺🛡️"
-2026-04-24,OpenAI,Learning Systems Data Engineer,Elite Strike,"$210,000",Applied,jeremy@jeremywood.digital,,Top Tier Target. 26 NCSU Alums. Forensic Signal / Data Integrity focus.
-2026-04-24,Pave Talent / HubSpot,Technical Solutions Engineer / HubSpot Dev,"$100,000 - $120,000","$120,000",Applied,jeremy@jeremywood.digital,,Director-to-IC pivot narrative. Custom API / RevOps focus.
-2026-04-24,Verve For Advertisers,Data Engineer (Remote / Contract),$30 - $50 / hr,"$104,000",Applied,jeremy@jeremywood.digital,,AdTech Forensics / ClickHouse focus. NCSU Alum (Timothy K).
-2026-04-24,PostHog,Technical Ex-Founder / Product Engineer,Top of Market,"$185,000",Applied,jeremy@jeremywood.digital,https://posthog.com/careers,ELITE STRIKE. Pikmin / Walgreens-to-Director narrative.
-2026-04-24,dbt Labs,GTM Automation Engineer,"$150,000 - $200,000 (Est)","$180,000",Applied,jeremy@jeremywood.digital,https://job-boards.greenhouse.io/dbtlabsinc/jobs/4674836005,Perfect Match Strike. AI/MCP/Automation focus. NCSU Alum hub.
-2026-04-24,Docker,"Senior Implementation Engineer, Customer Onboarding","$140,800 - $176,000","$176,000",Applied,jeremy@jeremywood.digital,,High Priority Strike. NCSU Alum hook (Jon Stout).
-2026-04-23,LocalStack,RevOps and Automation Lead,"$120,000 - $160,000","$160,000",Applied,jeremy@jeremywood.digital,,Dual Track with Sales Engineer application.
-2026-04-23,ClickUp,"Professional Services Consultant, AI Solutions","$110,000 - $150,000","$150,000",Applied,jeremy@jeremywood.digital,,Mirror Match. Specifically requested MCP knowledge.
-2026-04-23,Attentive,GTM Engineer,"$100,000 - $140,000","$140,000",Applied,jeremy@jeremywood.digital,,Embedded technical builder role. Perfect match for Vault Distiller.
-2026-04-22,LocalStack,Sales Engineer,"Up to $185,000 OTE","$185,000",Applied,jeremy@jeremywood.digital,https://localstack.workable.com,Zero Management Strike. Vibe Coding/MCP narrative.
-2026-04-22,SansuTek Inc,GA4/GTM Solution Architect,Contract W2/Ind,"$135,200",Applied,jeremy@jeremywood.digital,https://www.dice.com/job/detail/91126214,Mirror Match Strike. Version control/API focus.
-2026-04-22,Airbnb,Senior MarTech Operations Manager,"$132,000 - $154,000","$154,000",Applied,jeremy@jeremywood.digital,https://www.linkedin.com/jobs/view/4222045653/,Top Priority Strike. AI-Ops narrative. Nomad Gold Standard.
-2026-04-21,Zapier,Automation Strategist,IC3/IC4,"$170,000",Applied,jeremy@jeremywood.digital,,AI Orchestration narrative. High Impact/Freedom role.
-2026-04-21,NextGenPros Inc (UMG),GA4/GTM Solution Architect,$60/Hr W2,"$124,800",In Progress,jeremy@jeremywood.digital,,Screening call complete. Submitted to Fieldglass for UMG.
-2026-04-21,Tailscale,Support Engineer (Tier 1),"$63,000 - $79,000","$79,000",Rejected,jeremy@jeremywood.digital,,"REJECTED. Purging low-leverage ""Support"" roles."
-2026-04-21,Samsara,L1 Senior Technical Support,"$46,000 - $62,000","$62,000",Applied,jeremy@jeremywood.digital,,Easy Apply. IoT/Telematics focus.
-2026-04-21,Wrike,Customer Success Engineer,"$90,000 - $110,000","$110,000",Applied,jeremy@jeremywood.digital,,Easy Apply. Used Agentic/MCP narrative.
-2026-04-21,Plaid,Technical Support Engineer,"$73,872 - $110,000","$110,000",Applied,jeremy@jeremywood.digital,,Wilmington Zone 3. Lead with API Builder narrative.
-2026-04-20,Antavo,Enablement Manager,"$85,000 - $100,000","$100,000",Applied,jeremy@jeremywood.digital,https://antavo.com,Hungarian Ancestry (1895) lead. Enablement Architect narrative.
-2026-04-20,Bitrise,Solutions Architect,"$109,500 - $185,000","$175,000",Rejected,jeremy@jeremywood.digital,https://bitrise.io,Elite Long Shot. REJECTED. "Chosen to move forward with candidates whose experience and skills more closely match". Keep eyes on Infra role.
-2026-04-20,EasyLlama,Systems Administrator (GTM Systems),"$80,000 - $107,000","$107,000",Applied,jeremy@jeremywood.digital,,RevOps Architect role. Internal tech stack owner.
-2026-04-20,EasyLlama,Associate Customer Success Manager,"$45,000 - $60,000","$60,000",Rejected,jeremy@jeremywood.digital,,Tech-touch/Scaled segment. Efficiency focus.
-2026-04-20,EasyLlama,Technical Support Specialist,"$75,000 - $95,000","$95,000",Rejected,jeremy@jeremywood.digital,,High-ownership IC role. Bridge to Engineering focus.
-2026-04-20,Paubox,Technical Support Specialist,"$58,656 - $66,656","$66,000",Rejected,jeremy@jeremywood.digital,,HIPAA compliant email security. Series A.
-2026-04-20,Doist,Customer Support Specialist,"$70,000 - $85,000","$85,000",Applied,jeremy@jeremywood.digital,https://doist.com/careers,High autonomy/async focus.
-2026-04-20,Buffer,Customer Advocate,"$75,000 - $95,000","$95,000",Active / Launch Partner,jeremy@jeremywood.digital,https://buffer.com/journey/customer-advocate,Direct referral to Mike Eckstein.
-2026-04-20,GitLab,Support Engineer,"$80,000 - $110,000","$110,000",Applied,jeremy@jeremywood.digital,https://job-boards.greenhouse.io/gitlab/jobs/8389856002,Values-aligned (Iteration/Transparency).
-2026-04-20,Kraken Digital Asset Exchange,Sr Marketing Ops Specialist,"$70,000 - $110,000","$110,000",Rejected,jeremy@jeremywood.digital,https://jobs.ashbyhq.com/kraken.com/4d7f5803-5b1f-4818-ac04-c8251800ff69,Remote.
-2026-04-20,Jellyfish,AdTech Operations Manager,"$80,000 - $120,000","$120,000",Applied,jeremy@jeremywood.digital,,Remote. High AdTech precision.
-2026-04-20,Affirm,Implementation Specialist I,"$75,000 - $85,000","$85,000",Applied,jeremy@jeremywood.digital,https://job-boards.greenhouse.io/affirm/jobs/7666194003,Remote US (Los Angeles based).
-2026-04-18,Automattic,Customer Success Engineer (VIP),"$70,000 - $150,000","$145,000",Rejected,jeremy@jeremywood.digital,https://automattic.com/work-with-us/,Distributed-native focus.
-2026-04-18,Duende Software,Revenue Operations (RevOps) Engineer,"$80,000 - $100,000","$100,000",Applied,jeremy@jeremywood.digital,https://duendesoftware.com,Outreach sent to Dan VanHoozer.
-2026-04-18,Orange Logic,Associate Customer Success Manager,"$70,000 - $90,000","$90,000",Applied,jeremy@jeremywood.digital,,Matches preferences. Remote.
-2026-04-18,Sand Cherry Associates (Swooped),Ticketing Analyst,"$70,000 - $80,000","$80,000",Applied,jeremy@jeremywood.digital,,Digital workforce focus.
-2026-04-24,n8n,Senior Customer Success Operations EMEA,Today,"$146,000",Applied,jeremy@jeremywood.digital,,Agentic Native strike. Application cheatsheet ready. 🇭🇺🤖
-2026-04-24,SEON,Senior Platform Engineer,2 weeks ago,"$155,000",Strike Prepared,jeremy@jeremywood.digital,,Infrastructure Sentinel strike. Budapest Unicorn focus. 🇭🇺🛡️
-2026-04-24,QIMA,"Senior Manager, Data & Web Engineering",2 days ago,"$160,000",Strike Prepared,jeremy@jeremywood.digital,,Engineering Leadership strike. Data integrity focus. 🇭🇺⚙️
-2026-04-24,Aliz,Solution Architect (EU),1 month ago,"$150,000",Strike Prepared,jeremy@jeremywood.digital,,GCP Specialist strike. Premier CEE cloud partner. 🇭🇺☁️
-2026-04-24,EPAM Systems,Presales Solution Consultant – Data and AI,2 weeks ago,"$155,000",Strike Prepared,jeremy@jeremywood.digital,,AI Solution Strategist strike. Consulting powerhouse. 🇭🇺🧠
-2026-04-24,DigitalGenius,Solutions Engineer,1 month ago,"$145,000",Strike Prepared,jeremy@jeremywood.digital,,AI Automation Architect strike. CX focus. 🇭🇺🤖
-2026-04-24,Camunda,Senior Technical Productivity Manager,2 weeks ago,"$150,000",Strike Prepared,jeremy@jeremywood.digital,,Productivity Sentinel strike. Orchestration focus. 🇭🇺🛠️
-2026-04-24,Sophos,Senior Product Manager - CISO Advantage,1 week ago,"$160,000",Strike Prepared,jeremy@jeremywood.digital,,Security Strategist strike. Cyber security giant. 🇭🇺🛡️
-2026-04-24,SearchApi,Growth Engineer,5 months ago,"$140,000",Strike Prepared,jeremy@jeremywood.digital,,Growth Sentinel strike. Data acquisition focus. 🇭🇺📈
-2026-04-24,Doist,Product Designer (Architect),Recent,"$145,000",Applied,jeremy@jeremywood.digital,,Freedom Track gold standard. Async-first/AI-native focus. 🇭🇺💎
-2026-04-24,DuckDuckGo,Senior Backend / Platform Engineer,Recent,"$160,000",Applied,jeremy@jeremywood.digital,,Privacy Sentinel strike. Fully async/Freedom Track. 🇭🇺🛡️
-2026-04-25,Hopper,Sr Manager - Revenue Operations � Travel Supply & AI,"$180,000 - $250,000","$210,000",Strike Prepared,jeremy@jeremywood.digital,https://www.linkedin.com/jobs/view/4222045654/,"ELITE STRIKE. Perfect alignment with AI Strategy and Nomad Flight Intelligence monitor. ????"
+2026-04-18,Duende Software,Revenue Operations (RevOps) Engineer,$80000 - $100000,"$100,000",Applied,jeremy@jeremywood.digital,https://duendesoftware.com,Outreach sent to Dan VanHoozer.
+2026-04-18,Orange Logic,Associate Customer Success Manager,$70000 - $90000,"$90,000",Applied,jeremy@jeremywood.digital,N/A,Matches preferences. Remote.
+2026-04-18,Sand Cherry Associates (Swooped),Ticketing Analyst,$70000 - $80000,"$80,000",Applied,jeremy@jeremywood.digital,N/A,Digital workforce focus.
+2026-04-20,Antavo,Enablement Manager,$85000 - $100000,"$100,000",Applied,jeremy@jeremywood.digital,https://antavo.com,Hungarian Ancestry (1895) lead. Enablement Architect narrative.
+2026-04-20,EasyLlama,Systems Administrator (GTM Systems),$80000 - $107000,"$107,000",Applied,jeremy@jeremywood.digital,N/A,RevOps Architect role. Internal tech stack owner.
+2026-04-20,Doist,Customer Support Specialist,$70000 - $85000,"$85,000",Applied,jeremy@jeremywood.digital,https://doist.com/careers,High autonomy/async focus.
+2026-04-20,GitLab,Support Engineer,$80000 - $110000,"$110,000",Applied,jeremy@jeremywood.digital,https://job-boards.greenhouse.io/gitlab/jobs/8389856002,Values-aligned (Iteration/Transparency).
+2026-04-20,Affirm,Implementation Specialist I,$75000 - $85000,"$85,000",Applied,jeremy@jeremywood.digital,https://job-boards.greenhouse.io/affirm/jobs/7666194003,Remote US (Los Angeles based).
+2026-04-20,Buffer,Customer Advocate,$75000 - $95000,"$95,000",Applied,jeremy@jeremywood.digital,https://buffer.com/journey/customer-advocate,Direct referral to Mike Eckstein.
+2026-04-21,NextGenPros Inc (UMG),GA4/GTM Solution Architect,$60/Hr W2,"$124,800",Applied,jeremy@jeremywood.digital,N/A,Screening call complete. Submitted to Fieldglass for UMG.
+2026-04-21,Zapier,Automation Strategist,IC3/IC4,"$170,000",Applied,jeremy@jeremywood.digital,N/A,AI Orchestration narrative. High Impact/Freedom role.
+2026-04-21,Samsara,L1 Senior Technical Support,$46000 - $62000,"$62,000",Applied,jeremy@jeremywood.digital,N/A,Easy Apply. IoT/Telematics focus.
+2026-04-21,Plaid,Technical Support Engineer,$73872 - $110000,"$110,000",Applied,jeremy@jeremywood.digital,N/A,Wilmington Zone 3. Lead with API Builder narrative.
+2026-04-22,LocalStack,Sales Engineer,Up to $185000 OTE,"$185,000",Applied,jeremy@jeremywood.digital,https://localstack.workable.com,Zero Management Strike. Vibe Coding/MCP narrative.
+2026-04-23,LocalStack,RevOps and Automation Lead,$120000 - $160000,"$160,000",Applied,jeremy@jeremywood.digital,N/A,Dual Track with Sales Engineer application.
+2026-04-23,ClickUp,Professional Services Consultant - AI Solutions,$110000 - $150000,"$150,000",Applied,jeremy@jeremywood.digital,N/A,Mirror Match. Specifically requested MCP knowledge.
+2026-04-24,CETIN Hungary,Automation Expert,HUF 2.8M - 3.8M,"$144,000",Rejected,jeremy@jeremywood.digital,N/A,Ancestral Homecoming 1895. Focus on Agentic AI-Ops/Workflow Orchestration.
+2026-04-24,VulnCheck,Revenue Operations Sentinel,N/A,"$155,000",Applied,jeremy@jeremywood.digital,N/A,GTM Systems Architect strike. Focus on revenue forensics and data entropy mitigation.
+2026-04-24,OpenAI,Learning Systems Data Engineer,N/A,"$210,000",Applied,jeremy@jeremywood.digital,N/A,Top Tier Target. Forensic Signal / Data Integrity focus.
+2026-04-24,Verve For Advertisers,Data Engineer (Remote / Contract),$30 - $50 / hr,"$104,000",Applied,jeremy@jeremywood.digital,N/A,AdTech Forensics / ClickHouse focus. Role lead via technical networking.
+2026-04-24,Doist,Product Designer (Architect),N/A,"$145,000",Applied,jeremy@jeremywood.digital,N/A,Freedom Track gold standard. Async-first/AI-native focus. 🇭🇺💎
+2026-04-24,DuckDuckGo,Senior Backend / Platform Engineer,N/A,"$160,000",Applied,jeremy@jeremywood.digital,N/A,Privacy Sentinel strike. Fully async/Freedom Track. 🇭🇺🛡️
+2026-04-26,Joveo AI,Analytics Engineer (Remote),N/A,"$150,000",Applied,jeremy@jeremywood.digital,N/A,AI-first recruitment platform. dbt/SQL focus. 2 applicants at time of strike.
+2026-04-26,Cherry Bekaert,AI Agent Architect (Manager Level),$74670 - $186000,"$180,000",Applied,jeremy@jeremywood.digital,N/A,ELITE STRIKE. Business Transformation focus. RAG/Agent Orchestration. Raleigh-based.
+2026-04-27,Mermaid,AI-first front-end engineer,N/A,"$160,000",Applied,jeremy@jeremywood.digital,https://mermaid.js.org/,UNICORN STRIKE. Martin Pedrick (HM). Agentic Native / Design System focus. 🇭🇺🤖
+2026-04-27,Tiger Tracks,Analytics & Conversion Tracking Specialist,Competitive Market Rate,"$130,000",Applied,jeremy@jeremywood.digital,N/A,UNICORN STRIKE. Ex-Googlers. Server-side GTM/CAPI. High Autonomy.
+2026-04-27,Affirm,Senior Technical Account Manager (Lifestyle),$142000 - $192000,"$192,000",Applied,jeremy@jeremywood.digital,N/A,GOLDILOCKS STRIKE. Mirror Match (Agency/Retail background). High-fidelity written word focus. $192k target.
+2026-04-28,Hopper,Sr Manager - Revenue Operations - Travel Supply & AI,N/A,"$210,000",Applied,jeremy@jeremywood.digital,https://jobs.ashbyhq.com/hopper,ELITE STRIKE. Mirror Match (AI Native Builder). RevOps + AI Architecture focus. $210k target. UNICORN
+2026-04-28,ElevenLabs,GTM Agentic Enablement Lead,N/A,"$185,000",Applied,jeremy@jeremywood.digital,N/A,TIER 0 ELITE STRIKE. Agentic Native narrative. Focus on building enablement agents.
+2026-04-28,Elastic,Senior Customer Architect (West),N/A,"$185,000",Applied,jeremy@jeremywood.digital,N/A,TIER 0 GOLDILOCKS. Early applicant (3 clicks). High-fidelity technical match. Aligned to Pacific Time.
+2026-04-28,Sharpen,Platform Engineer,N/A,"$150,000",Applied,jeremy@jeremywood.digital,N/A,GOLDILOCKS. 7 applicants in 3 weeks. Perfect AI-automation brand match.
+2026-04-28,DBeaver,Technical Product Marketing Manager,N/A,"$150,000",Applied,jeremy@jeremywood.digital,N/A,US-Remote Strike. Honest Naturalization Path. Power-user narrative.
+2026-04-28,DBeaver,Customer Success Manager,N/A,"$150,000",Applied,jeremy@jeremywood.digital,N/A,US-Remote Strike. Honest Naturalization Path. Power-user narrative.
+2026-04-28,Supabase,Strategic Customer Solutions Architect (AMER),N/A,,Applied,jeremy@jeremywood.digital,N/A,TIER 0 ELITE STRIKE. Strategic CSA role. 100% Remote AMER. Postgres Sentinel brand.
+2026-04-28,Supabase,GTM Engineer (AMER),N/A,,Applied,jeremy@jeremywood.digital,N/A,TIER 0 GOLDILOCKS. GTM Engineer role. HubSpot/Postgres Mirror Match. 100% Remote AMER.
+2026-04-29,Mondo,Lead Analytics Engineer,N/A,"$160,000",Recruiter Outreach (Callback Pending),jeremy@jeremywood.digital,N/A,Missed automated Quinn call. Requested phone callback to +1-646-933-2300. Python/SQL/Snowflake/Databricks focus.
+2026-04-29,Pressable (Automattic),Senior Technical Account Manager (Remote),N/A,"$140,000",Applied,jeremy@jeremywood.digital,https://automattic.com/work-with-us/,FREEDOM STRIKE. Automattic ecosystem. WordPress/AI focus. Zero-travel gold standard.
+2026-04-29,ListLab,GTM Engineer (Flexible),N/A,$180000 OTE,Interview Scheduled (John Mannix - COO),jeremy@jeremywood.digital,https://list-lab.org/,"TIER 0 STRIKE. Recruiter screening successful ($150k base + 20% bonus). Interview scheduled with John Mannix (COO). Focus on Shopify/E-commerce integrations and onboarding leadership."
+2026-04-29,Honeycomb.io,Senior Solution Architect (Remote),N/A,"$210,000",Applied,jeremy@jeremywood.digital,https://honeycomb.io/careers/,ELITE STRIKE. High-fidelity observability focus. OTel/OpenTelemetry expertise. Senior-level IC role.
+2026-05-01,Airbnb,Process & Tools Scalability Specialist,$106k - $125k + Bonus/Equity,125000,Applied,jeremy@jeremywood.digital,"https://www.linkedin.com/jobs/view/4222045667/ | STABILITY ANCHOR. $170k OTE. Mirror match on SME/Technical Solutions. Low stress, high mastery. 38 NCSU alums for referral. Applied 5/1.",5
+2026-05-01,Jonas Club Software,Implementation & Customer Success (Project Synergy),N/A,,Applied,jeremy@jeremywood.digital,N/A,Stability Track Strike. Fresh role (1 hr). PMP/Implementation focus. Travel 50% possible.
+2026-05-01,Silvus Technologies,Software CSM Manager (Southeast),N/A,,Applied,jeremy@jeremywood.digital,N/A,Stability Track Strike. Fresh role (1 day). Manager-level potential. NC/Remote.
+2026-05-01,Vantaca / HOAi,Forward Deployed Engineer,N/A,"$165,000",Applied,jeremy@jeremywood.digital,N/A,TIER 0 ELITE STRIKE. Wilmington Native / NCSU Alum. Applied 5/1 via portal with Agentic Native narrative.
+2026-05-01,Hyphen Connect,Agentic Systems Architect,N/A,,Applied,jeremy@jeremywood.digital,N/A,TIER 0 MIRROR MATCH. Direct title match. Multi-agent orchestration focus. Applied 5/1.
+2026-05-01,TravelNet Solutions,UX Manager,$140k - $160k + 15% Bonus,N/A,Applied,jeremy@jeremywood.digital,https://www.linkedin.com/jobs/view/4222045663/,GOLDILOCKS STRIKE. Travel/Nomad perks. Mirror match on AI-first design philosophy. Applied 5/1.
+2026-05-01,Hopper,Principal Product Manager,$250k - $350k,"$350,000",Applied,jeremy@jeremywood.digital,https://www.linkedin.com/jobs/view/4222045664/ | TIER 0 MOONSHOT. $350k Ceiling. 100% mirror match on 'Vibe Coding' and AI-native prototyping. Applied 5/1.,5
+2026-05-03,n8n,Senior Technical CSM,N/A,"$165,000",Rejected,jeremy@jeremywood.digital,N/A,TIER 0 STRIKE. Native MCP/Agentic Workflow focus. Proof of Work (Vector Distiller) included.
+2026-05-04,Veeam,Lead Domain Engineering Specialist,$171k - $319k,"$250,000",Applied,jeremy@jeremywood.digital,N/A,TIER 0 WHALE STRIKE. Data Resilience / Forensic Integrity focus. $319k ceiling.
+2026-05-04,Ladders,GTM Systems Manager,N/A,"$160,000",Applied,jeremy@jeremywood.digital,N/A,Strategic GTM Architecture focus.
+2026-05-04,Percona,Technical Account Manager,N/A,"$155,000",Applied,jeremy@jeremywood.digital,N/A,Open Source Data Resilience focus.
+2026-04-24,Bitrise,Solutions Architect (Pivoted from Infra),N/A,"$175,000",Culture Interview Scheduled (5/12 @ 10:00 AM - Gergő),jeremy@jeremywood.digital,https://hu.linkedin.com/jobs/view/4222045656/,Culture interview scheduled with Gergő Nagy (10:00 - 10:45 EDT). ELITE STRIKE. Successfully pivoted from Infra to SA after LinkedIn outreach to Gergő. Focus on 'Technical Sentinel' / Hungarian roots.
+2026-04-24,Jobot,Solutions Architect (Cloud Ops),N/A,"$145,000",Interview Complete (Jenni),jeremy@jeremywood.digital,N/A,Architect-level strike. Focus on production-grade automation and managed services.
+2026-05-01,Hopper,IT Operations Automation Engineer,$160k - $190k,"$130,000",Interview Complete (Next Round Pending),jeremy@jeremywood.digital,https://www.linkedin.com/jobs/view/4222045665/,"Screening with Skye complete 5/8. High-freedom role: 5 tickets/mo, low meetings (every 2 weeks), async/flexible, $130k base. Next: tech test & HM loops. Feedback by Monday EOD."
+2026-04-28,Huzzle.com,Go-To-Market Engineer,N/A,"$160,000",AI Video Interview Submitted (Next Round Pending),jeremy@jeremywood.digital,N/A,Conversational AI video interview completed on 5/7. Platform had high voice-activity detection sensitivity but successfully finalized. Awaiting review.
+2026-04-23,Attentive,GTM Engineer,$100000 - $140000,"$140,000",Interview Scheduled (5/8 @ 4:00 PM - Andrea),jeremy@jeremywood.digital,N/A,Recruiter screen with Andrea Rodriguez scheduled for Friday 5/8 from 4:00 - 4:30 PM EDT. Embedded technical builder role. Perfect match for Vault Distiller.
+2026-04-28,Toptal,Core Team Engineering,N/A,"$160,000",Rejected,jeremy@jeremywood.digital,N/A,Intro screen with Adrian Bora rescheduled for Friday 5/8 @ 7:00 - 7:30 AM EDT. Elite Core Team. Hyper-remote async culture.
+2026-04-29,Ethos Risk Services,IT Data Architect (Remote),N/A,"$175,000",AI Video Interview Submitted (Next Round Pending),jeremy@jeremywood.digital,https://record.interview.video/4514959986557522.cMFHaVeZNayk7nXYihsESC,"Wedge AI one-way self-recorded video interview completed 5/7. Focused on database migration, data staging, and compliance. Amelia Woods managing."
+2026-04-22,SansuTek Inc,GA4/GTM Solution Architect,N/A,"$135,200",Recruiter Outreach (David),jeremy@jeremywood.digital,https://www.dice.com/job/detail/91126214,Mirror Match Strike. GA4 tracking and custom tag-management focus.
+2026-04-28,Insight Global (MarTech Client),Implementation Manager (Technical Onboarding),N/A,"$165,000",Recruiter Outreach (Pat Kelly),jeremy@jeremywood.digital,N/A,GOLDILOCKS STRIKE. Urgent remote role. Focused on technical onboarding and tracking.
+2026-04-24,Pave Talent / HubSpot,Technical Solutions Engineer / HubSpot Dev,$100000 - $120000,"$120,000",Recruiter Screen Complete (HarvestROI - Next Round Pending),jeremy@jeremywood.digital,N/A,"Recruiter screening with Ram complete. Client is HarvestROI. Pure hands-on Node/Python/PHP role. Expecting 3-4 rounds next."
+2026-05-07,SRI Tech Solutions,Digital Services Operations Specialist,N/A,N/A,Recruiter Outreach (Surendra),jeremy@jeremywood.digital,N/A,"Inbound agency outreach. Perfect 100% mirror match on DNS, GTM, GA4, OneTrust, and ServiceNow. Responded 5/7."
+2026-04-18,Automattic,Customer Success Engineer (VIP),$70000 - $150000,"$145,000",Rejected,jeremy@jeremywood.digital,https://automattic.com/work-with-us/,Distributed-native focus.
+2026-04-20,Bitrise,Solutions Architect,$109500 - $185000,"$175,000",Rejected,jeremy@jeremywood.digital,https://bitrise.io,"Elite Long Shot. REJECTED. ""Chosen to move forward with candidates whose experience and skills more closely match"". Keep eyes on Infra role."
+2026-04-20,EasyLlama,Associate Customer Success Manager,$45000 - $60000,"$60,000",Rejected,jeremy@jeremywood.digital,N/A,Tech-touch/Scaled segment. Efficiency focus.
+2026-04-20,EasyLlama,Technical Support Specialist,$75000 - $95000,"$95,000",Rejected,jeremy@jeremywood.digital,N/A,High-ownership IC role. Bridge to Engineering focus.
+2026-04-20,Paubox,Technical Support Specialist,$58656 - $66656,"$66,000",Rejected,jeremy@jeremywood.digital,N/A,HIPAA compliant email security. Series A.
+2026-04-20,Kraken Digital Asset Exchange,Sr Marketing Ops Specialist,$70000 - $110000,"$110,000",Rejected,jeremy@jeremywood.digital,https://jobs.ashbyhq.com/kraken.com/4d7f5803-5b1f-4818-ac04-c8251800ff69,Remote.
+2026-04-21,Tailscale,Support Engineer (Tier 1),$63000 - $79000,"$79,000",Rejected,jeremy@jeremywood.digital,N/A,"REJECTED. Purging low-leverage ""Support"" roles."
+2026-04-21,Wrike,Customer Success Engineer,$90000 - $110000,"$110,000",Rejected,jeremy@jeremywood.digital,N/A,Easy Apply. Used Agentic/MCP narrative.
+2026-04-22,Airbnb,Senior MarTech Operations Manager,$132000 - $154000,"$154,000",Rejected,jeremy@jeremywood.digital,https://www.linkedin.com/jobs/view/4222045653/,Top Priority Strike. AI-Ops narrative. Nomad Gold Standard.
+2026-04-24,Pdftools,RevOps Specialist,N/A,"$146,000",Rejected,jeremy@jeremywood.digital,N/A,Swiss Precision Strike. HubSpot/n8n/Automation focus. 🇨🇭🛠️
+2026-04-24,One Identity,Solution Architect,N/A,"$145,000",Rejected,jeremy@jeremywood.digital,N/A,Ancestral Homecoming 1895. Focus on Identity Governance/PAM.
+2026-04-24,Attentive,Senior IT Engineer,N/A,"$165,000",Rejected,jeremy@jeremywood.digital,N/A,Elite Strike. AI Systems Sentinel narrative. Focus on autonomous MCP agents and GTM forensics. Rejection received 4/30.
+2026-04-24,PostHog,Technical Ex-Founder / Product Engineer,Top of Market,"$185,000",Rejected,jeremy@jeremywood.digital,https://posthog.com/careers,"ELITE STRIKE. Rejected: ""Background not technical enough or relevant experience missing"". 🦔"
+2026-04-24,dbt Labs,GTM Automation Engineer,$150000 - $200000 (Est),"$180,000",Rejected,jeremy@jeremywood.digital,https://job-boards.greenhouse.io/dbtlabsinc/jobs/4674836005,Perfect Match Strike. AI/MCP/Automation focus. Technical hub. Rejection 5/5.
+2026-04-24,Docker,Senior Implementation Engineer - Customer Onboarding,$140800 - $176000,"$176,000",Rejected,jeremy@jeremywood.digital,N/A,High Priority Strike. Technical Onboarding Forensics narrative. Rejection received 4/30.
+2026-04-24,n8n,Senior Customer Success Operations EMEA,N/A,"$146,000",Rejected,jeremy@jeremywood.digital,N/A,Agentic Native strike. Application cheatsheet ready. 🇭🇺🤖
+2026-04-26,Checkly,Senior Sales Engineer (Pre-Sales),$165000 - $185000,"$185,000",Rejected,jeremy@jeremywood.digital,N/A,TIER 0 STRIKE. Monitoring as Code. AI-Native Workflow (MCP/Claude). Async-first culture.
+2026-04-27,Samsara,Solutions Consultant (Engagement Services Manager),$101420 - $136363,"$136,363",Rejected,jeremy@jeremywood.digital,N/A,GOLDILOCKS STRIKE. NC-Remote. PMP focus. IoT/Fleet mastery. $136k target.
+2026-04-28,Cloudera,Principal Solutions Engineer - AI,N/A,"$165,000",Rejected,jeremy@jeremywood.digital,N/A,TIER 0 GOLDILOCKS. Early strike (1 applicant). Technical Naturalization narrative.
+2026-04-28,Tiger Data,AI Ops GTM,N/A,,Rejected,jeremy@jeremywood.digital,N/A,TIER 0 ELITE STRIKE. AI Ops GTM role. Explicitly requested Agentic tools (Claude Code). Postgres Sentinel brand. 100% Remote US.
+2026-05-01,Cedar,Technical Account Manager,N/A,$123k - $145k,Rejected,jeremy@jeremywood.digital,N/A,Technical Steward narrative. Rejection received 5/1. Moving on to Tie/Jonas.
+2026-05-01,Wiz,Senior GTM Systems Engineer,$130k - $179k+,N/A,Rejected,jeremy@jeremywood.digital,https://www.linkedin.com/jobs/view/4222045662/,TIER 0 ELITE WHALE STRIKE. Fastest-growing startup. Mirror match on Post-Sales/Workato/Sentinel. Rejection 5/5.
+2026-05-01,Pressable (Automattic),Founding Senior Solutions Engineer,$120k - $175k+ Base + Variable,N/A,Rejected,jeremy@jeremywood.digital,https://www.linkedin.com/jobs/view/4222045668/,THE DESTINY STRIKE. Founding Pre-Sales role. 100% mirror match on WordPress/DNS/Migrations. Ultimate nomad culture. Applied 5/1. Note: 6-year tenure at BlueTone (2020-Present).
+2026-04-20,Jellyfish,AdTech Operations Manager,$80000 - $120000,"$120,000",Rejected (Position Filled),jeremy@jeremywood.digital,N/A,Remote. High AdTech precision. Rejection received 4/30.
+2026-04-24,PandaDoc,GTM Engineer,N/A,"$140,000",Rejected (Position Filled),jeremy@jeremywood.digital,N/A,Elite Strike. RevOps/GTM orchestration focus.
+2026-04-28,DBeaver,Sales Engineer,N/A,"$145,000",Rejected (Position Filled),jeremy@jeremywood.digital,N/A,GOLDILOCKS. 9 applicants in 1 month. Mirror Match (used at Bluetone). US-Based Bridge.
+2026-04-24,SEON,Senior Platform Engineer,N/A,"$155,000",Applied,jeremy@jeremywood.digital,N/A,Infrastructure Sentinel strike. Budapest Unicorn focus. 🇭🇺🛡️
+2026-04-24,QIMA,Senior Manager - Data & Web Engineering,N/A,"$160,000",Applied,jeremy@jeremywood.digital,N/A,Engineering Leadership strike. Data integrity focus. 🇭🇺⚙️
+2026-04-24,Aliz,Solution Architect (EU),N/A,"$150,000",Applied,jeremy@jeremywood.digital,N/A,GCP Specialist strike. Premier CEE cloud partner. 🇭🇺☁️
+2026-04-24,EPAM Systems,Presales Solution Consultant – Data and AI,N/A,"$155,000",Applied,jeremy@jeremywood.digital,N/A,AI Solution Strategist strike. Consulting powerhouse. 🇭🇺🧠
+2026-04-24,DigitalGenius,Solutions Engineer,N/A,"$145,000",Applied,jeremy@jeremywood.digital,N/A,AI Automation Architect strike. CX focus. 🇭🇺🤖
+2026-04-24,Camunda,Senior Technical Productivity Manager,N/A,"$150,000",Applied,jeremy@jeremywood.digital,N/A,Productivity Sentinel strike. Orchestration focus. 🇭🇺🛠️
+2026-04-24,Sophos,Senior Product Manager - CISO Advantage,N/A,"$160,000",Applied,jeremy@jeremywood.digital,N/A,Security Strategist strike. Cyber security giant. 🇭🇺🛡️
+2026-04-24,SearchApi,Growth Engineer,N/A,"$140,000",Applied,jeremy@jeremywood.digital,N/A,Growth Sentinel strike. Data acquisition focus. 🇭🇺📈
+2026-04-25,Hopper,Sr Manager - Revenue Operations — Travel Supply & AI,$180000 - $250000,"$210,000",Applied,jeremy@jeremywood.digital,https://www.linkedin.com/jobs/view/4222045654/,ELITE STRIKE. Perfect alignment with AI Strategy and Nomad Flight Intelligence monitor. 🦄
+2026-05-01,Bolder Apps,Agentic Builder - Claude Code,N/A,$120000+,Applied,jeremy@jeremywood.digital,N/A,TIER 0 MIRROR MATCH. Agentic Systems Architect narrative. Used Global Encoding Fix war story.
+2026-05-01,AI Security Assurance (Jobright),Human-AI Collaboration Engineer,N/A,$160k - $230k,Applied,jeremy@jeremywood.digital,N/A,TIER 0 WHALE STRIKE. Posted 1 hr ago. Wilmington-D.C. proximity lead. Security forensics narrative.
+2026-05-01,Replicate,Agentic Systems Architect (Direct),N/A,$180000+,Applied,jeremy@jeremywood.digital,N/A,TIER 0 GOLDILOCKS. Direct-to-Engineering strike. Used Technical Brief / Wood Protocol. Async/Remote focus.
+2026-05-01,Secret World App,AI Automation Engineer – Claude Platform Specialist,1 hr ago,,Applied,jeremy@jeremywood.digital,https://www.linkedin.com/jobs/view/4222045657/,TIER 0 MIRROR MATCH. Claude Specialist / Node.js focus. Transitioning outsourced skills. Applied 5/1.
+2026-05-01,Jobright.ai,Data Scientist / AI Engineer (Early Career),4 hrs ago,,Applied,jeremy@jeremywood.digital,https://www.linkedin.com/jobs/view/4222045658/,UNICORN META-STRIKE. Agentic Native building job-search agents. Meta-narrative focus. Applied 5/1.
+2026-05-01,Circle,Senior Marketing Operations Manager,$172k - $222k,"$222,000",Applied,jeremy@jeremywood.digital,https://www.linkedin.com/jobs/view/4222045659/,TIER 0 WHALE STRIKE. Base $222k. Mirror match on AI/n8n/Clay. NCSU alum hook (Sean K). Applied 5/1.
+2026-05-01,ConsumerAffairs,AI Native Business Operations Specialist,N/A,,Applied,jeremy@jeremywood.digital,https://www.linkedin.com/jobs/view/4222045660/,TIER 0 MIRROR MATCH. Explicitly requested 'AI Native'. NCSU alum hook (Daniel S). Applied 5/1.
+2026-05-01,Jump - Advisor AI,Technical GTM Engineer,$125k - $200k,"$200,000",Applied,jeremy@jeremywood.digital,https://www.linkedin.com/jobs/view/4222045661/,TIER 0 WHALE STRIKE. Base $200k. Mirror match on AI/BigQuery/GTM. 2 months old but high comp. Applied 5/1.
+2026-05-03,Baserow,Product Specialist,N/A,N/A,Applied,jeremy@jeremywood.digital,https://baserow.io/jobs/product-specialist,TIER 0 MIRROR MATCH. Agentic Native narrative. Focus on relational data modeling and solutions. Magyar Homecoming lead.
+2026-05-04,Thomas Talent Network,Technical Account Manager,N/A,N/A,Applied,jeremy@jeremywood.digital,N/A,Applied via Adzuna / ApplyIQ. Location: USA.
+2026-05-06,AgeWell Solvere Living,Marketing Account Manager,N/A,N/A,Applied,jeremy@jeremywood.digital,N/A,"Applied via Adzuna / ApplyIQ. Location: Orlando, Florida."
+2026-05-06,Mercor,Project Management Consultant,N/A,N/A,Applied,jeremy@jeremywood.digital,N/A,Applied via Adzuna / ApplyIQ. Location: New York.
+2026-05-06,QuantumWork Advisory,Project Manager- Business Operations 6-Month Contract,N/A,N/A,Applied,jeremy@jeremywood.digital,N/A,"Applied via Adzuna / ApplyIQ. Location: Remote, Oregon."
+2026-05-06,Nexiva Inc,Project Manager,N/A,N/A,Applied,jeremy@jeremywood.digital,N/A,Applied via Adzuna / ApplyIQ. Location: MS.
+2026-05-07,Aretum,Software Team Manager,N/A,N/A,Applied,jeremy@jeremywood.digital,N/A,Applied via Adzuna / ApplyIQ. Location: McLean Virginia.
+2026-05-07,Traveling with Mchaila,Client Support Administrator,N/A,N/A,Applied,jeremy@jeremywood.digital,N/A,Applied via Adzuna / ApplyIQ. Location: Georgetown.
+2026-05-07,Jonesbororealtycompany,IT ANALYST,N/A,N/A,Applied,jeremy@jeremywood.digital,N/A,Applied via Adzuna / ApplyIQ. Location: Tennessee.
+2026-05-07,Openkyber,Associate Intelligence Operations Analyst,N/A,N/A,Applied,jeremy@jeremywood.digital,N/A,Applied via Adzuna / ApplyIQ. Location: AK.
+2026-05-07,Momento USA,Infrastructure Technical Specialist - FileCloud & AWS I Remote,N/A,N/A,Applied,jeremy@jeremywood.digital,N/A,Applied via Adzuna / ApplyIQ. Location: NJ.
+2026-05-08,Renew Home,"Staff Sales Engineer, Omnichannel (Remote, US)",N/A,"$180,000",Applied,jeremy.wood.nc@gmail.com,N/A,Workable application submitted 5/8. High-level sales engineering and technical strategy.
+2026-05-08,QuantumWork Advisory,Senior Talent Technology Consultant 3-Month Contract,N/A,N/A,Applied,jeremy@jeremywood.digital,N/A,SmartRecruiters application completed 5/8. Focus on talent technology systems.
+2026-05-08,Aquest Staffing (Servstaffing Solutions),Senior AI Engineer - Agentic Systems and LLM (Python),N/A,"$75/Hr W2",Recruiter Outreach,jeremy@jeremywood.digital,N/A,Inbound agency lead from Mahir Hakeem. Highly targeted Senior AI / Python role. Tailored resume prepped.
