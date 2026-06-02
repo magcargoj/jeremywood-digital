@@ -1,12 +1,12 @@
 :root {
-    --bg-dark: #0f172a;
-    --bg-card: #1e293b;
-    --bg-alt: #0b1120;
-    --primary: #38bdf8;
-    --primary-hover: #0284c7;
-    --text-main: #f8fafc;
-    --text-muted: #94a3b8;
-    --border: rgba(255, 255, 255, 0.1);
+    --bg-dark: #562C2C; /* Espresso */
+    --bg-card: #683838; /* Lighter Espresso */
+    --bg-alt: #432121; /* Darker Espresso */
+    --primary: #0E9594; /* Dark Cyan */
+    --primary-hover: #0B7372;
+    --text-main: #F5DFBB; /* Wheat */
+    --text-muted: #E3C291; /* Lighter Wheat */
+    --border: rgba(245, 223, 187, 0.2);
     --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
